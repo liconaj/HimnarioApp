@@ -1,0 +1,3838 @@
+[
+    {
+        "titulo": "Cantad alegres al Señor",
+        "numero": "1",
+        "ruta": "001 - Cantad alegres al Senor",
+        "tiempos": "00:00:00|00:24:00|01:02:00|01:38:00"
+    },
+    {
+        "titulo": "Da gloria al Señor",
+        "numero": "2",
+        "ruta": "002 - Da gloria al Senor",
+        "tiempos": "00:00:00|00:16:00|00:32:00|00:50:00|01:06:00|01:25:00|01:40:00|01:59:00|02:15:00"
+    },
+    {
+        "titulo": "Unidos en espíritu",
+        "numero": "3",
+        "ruta": "003 - Unidos en espiritu",
+        "tiempos": "00:00:00|00:08:00|00:25:00|00:41:00|00:58:00|01:14:00|01:30:00"
+    },
+    {
+        "titulo": "Alabanzas sin cesar",
+        "numero": "4",
+        "ruta": "004 - Alabanzas sin cesar",
+        "tiempos": "00:00:00|00:10:00|00:28:00|00:47:00|01:05:00|01:24:00|01:42:00"
+    },
+    {
+        "titulo": "A ti, glorioso Dios",
+        "numero": "5",
+        "ruta": "005 - A ti, glorioso Dios",
+        "tiempos": "00:00:00|00:09:00|00:33:00|00:59:00|01:24:00|01:45:00|02:10:00"
+    },
+    {
+        "titulo": "¡Hosanna!",
+        "numero": "6",
+        "ruta": "006 - Hosanna",
+        "tiempos": "00:00:00|00:06:00|00:24:00|00:41:00|00:58:00"
+    },
+    {
+        "titulo": "Oh Dios, mi soberano Rey",
+        "numero": "7",
+        "ruta": "007 - Oh Dios, mi soberano Rey",
+        "tiempos": "00:00:00|00:06:00|00:22:00|00:39:00|00:56:00"
+    },
+    {
+        "titulo": "¡Suenen dulces himnos!",
+        "numero": "8",
+        "ruta": "008 - Suenen dulces himnos",
+        "tiempos": "00:00:00|00:09:00|00:19:00|00:30:00|00:41:00|00:52:00|01:02:00|01:13:00|01:24:00|01:34:00|01:44:00|01:55:00|02:06:00|02:17:00|02:27:00|02:38:00|02:49:00"
+    },
+    {
+        "titulo": "Alabemos al Señor",
+        "numero": "9",
+        "ruta": "009 - Alabemos al Senor",
+        "tiempos": "00:00:00|00:09:00|00:31:00"
+    },
+    {
+        "titulo": "Alaba al Dios de Abraham",
+        "numero": "10",
+        "ruta": "010 - Alaba al Dios de Abraham",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00|01:14:00|01:36:00|01:57:00"
+    },
+    {
+        "titulo": "Alma, bendice al Señor",
+        "numero": "11",
+        "ruta": "011 - Alma, bendice al Senor",
+        "tiempos": "00:00:00|00:15:00|00:37:00|00:54:00|01:15:00|01:32:00|01:53:00"
+    },
+    {
+        "titulo": "Todos juntos reunidos",
+        "numero": "12",
+        "ruta": "012 - Todos juntos reunidos",
+        "tiempos": "00:00:00|00:08:00|00:24:00|00:42:00|00:58:00"
+    },
+    {
+        "titulo": "Al Dios invisible",
+        "numero": "13",
+        "ruta": "013 - Al Dios invisible",
+        "tiempos": "00:00:00|00:12:00|00:26:00|00:40:00|00:53:00|01:08:00|01:28:00|01:36:00|01:56:00"
+    },
+    {
+        "titulo": "Engrandecido sea Dios",
+        "numero": "14",
+        "ruta": "014 - Engrandecido sea Dios",
+        "tiempos": "00:00:00|00:11:00|00:25:00|00:42:00|00:57:00|01:13:00|01:27:00|01:44:00|01:58:00"
+    },
+    {
+        "titulo": "Loámoste, oh Dios",
+        "numero": "15",
+        "ruta": "015 - Loamoste, oh Dios",
+        "tiempos": "00:00:00|00:09:00|00:23:00|00:39:00|00:53:00|01:11:00|01:26:00"
+    },
+    {
+        "titulo": "A nuestro Padre Dios",
+        "numero": "16",
+        "ruta": "016 - A nuestro Padre Dios",
+        "tiempos": "00:00:00|00:09:00|00:24:00|00:45:00|01:00:00|01:20:00|01:36:00"
+    },
+    {
+        "titulo": "Oh Padre, eterno Dios",
+        "numero": "17",
+        "ruta": "017 - Oh Padre, eterno Dios",
+        "tiempos": "00:00:00|00:12:00|00:31:00|00:42:00|01:00:00|01:11:00|01:25:00"
+    },
+    {
+        "titulo": "Load al Padre",
+        "numero": "18",
+        "ruta": "018 - Load al Padre",
+        "tiempos": "00:00:00|00:05:00|00:18:00|00:32:00|00:45:00|00:58:00|01:11:00"
+    },
+    {
+        "titulo": "Padre nuestro",
+        "numero": "19",
+        "ruta": "019 - Padre nuestro",
+        "tiempos": "00:00:00|00:14:00|00:28:00|00:42:00|00:55:00|01:10:00|01:23:00"
+    },
+    {
+        "titulo": "A Dios, el Padre celestial",
+        "numero": "20",
+        "ruta": "020 - A Dios, el Padre celestial",
+        "tiempos": "00:00:00|00:10:00"
+    },
+    {
+        "titulo": "Gloria sea al Padre",
+        "numero": "21",
+        "ruta": "021 - Gloria sea al Padre",
+        "tiempos": "00:00:00|00:09:00|00:25:00"
+    },
+    {
+        "titulo": "Jehová está en su santo templo",
+        "numero": "22",
+        "ruta": "022 - Jehova esta en su santo templo",
+        "tiempos": "00:00:00|00:19:00|00:41:00"
+    },
+    {
+        "titulo": "¡Silencio! ¡Silencio!",
+        "numero": "23",
+        "ruta": "023 - Silencio Silencio",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:59:00|01:23:00|01:47:00|02:11:00"
+    },
+    {
+        "titulo": "Imploramos tu presencia",
+        "numero": "24",
+        "ruta": "024 - Imploramos tu presencia",
+        "tiempos": "00:00:00|00:11:00|00:37:00|01:04:00"
+    },
+    {
+        "titulo": "Siento la presencia del Señor",
+        "numero": "25",
+        "ruta": "025 - Siento la presencia del Senor",
+        "tiempos": "00:00:00|00:12:00|00:27:00"
+    },
+    {
+        "titulo": "Aquí reunidos",
+        "numero": "26",
+        "ruta": "026 - Aqui reunidos",
+        "tiempos": "00:00:00|00:07:00|00:24:00|00:40:00|00:56:00|01:13:00|01:28:00"
+    },
+    {
+        "titulo": "¡Oh Pastor divino, escucha!",
+        "numero": "27",
+        "ruta": "027 - Oh Pastor divino, escucha",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:39:00|01:00:00|01:12:00|01:31:00|01:42:00|02:02:00"
+    },
+    {
+        "titulo": "Tu pueblo jubiloso",
+        "numero": "28",
+        "ruta": "028 - Tu pueblo jubiloso",
+        "tiempos": "00:00:00|00:22:00|00:46:00|01:09:00|01:32:00|01:56:00|02:19:00"
+    },
+    {
+        "titulo": "Del culto el tiempo llega",
+        "numero": "29",
+        "ruta": "029 - Del culto el tiempo llega",
+        "tiempos": "00:00:00|00:13:00|00:36:00|00:59:00|01:22:00|01:46:00|02:09:00"
+    },
+    {
+        "titulo": "Abre mis ojos",
+        "numero": "30",
+        "ruta": "030 - Abre mis ojos",
+        "tiempos": "00:00:00|00:13:00|00:44:00"
+    },
+    {
+        "titulo": "¡Oh, Senor! al orar",
+        "numero": "31",
+        "ruta": "031 - Oh, Senor al orar",
+        "tiempos": "00:00:00|00:12:00|00:40:00"
+    },
+    {
+        "titulo": "Nos reunimos en tu santuario",
+        "numero": "32",
+        "ruta": "032 - Nos reunimos en tu santuario",
+        "tiempos": "00:00:00|00:08:00|00:30:00"
+    },
+    {
+        "titulo": "Tu presencia, Padre amante, invocamos",
+        "numero": "33",
+        "ruta": "033 - Tu presencia, Padre amante, invocamos",
+        "tiempos": "00:00:00|00:18:00|00:47:00"
+    },
+    {
+        "titulo": "En momentos así",
+        "numero": "34",
+        "ruta": "034 - En momentos asi",
+        "tiempos": "00:00:00|00:13:00|00:29:00|00:43:00"
+    },
+    {
+        "titulo": "Oye, oh Señor",
+        "numero": "35",
+        "ruta": "035 - Oye, oh Senor",
+        "tiempos": "00:00:00|00:21:00"
+    },
+    {
+        "titulo": "¡Oh, Dios, que oyes cada oración!",
+        "numero": "36",
+        "ruta": "036 - Oh, Dios, que oyes cada oracion",
+        "tiempos": "00:00:00|00:15:00|00:38:00"
+    },
+    {
+        "titulo": "Dios os guarde",
+        "numero": "37",
+        "ruta": "037 - Dios os guarde",
+        "tiempos": "00:00:00|00:11:00|00:35:00|00:59:00|01:23:00|01:47:00|02:11:00|02:35:00|02:59:00"
+    },
+    {
+        "titulo": "Que Dios te guarde",
+        "numero": "38",
+        "ruta": "038 - Que Dios te guarde",
+        "tiempos": "00:00:00|00:16:00|00:35:00|01:01:00|01:30:00"
+    },
+    {
+        "titulo": "Despide hoy tu grey",
+        "numero": "39",
+        "ruta": "039 - Despide hoy tu grey",
+        "tiempos": "00:00:00|00:08:00|00:27:00"
+    },
+    {
+        "titulo": "Shalom",
+        "numero": "40",
+        "ruta": "040 - Shalom",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00"
+    },
+    {
+        "titulo": "Gracia, amor y comunión",
+        "numero": "41",
+        "ruta": "041 - Gracia, amor y comunion",
+        "tiempos": "00:00:00|00:20:00|00:41:00|01:01:00"
+    },
+    {
+        "titulo": "Queda, Señor",
+        "numero": "42",
+        "ruta": "042 - Queda, Senor",
+        "tiempos": "00:00:00|00:19:00|00:43:00"
+    },
+    {
+        "titulo": "Agua de vida",
+        "numero": "43",
+        "ruta": "043 - Agua de vida",
+        "tiempos": "00:00:00|00:09:00|00:32:00"
+    },
+    {
+        "titulo": "Despídenos con tu bendicion",
+        "numero": "44",
+        "ruta": "044 - Despidenos con tu bendicion",
+        "tiempos": "00:00:00|00:06:00|00:20:00"
+    },
+    {
+        "titulo": "Después, Señor",
+        "numero": "45",
+        "ruta": "045 - Despues, Senor",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:46:00|01:04:00|01:23:00|01:41:00"
+    },
+    {
+        "titulo": "Hoy amanece",
+        "numero": "46",
+        "ruta": "046 - Hoy amanece",
+        "tiempos": "00:00:00|00:15:00|00:33:00|00:49:00|01:25:00"
+    },
+    {
+        "titulo": "Por la mañana",
+        "numero": "47",
+        "ruta": "047 - Por la manana",
+        "tiempos": "00:00:00|00:10:00|00:33:00|00:56:00|01:19:00"
+    },
+    {
+        "titulo": "Oh Dios, si he ofendido un corazón",
+        "numero": "48",
+        "ruta": "048 - Oh Dios, si he ofendido un corazon",
+        "tiempos": "00:00:00|00:14:00|00:27:00|00:40:00|00:53:00|01:06:00|01:20:00|01:33:00|01:46:00"
+    },
+    {
+        "titulo": "Cristo, ya la noche cierra",
+        "numero": "49",
+        "ruta": "049 - Cristo, ya la noche cierra",
+        "tiempos": "00:00:00|00:11:00|00:37:00|01:05:00|01:31:00"
+    },
+    {
+        "titulo": "Baja el sol",
+        "numero": "50",
+        "ruta": "050 - Baja el sol",
+        "tiempos": "00:00:00|00:09:00|00:27:00|00:45:00|00:56:00|01:08:00|01:27:00|01:44:00|01:55:00|02:08:00|02:26:00|02:43:00|02:55:00"
+    },
+    {
+        "titulo": "Nuestro sol se pone ya",
+        "numero": "51",
+        "ruta": "051 - Nuestro sol se pone ya",
+        "tiempos": "00:00:00|00:16:00|00:44:00|01:11:00|01:39:00|02:07:00|02:35:00"
+    },
+    {
+        "titulo": "Señor Jesús, el día ya se fue",
+        "numero": "52",
+        "ruta": "052 - Senor Jesus, el dia ya se fue",
+        "tiempos": "00:00:00|00:09:00|00:49:00|01:29:00|01:49:00|02:09:00|02:29:00"
+    },
+    {
+        "titulo": "¡Oh amor de Dios!",
+        "numero": "53",
+        "ruta": "053 - Oh amor de Dios",
+        "tiempos": "00:00:00|00:24:00|00:44:00|01:04:00|01:25:00|01:45:00|02:05:00|02:25:00|02:45:00|03:05:00"
+    },
+    {
+        "titulo": "Tan bueno es Dios",
+        "numero": "54",
+        "ruta": "054 - Tan bueno es Dios",
+        "tiempos": "00:00:00|00:08:00|00:27:00|00:47:00"
+    },
+    {
+        "titulo": "Grande, Señor, es tu misericordia",
+        "numero": "55",
+        "ruta": "055 - Grande, Senor, es tu misericordia",
+        "tiempos": "00:00:00|00:14:00|00:44:00|01:15:00|01:45:00|02:17:00|02:47:00"
+    },
+    {
+        "titulo": "De tal manera amó",
+        "numero": "56",
+        "ruta": "056 - De tal manera amo",
+        "tiempos": "00:00:00|00:14:00"
+    },
+    {
+        "titulo": "Mi Dios me ama",
+        "numero": "57",
+        "ruta": "057 - Mi Dios me ama",
+        "tiempos": "00:00:00|00:09:00|00:21:00|00:32:00|00:44:00|00:55:00|01:06:00|01:18:00|01:29:00"
+    },
+    {
+        "titulo": "Grande es el amor divino",
+        "numero": "58",
+        "ruta": "058 - Grande es el amor divino",
+        "tiempos": "00:00:00|00:08:00|00:31:00|00:43:00|01:07:00|01:19:00|01:43:00|01:56:00|02:19:00"
+    },
+    {
+        "titulo": "Mirad qué amor",
+        "numero": "59",
+        "ruta": "059 - Mirad que amor",
+        "tiempos": "00:00:00|00:05:00|00:17:00|00:35:00"
+    },
+    {
+        "titulo": "¡Santo! ¡Santo! ¡Santo! Tu gloria llena",
+        "numero": "60",
+        "ruta": "060 - Santo Santo Santo Tu gloria llena",
+        "tiempos": "00:00:00|00:17:00|00:53:00|01:17:00|01:52:00|02:17:00|02:53:00"
+    },
+    {
+        "titulo": "Santo, Santo, Santo, Dios Omnipotente",
+        "numero": "61",
+        "ruta": "061 - Santo, Santo, Santo, Dios Omnipotente",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:53:00|01:14:00|01:36:00|01:57:00"
+    },
+    {
+        "titulo": "Santo, Santo, Santo, santo es el Señor",
+        "numero": "62",
+        "ruta": "062 - Santo, Santo, Santo, santo es el Senor",
+        "tiempos": "00:00:00|00:13:00|00:42:00|01:10:00|01:39:00"
+    },
+    {
+        "titulo": "Al Rey adorad",
+        "numero": "63",
+        "ruta": "063 - Al Rey adorad",
+        "tiempos": "00:00:00|00:05:00|00:35:00|00:49:00|01:05:00|01:20:00|01:35:00|01:51:00"
+    },
+    {
+        "titulo": "Yo canto el poder de Dios",
+        "numero": "64",
+        "ruta": "064 - Yo canto el poder de Dios",
+        "tiempos": "00:00:00|00:12:00|00:30:00|00:52:00|01:10:00|01:32:00|01:50:00"
+    },
+    {
+        "titulo": "El mundo es de mi Dios",
+        "numero": "65",
+        "ruta": "065 - El mundo es de mi Dios",
+        "tiempos": "00:00:00|00:14:00|00:36:00|00:59:00|01:22:00|01:45:00|02:08:00"
+    },
+    {
+        "titulo": "¿Sabes cuántos?",
+        "numero": "66",
+        "ruta": "066 - Sabes cuantos",
+        "tiempos": "00:00:00|00:08:00|00:27:00|00:47:00|01:05:00|01:25:00|01:44:00"
+    },
+    {
+        "titulo": "¡Señor, yo te conozco!",
+        "numero": "67",
+        "ruta": "067 - Senor, yo te conozco",
+        "tiempos": "00:00:00|00:09:00|00:28:00|00:47:00|01:07:00|01:27:00|01:47:00|02:06:00|02:26:00"
+    },
+    {
+        "titulo": "Todo lo que ha creado Dios",
+        "numero": "68",
+        "ruta": "068 - Todo lo que ha creado Dios",
+        "tiempos": "00:00:00|00:24:00|00:48:00|01:04:00|01:28:00|01:45:00|02:09:00|02:26:00|02:50:00"
+    },
+    {
+        "titulo": "Señor, mi Dios",
+        "numero": "69",
+        "ruta": "069 - Senor, mi Dios",
+        "tiempos": "00:00:00|00:13:00|00:26:00|00:38:00|00:50:00|01:05:00|01:29:00|01:41:00|01:55:00|02:08:00|02:20:00|02:32:00|02:46:00|03:11:00|03:23:00"
+    },
+    {
+        "titulo": "¡Nuestro Dios reina!",
+        "numero": "70",
+        "ruta": "070 - Nuestro Dios reina",
+        "tiempos": "00:00:00|00:15:00|00:42:00"
+    },
+    {
+        "titulo": "Cada cosa hermosa",
+        "numero": "71",
+        "ruta": "071 - Cada cosa hermosa",
+        "tiempos": "00:00:00|00:19:00|00:39:00|00:59:00|01:19:00|01:40:00|02:00:00|02:20:00|02:41:00|03:02:00"
+    },
+    {
+        "titulo": "Fue un milagro",
+        "numero": "72",
+        "ruta": "072 - Fue un milagro",
+        "tiempos": "00:00:00|00:08:00|00:27:00|00:45:00|01:05:00|01:24:00|01:42:00|02:01:00|02:21:00|02:39:00"
+    },
+    {
+        "titulo": "La creación",
+        "numero": "73",
+        "ruta": "073 - La creacion",
+        "tiempos": "00:00:00|00:08:00|00:34:00|00:59:00|01:18:00|01:43:00|02:08:00|02:27:00|02:52:00|03:17:00"
+    },
+    {
+        "titulo": "Himno al Creador",
+        "numero": "74",
+        "ruta": "074 - Himno al Creador",
+        "tiempos": "00:00:00|00:13:00|00:34:00|00:48:00|01:09:00|01:30:00|01:44:00"
+    },
+    {
+        "titulo": "Grande es Jehová",
+        "numero": "75",
+        "ruta": "075 - Grande es Jehova",
+        "tiempos": "00:00:00|00:22:00|00:34:00|00:46:00|01:07:00|01:19:00|01:31:00"
+    },
+    {
+        "titulo": "Eterno Dios, mi Creador",
+        "numero": "76",
+        "ruta": "076 - Eterno Dios, mi Creador",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:54:00|01:17:00"
+    },
+    {
+        "titulo": "Sea exaltado",
+        "numero": "77",
+        "ruta": "077 - Sea exaltado",
+        "tiempos": "00:00:00|00:07:00|00:19:00|00:39:00"
+    },
+    {
+        "titulo": "¡Al mundo paz!",
+        "numero": "78",
+        "ruta": "078 - Al mundo paz",
+        "tiempos": "00:00:00|00:10:00|00:38:00|01:06:00"
+    },
+    {
+        "titulo": "Se oye un canto en alta esfera",
+        "numero": "79",
+        "ruta": "079 - Se oye un canto en alta esfera",
+        "tiempos": "00:00:00|00:18:00|00:36:00|01:04:00|01:22:00|01:49:00|02:07:00"
+    },
+    {
+        "titulo": "Venid, pastorcillos",
+        "numero": "80",
+        "ruta": "080 - Venid, pastorcillos",
+        "tiempos": "00:00:00|00:07:00|00:21:00|00:36:00|00:50:00|01:05:00|01:19:00"
+    },
+    {
+        "titulo": "Noche de paz",
+        "numero": "81",
+        "ruta": "081 - Noche de paz",
+        "tiempos": "00:00:00|00:11:00|00:30:00|00:49:00|01:09:00|01:28:00|01:47:00"
+    },
+    {
+        "titulo": "Ya repican las campanas",
+        "numero": "82",
+        "ruta": "082 - Ya repican las campanas",
+        "tiempos": "00:00:00|00:06:00|00:20:00|00:35:00|00:49:00|01:05:00|01:19:00"
+    },
+    {
+        "titulo": "La primera Navidad",
+        "numero": "83",
+        "ruta": "083 - La primera Navidad",
+        "tiempos": "00:00:00|00:16:00|00:49:00|01:06:00|01:38:00|01:56:00|02:28:00|02:45:00|03:18:00"
+    },
+    {
+        "titulo": "Ve, dilo en las montañas",
+        "numero": "84",
+        "ruta": "084 - Ve, dilo en las montanas",
+        "tiempos": "00:00:00|00:08:00|00:25:00|00:44:00|01:01:00|01:20:00|01:37:00|01:56:00"
+    },
+    {
+        "titulo": "Allá en el pesebre",
+        "numero": "85",
+        "ruta": "085 - Alla en el pesebre",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:44:00|01:02:00|01:21:00|01:38:00"
+    },
+    {
+        "titulo": "A medianoche en Belén",
+        "numero": "86",
+        "ruta": "086 - A medianoche en Belen",
+        "tiempos": "00:00:00|00:09:00|00:28:00|00:49:00|01:09:00|01:29:00|01:49:00"
+    },
+    {
+        "titulo": "Venid, fieles todos",
+        "numero": "87",
+        "ruta": "087 - Venid, fieles todos",
+        "tiempos": "00:00:00|00:19:00|00:49:00|01:09:00|01:38:00|01:58:00|02:27:00"
+    },
+    {
+        "titulo": "Oh, aldehuela de Belén",
+        "numero": "88",
+        "ruta": "088 - Oh, aldehuela de Belen",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:51:00|01:13:00|01:35:00|01:57:00"
+    },
+    {
+        "titulo": "Cristianos alegraos hoy",
+        "numero": "89",
+        "ruta": "089 - Cristianos alegraos hoy",
+        "tiempos": "00:00:00|00:06:00|00:23:00|00:39:00|00:56:00|01:13:00|01:30:00"
+    },
+    {
+        "titulo": "Somos del oriente",
+        "numero": "90",
+        "ruta": "090 - Somos del oriente",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:45:00|01:03:00|01:22:00|01:40:00|01:59:00|02:17:00|02:36:00|02:54:00"
+    },
+    {
+        "titulo": "¿Que niño es este?",
+        "numero": "91",
+        "ruta": "091 - Que nino es este",
+        "tiempos": "00:00:00|00:10:00|00:33:00|00:57:00|01:20:00|01:43:00|02:06:00"
+    },
+    {
+        "titulo": "Ángeles cantando estan",
+        "numero": "92",
+        "ruta": "092 - Angeles cantando estan",
+        "tiempos": "00:00:00|00:15:00|00:35:00|01:08:00|01:27:00"
+    },
+    {
+        "titulo": "Hubo Uno que quiso",
+        "numero": "93",
+        "ruta": "093 - Hubo Uno que quiso",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00|01:21:00|01:45:00|02:08:00"
+    },
+    {
+        "titulo": "Sangró mi soberano Dios",
+        "numero": "94",
+        "ruta": "094 - Sangro mi soberano Dios",
+        "tiempos": "00:00:00|00:17:00|00:35:00|00:55:00|01:14:00"
+    },
+    {
+        "titulo": "Un día",
+        "numero": "95",
+        "ruta": "095 - Un dia",
+        "tiempos": "00:00:00|00:14:00|00:42:00|01:09:00|01:36:00|02:03:00|02:29:00|02:57:00|03:24:00"
+    },
+    {
+        "titulo": "Al contemplar la excelsa cruz",
+        "numero": "96",
+        "ruta": "096 - Al contemplar la excelsa cruz",
+        "tiempos": "00:00:00|00:08:00|00:45:00|01:21:00|01:57:00"
+    },
+    {
+        "titulo": "En el monte Calvario",
+        "numero": "97",
+        "ruta": "097 - En el monte Calvario",
+        "tiempos": "00:00:00|00:14:00|00:45:00|01:16:00|01:48:00|02:19:00|02:51:00|03:22:00|03:54:00"
+    },
+    {
+        "titulo": "Rostro divino",
+        "numero": "98",
+        "ruta": "098 - Rostro divino",
+        "tiempos": "00:00:00|00:06:00|00:36:00|01:07:00|01:38:00"
+    },
+    {
+        "titulo": "Jamás podrá alguien separarnos",
+        "numero": "99",
+        "ruta": "099 - Jamas podra alguien separarnos",
+        "tiempos": "00:00:00|00:13:00|00:40:00|01:06:00|01:30:00|01:55:00|02:18:00"
+    },
+    {
+        "titulo": "¡Dulces momentos!",
+        "numero": "100",
+        "ruta": "100 - Dulces momentos",
+        "tiempos": "00:00:00|00:08:00|00:48:00|01:27:00|02:06:00"
+    },
+    {
+        "titulo": "Cabeza sacrosanta",
+        "numero": "101",
+        "ruta": "101 - Cabeza sacrosanta",
+        "tiempos": "00:00:00|00:09:00|00:33:00|00:56:00|01:20:00|01:44:00|02:08:00"
+    },
+    {
+        "titulo": "Cordero de Dios",
+        "numero": "102",
+        "ruta": "102 - Cordero de Dios",
+        "tiempos": "00:00:00|00:13:00|00:38:00|01:03:00|01:28:00|01:53:00|02:18:00"
+    },
+    {
+        "titulo": "Jesús resucitado",
+        "numero": "103",
+        "ruta": "103 - Jesus resucitado",
+        "tiempos": "00:00:00|00:39:00|01:18:00|02:00:00|02:38:00|03:20:00|03:58:00"
+    },
+    {
+        "titulo": "La tumba le encerró",
+        "numero": "104",
+        "ruta": "104 - La tumba le encerro",
+        "tiempos": "00:00:00|00:15:00|00:33:00|00:47:00|01:04:00|01:22:00|01:36:00|01:53:00|02:11:00|02:25:00"
+    },
+    {
+        "titulo": "Cristo ha resucitado",
+        "numero": "105",
+        "ruta": "105 - Cristo ha resucitado",
+        "tiempos": "00:00:00|00:05:00|00:44:00|01:22:00|02:00:00"
+    },
+    {
+        "titulo": "Tuya es la gloria",
+        "numero": "106",
+        "ruta": "106 - Tuya es la gloria",
+        "tiempos": "00:00:00|00:19:00|01:01:00|01:22:00|02:04:00|02:25:00|03:07:00"
+    },
+    {
+        "titulo": "Canto el gran amor",
+        "numero": "107",
+        "ruta": "107 - Canto el gran amor",
+        "tiempos": "00:00:00|00:11:00|00:33:00|00:56:00|01:17:00|01:39:00|02:01:00|02:23:00|02:45:00"
+    },
+    {
+        "titulo": "Amigo fiel es Cristo",
+        "numero": "108",
+        "ruta": "108 - Amigo fiel es Cristo",
+        "tiempos": "00:00:00|00:18:00|00:37:00|00:56:00|01:15:00|01:34:00|01:53:00|02:12:00|02:31:00"
+    },
+    {
+        "titulo": "Un buen amigo tengo yo",
+        "numero": "109",
+        "ruta": "109 - Un buen amigo tengo yo",
+        "tiempos": "00:00:00|00:15:00|00:33:00|00:50:00|01:06:00|01:24:00|01:41:00|01:58:00|02:14:00"
+    },
+    {
+        "titulo": "Cristo es el mejor amigo",
+        "numero": "110",
+        "ruta": "110 - Cristo es el mejor amigo",
+        "tiempos": "00:00:00|00:14:00|00:37:00|01:01:00|01:25:00|01:50:00|02:13:00|02:37:00|03:02:00"
+    },
+    {
+        "titulo": "Como Jesús no hay otro amigo",
+        "numero": "111",
+        "ruta": "111 - Como Jesus no hay otro amigo",
+        "tiempos": "00:00:00|00:24:00|00:47:00|01:10:00|01:33:00|01:56:00|02:18:00"
+    },
+    {
+        "titulo": "Ningún otro me amo cual Cristo",
+        "numero": "112",
+        "ruta": "112 - Ningun otro me amo cual Cristo",
+        "tiempos": "00:00:00|00:12:00|00:39:00|01:08:00|01:33:00|02:00:00|02:26:00"
+    },
+    {
+        "titulo": "Amor que no me dejaáas",
+        "numero": "113",
+        "ruta": "113 - Amor que no me dejaras",
+        "tiempos": "00:00:00|00:11:00|00:42:00|01:15:00|01:46:00"
+    },
+    {
+        "titulo": "Dime la antigua historia",
+        "numero": "114",
+        "ruta": "114 - Dime la antigua historia",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:54:00|01:17:00|01:39:00|02:01:00|02:24:00|02:46:00|03:08:00"
+    },
+    {
+        "titulo": "¡Oh, cuán grande amor!",
+        "numero": "115",
+        "ruta": "115 - Oh, cuan grande amor",
+        "tiempos": "00:00:00|00:08:00|00:29:00"
+    },
+    {
+        "titulo": "Cristo está a mi lado",
+        "numero": "116",
+        "ruta": "116 - Cristo esta a mi lado",
+        "tiempos": "00:00:00|00:10:00|00:39:00|01:08:00|01:36:00|02:05:00|02:35:00"
+    },
+    {
+        "titulo": "No sé por qué",
+        "numero": "117",
+        "ruta": "117 - No se por que",
+        "tiempos": "00:00:00|00:21:00|01:03:00|01:47:00|02:28:00|03:11:00|03:53:00"
+    },
+    {
+        "titulo": "Cuando estés cansado y abatido",
+        "numero": "118",
+        "ruta": "118 - Cuando estes cansado y abatido",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:49:00|01:10:00|01:30:00|01:50:00|02:10:00|02:31:00"
+    },
+    {
+        "titulo": "De su trono, mi Jesús",
+        "numero": "119",
+        "ruta": "119 - De su trono, mi Jesus",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:44:00|01:02:00|01:20:00|01:37:00"
+    },
+    {
+        "titulo": "¡Cuánto me alegra!",
+        "numero": "120",
+        "ruta": "120 - Cuanto me alegra",
+        "tiempos": "00:00:00|00:19:00|00:38:00|00:58:00|01:17:00|01:36:00|01:56:00"
+    },
+    {
+        "titulo": "Es Jesucristo la vida, la luz",
+        "numero": "121",
+        "ruta": "121 - Es Jesucristo la vida, la luz",
+        "tiempos": "00:00:00|00:17:00|00:43:00|01:09:00|01:34:00|02:05:00|02:35:00"
+    },
+    {
+        "titulo": "Divino pastor",
+        "numero": "122",
+        "ruta": "122 - Divino pastor",
+        "tiempos": "00:00:00|00:11:00|00:37:00|01:02:00|01:28:00|01:54:00|02:20:00"
+    },
+    {
+        "titulo": "¡Cuánto nos ama Jesús!",
+        "numero": "123",
+        "ruta": "123 - Cuanto nos ama Jesus",
+        "tiempos": "00:00:00|00:15:00|00:57:00"
+    },
+    {
+        "titulo": "Ama el Pastor sus ovejas",
+        "numero": "124",
+        "ruta": "124 - Ama el Pastor sus ovejas",
+        "tiempos": "00:00:00|00:22:00|00:45:00|01:08:00|01:32:00|01:55:00|02:18:00|02:42:00|03:06:00|03:30:00"
+    },
+    {
+        "titulo": "Infinito amor de Cristo",
+        "numero": "125",
+        "ruta": "125 - Infinito amor de Cristo",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:52:00"
+    },
+    {
+        "titulo": "Abrigadas y salvas en el redil",
+        "numero": "126",
+        "ruta": "126 - Abrigadas y salvas en el redil",
+        "tiempos": "00:00:00|00:12:00|00:36:00|00:57:00|01:20:00|01:40:00|02:04:00|02:24:00|02:48:00"
+    },
+    {
+        "titulo": "Cristo, nombre dulce",
+        "numero": "127",
+        "ruta": "127 - Cristo, nombre dulce",
+        "tiempos": "00:00:00|00:25:00|00:37:00|00:52:00|01:10:00|01:19:00|01:38:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¡Tu nombre es dulce, buen Jesus!",
+        "numero": "128",
+        "ruta": "128 - Tu nombre es dulce, buen Jesus",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:47:00|01:07:00|01:26:00|01:45:00|02:05:00|02:24:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Cual Jesús no hay otro nombre",
+        "numero": "129",
+        "ruta": "129 - Cual Jesus no hay otro nombre",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:42:00|00:53:00|01:14:00|01:25:00|01:36:00|01:56:00|02:07:00|02:18:00|02:39:00|02:50:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Cristo, Cristo, Cristo",
+        "numero": "130",
+        "ruta": "130 - Cristo, Cristo, Cristo",
+        "tiempos": "00:00:00|00:14:00|00:49:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Bendito es el nombre de Jesús",
+        "numero": "131",
+        "ruta": "131 - Bendito es el nombre de Jesus",
+        "tiempos": "00:00:00|00:08:00|00:46:00|01:23:00|02:01:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Dulce, hermoso nombre es Jesús",
+        "numero": "132",
+        "ruta": "132 - Dulce, hermoso nombre es Jesus",
+        "tiempos": "00:00:00|00:13:00|00:43:00|01:12:00|01:42:00|02:10:00|02:40:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Venid, con cánticos venid",
+        "numero": "133",
+        "ruta": "133 - Venid, con canticos venid",
+        "tiempos": "00:00:00|00:08:00|00:24:00|00:33:00|00:50:00|00:59:00|01:16:00|01:25:00|01:42:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Cual mirra fragante",
+        "numero": "134",
+        "ruta": "134 - Cual mirra fragante",
+        "tiempos": "00:00:00|00:11:00|00:30:00|00:51:00|01:11:00|01:30:00|01:50:00|02:09:00|02:28:00|02:49:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Cristo, nombre sublime",
+        "numero": "135",
+        "ruta": "135 - Cristo, nombre sublime",
+        "tiempos": "00:00:00|00:15:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¡Oh, cuánto amo a Cristo!",
+        "numero": "136",
+        "ruta": "136 - Oh, cuanto amo a Cristo",
+        "tiempos": "00:00:00|00:07:00|00:24:00|00:42:00|00:59:00|01:16:00|01:33:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "De Jesús el nombre invoca",
+        "numero": "137",
+        "ruta": "137 - De Jesus el nombre invoca",
+        "tiempos": "00:00:00|00:22:00|00:45:00|01:09:00|01:32:00|01:56:00|02:19:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "De mi amante Salvador",
+        "numero": "138",
+        "ruta": "138 - De mi amante Salvador",
+        "tiempos": "00:00:00|00:11:00|00:22:00|00:34:00|00:45:00|00:57:00|01:09:00|01:21:00|01:31:00|01:44:00|01:56:00|02:07:00|02:18:00|02:31:00|02:43:00|02:54:00|03:05:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "La tierna voz del Salvador",
+        "numero": "139",
+        "ruta": "139 - La tierna voz del Salvador",
+        "tiempos": "00:00:00|00:13:00|00:36:00|01:00:00|01:25:00|01:50:00|02:13:00|02:38:00|03:02:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Te quiero, te quiero",
+        "numero": "140",
+        "ruta": "140 - Te quiero, te quiero",
+        "tiempos": "00:00:00|00:10:00|00:30:00|00:51:00|01:11:00|01:31:00|01:52:00|02:12:00|02:32:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¡Alabadle!",
+        "numero": "141",
+        "ruta": "141 - Alabadle",
+        "tiempos": "00:00:00|00:16:00|00:32:00|00:47:00|01:02:00|01:18:00|01:34:00|01:49:00|02:04:00|02:20:00|02:44:00|03:07:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Venid, cantad, de gozo en plenitud",
+        "numero": "142",
+        "ruta": "142 - Venid, cantad, de gozo en plenitud",
+        "tiempos": "00:00:00|00:15:00|00:33:00|00:49:00|01:15:00|01:25:00|01:42:00|01:58:00|02:24:00|02:33:00|02:50:00|03:07:00|03:32:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Digno eres tú",
+        "numero": "143",
+        "ruta": "143 - Digno eres tu",
+        "tiempos": "00:00:00|00:14:00|00:29:00|00:44:00|01:15:00|01:31:00|01:44:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Mi Salvador",
+        "numero": "144",
+        "ruta": "144 - Mi Salvador",
+        "tiempos": "00:00:00|00:24:00|00:51:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Con acentos de alegría",
+        "numero": "145",
+        "ruta": "145 - Con acentos de alegria",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:48:00|01:09:00|01:28:00|01:47:00|02:07:00|02:27:00|02:45:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Ni en la tierra",
+        "numero": "146",
+        "ruta": "146 - Ni en la tierra",
+        "tiempos": "00:00:00|00:11:00|00:37:00|01:02:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A Dios sea gloria",
+        "numero": "147",
+        "ruta": "147 - A Dios sea gloria",
+        "tiempos": "00:00:00|00:16:00|00:32:00|00:47:00|01:03:00|01:18:00|01:34:00|01:49:00|02:05:00|02:28:00|02:45:00|03:01:00|03:16:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Solo Cristo",
+        "numero": "148",
+        "ruta": "148 - Solo Cristo",
+        "tiempos": "00:00:00|00:16:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Junto a la cruz do Jesús murió",
+        "numero": "149",
+        "ruta": "149 - Junto a la cruz do Jesus murio",
+        "tiempos": "00:00:00|00:18:00|00:39:00|01:00:00|01:21:00|01:41:00|02:02:00|02:22:00|02:43:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A Cristo doy mi canto",
+        "numero": "150",
+        "ruta": "150 - A Cristo doy mi canto",
+        "tiempos": "00:00:00|00:17:00|00:34:81|00:52:00|01:10:32|01:27:00|01:45:60|02:04:00|02:23:36",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Por eso lo amo",
+        "numero": "151",
+        "ruta": "151 - Por eso lo amo",
+        "tiempos": "00:00:00|00:06:00|00:22:00|00:37:00|00:53:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A ti, Jesús",
+        "numero": "152",
+        "ruta": "152 - A ti, Jesus",
+        "tiempos": "00:00:00|00:12:00|00:39:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Ved a Cristo",
+        "numero": "153",
+        "ruta": "153 - Ved a Cristo",
+        "tiempos": "00:00:00|00:13:00|00:33:00|00:54:00|01:13:00|01:33:00|01:53:00|02:12:00|02:32:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Dad gloria al Cordero Rey",
+        "numero": "154",
+        "ruta": "154 - Dad gloria al Cordero Rey",
+        "tiempos": "00:00:00|00:09:00|00:23:00|00:41:00|00:55:00|01:13:00|01:27:00|01:45:00|01:59:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "En Sion Jesús hoy reina",
+        "numero": "155",
+        "ruta": "155 - En Sion Jesus hoy reina",
+        "tiempos": "00:00:00|00:16:00|00:38:00|01:00:00|01:22:00|01:44:00|02:06:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A Cristo coronad",
+        "numero": "156",
+        "ruta": "156 - A Cristo coronad",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:46:00|01:04:00|01:23:00|01:41:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¡Majestad!",
+        "numero": "157",
+        "ruta": "157 - Majestad",
+        "tiempos": "00:00:00|00:07:00|00:28:00|00:47:00|01:07:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Amanece ya la mañana de oro",
+        "numero": "158",
+        "ruta": "158 - Amanece ya la manana de oro",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00|01:15:00|01:38:00|02:00:00|02:22:00|02:44:00"
+    },
+    {
+        "titulo": "Yo espero la mañana",
+        "numero": "159",
+        "ruta": "159 - Yo espero la manana",
+        "tiempos": "00:00:00|00:08:00|00:32:00|00:56:00|01:20:00|01:45:00|02:09:00|02:33:00|02:57:00"
+    },
+    {
+        "titulo": "Viene otra vez nuestro Salvador",
+        "numero": "160",
+        "ruta": "160 - Viene otra vez nuestro Salvador",
+        "tiempos": "00:00:00|00:16:00|00:31:00|00:53:00|01:11:00|01:30:00|01:48:00|02:06:00|02:24:00|02:42:00|03:01:00|03:19:00|03:37:00"
+    },
+    {
+        "titulo": "¡Oh! cuán gratas las nuevas",
+        "numero": "161",
+        "ruta": "161 - Oh cuan gratas las nuevas",
+        "tiempos": "00:00:00|00:30:00|00:44:00|00:57:00|01:26:00|01:40:00|01:52:00|02:22:00|02:35:00|02:48:00"
+    },
+    {
+        "titulo": "En presencia estar de Cristo",
+        "numero": "162",
+        "ruta": "162 - En presencia estar de Cristo",
+        "tiempos": "00:00:00|00:27:00|00:52:00|01:22:00|01:47:00|02:17:00|02:42:00|03:12:00|03:38:00"
+    },
+    {
+        "titulo": "Cristo viene, esto es cierto",
+        "numero": "163",
+        "ruta": "163 - Cristo viene, esto es cierto",
+        "tiempos": "00:00:00|00:07:00|00:24:00|00:49:00|01:06:00|01:31:00|01:48:00|02:14:00|02:31:00"
+    },
+    {
+        "titulo": "Jesús pronto volverá",
+        "numero": "164",
+        "ruta": "164 - Jesus pronto volvera",
+        "tiempos": "00:00:00|00:07:00|00:26:00|00:44:00|01:02:00|01:20:00|01:39:00|01:56:00|02:15:00"
+    },
+    {
+        "titulo": "¡Vendrá el Senor!",
+        "numero": "165",
+        "ruta": "165 - Vendra el Senor",
+        "tiempos": "00:00:00|00:23:00|00:40:00|00:55:00|01:11:00|01:26:00|01:42:00|01:57:00|02:13:00|02:28:00|02:45:00|03:00:00|03:16:00"
+    },
+    {
+        "titulo": "Siervos de Dios, la trompeta tocad",
+        "numero": "166",
+        "ruta": "166 - Siervos de Dios, la trompeta tocad",
+        "tiempos": "00:00:00|00:09:00|00:20:00|00:33:00|00:45:00|00:56:00|01:09:00|01:21:00|01:45:00"
+    },
+    {
+        "titulo": "¿Quién en deslumbrante gloria?",
+        "numero": "167",
+        "ruta": "167 - Quien en deslumbrante gloria",
+        "tiempos": "00:00:00|00:18:00|00:38:00|00:58:00|01:18:00|01:37:00|01:57:00|02:17:00|02:37:00|02:56:00"
+    },
+    {
+        "titulo": "El Rey que viene",
+        "numero": "168",
+        "ruta": "168 - El Rey que viene",
+        "tiempos": "00:00:00|00:10:00|00:33:00|00:55:00|01:18:00|01:40:00|02:03:00|02:25:00|02:49:00"
+    },
+    {
+        "titulo": "Cuando suene la trompeta",
+        "numero": "169",
+        "ruta": "169 - Cuando suene la trompeta",
+        "tiempos": "00:00:00|00:29:00|00:40:00|00:51:00|01:16:00|01:28:00|01:38:00|02:08:00|02:21:00|02:32:00"
+    },
+    {
+        "titulo": "La segunda venida de Cristo",
+        "numero": "170",
+        "ruta": "170 - La segunda venida de Cristo",
+        "tiempos": "00:00:00|00:10:00|00:37:00|01:04:00|01:31:00|01:58:00|02:25:00|02:52:00|03:19:00"
+    },
+    {
+        "titulo": "¿Has oído el mensaje?",
+        "numero": "171",
+        "ruta": "171 - Has oido el mensaje",
+        "tiempos": "00:00:00|00:12:00|00:24:00|00:35:00|00:52:00|01:10:00|01:22:00|01:33:00|01:50:00|02:09:00|02:20:00|02:31:00|02:48:00|03:07:00|03:19:00|03:30:00|03:47:00"
+    },
+    {
+        "titulo": "Promesa dulce",
+        "numero": "172",
+        "ruta": "172 - Promesa dulce",
+        "tiempos": "00:00:00|00:19:00|00:41:00|01:02:00|01:23:00|01:44:00|02:05:00|02:26:00|02:47:00"
+    },
+    {
+        "titulo": "¿Será al albor?",
+        "numero": "173",
+        "ruta": "173 - Sera al albor",
+        "tiempos": "00:00:00|00:14:00|00:32:00|00:46:00|01:11:00|01:29:00|01:44:00|02:08:00|02:26:00|02:41:00"
+    },
+    {
+        "titulo": "Mira los hitos",
+        "numero": "174",
+        "ruta": "174 - Mira los hitos",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:54:00|01:15:00|01:37:00|01:58:00"
+    },
+    {
+        "titulo": "Ved a Cristo, que se acerca",
+        "numero": "175",
+        "ruta": "175 - Ved a Cristo, que se acerca",
+        "tiempos": "00:00:00|00:12:00|00:30:00|00:48:00|01:06:00|01:28:00|01:46:00"
+    },
+    {
+        "titulo": "Tú verás al Rey viniendo",
+        "numero": "176",
+        "ruta": "176 - Tu veras al Rey viniendo",
+        "tiempos": "00:00:00|00:13:00|00:28:00|00:42:00|00:56:00|01:11:00|01:25:00"
+    },
+    {
+        "titulo": "Los tres mensajes angélicos",
+        "numero": "177",
+        "ruta": "177 - Los tres mensajes angelicos",
+        "tiempos": "00:00:00|00:06:00|00:25:00|00:39:00|00:58:00|01:12:00|01:31:00|01:45:00|02:04:00"
+    },
+    {
+        "titulo": "Contemplé la gloria",
+        "numero": "178",
+        "ruta": "178 - Contemple la gloria",
+        "tiempos": "00:00:00|00:09:00|00:21:00|00:31:00|00:51:00|01:03:00|01:13:00|01:34:00|01:45:00|01:55:00"
+    },
+    {
+        "titulo": "¡Cristo viene! Aquel día se acerca",
+        "numero": "179",
+        "ruta": "179 - Cristo viene Aquel dia se acerca",
+        "tiempos": "00:00:00|00:15:00|00:37:00|00:54:00|01:16:00|01:32:00|01:54:00"
+    },
+    {
+        "titulo": "Sí, lo veremos",
+        "numero": "180",
+        "ruta": "180 - Si, lo veremos",
+        "tiempos": "00:00:00|00:10:00|00:25:00|00:40:00|00:54:00|01:09:00|01:31:00"
+    },
+    {
+        "titulo": "Una esperanza",
+        "numero": "181",
+        "ruta": "181 - Una esperanza",
+        "tiempos": "00:00:00|00:24:00|01:04:00|01:37:00|02:04:00|02:27:00"
+    },
+    {
+        "titulo": "Veremos a Cristo",
+        "numero": "182",
+        "ruta": "182 - Veremos a Cristo",
+        "tiempos": "00:00:00|00:09:00|00:57:00|01:46:00|02:10:00|02:34:00"
+    },
+    {
+        "titulo": "No me olvidé de ti",
+        "numero": "183",
+        "ruta": "183 - No me olvide de ti",
+        "tiempos": "00:00:00|00:13:00|00:36:00|00:59:00|01:22:00|01:47:00|02:11:00|02:34:00|02:56:00"
+    },
+    {
+        "titulo": "Nunca te rindas",
+        "numero": "184",
+        "ruta": "184 - Nunca te rindas",
+        "tiempos": "00:00:00|00:06:00|00:35:00|01:07:00|01:22:00|01:37:00"
+    },
+    {
+        "titulo": "Al cielo voy",
+        "numero": "185",
+        "ruta": "185 - Al cielo voy",
+        "tiempos": "00:00:00|00:15:00|00:37:00|01:00:00|01:23:00|01:45:00|02:08:00"
+    },
+    {
+        "titulo": "Hace años escuche",
+        "numero": "186",
+        "ruta": "186 - Hace anos escuche",
+        "tiempos": "00:00:00|00:37:00|00:56:00|01:15:00|01:53:00|02:13:00|02:32:00"
+    },
+    {
+        "titulo": "Aunque anochezca",
+        "numero": "187",
+        "ruta": "187 - Aunque anochezca",
+        "tiempos": "00:00:00|00:09:00|00:48:00|01:28:00|02:07:00"
+    },
+    {
+        "titulo": "Gran alegría",
+        "numero": "188",
+        "ruta": "188 - Gran alegria",
+        "tiempos": "00:00:00|00:09:00|00:20:00|00:30:00|00:46:00|01:10:00|01:21:00|01:31:00|01:51:00|02:11:00|02:21:00"
+    },
+    {
+        "titulo": "Cristo muy pronto vendrá",
+        "numero": "189",
+        "ruta": "189 - Cristo muy pronto vendra",
+        "tiempos": "00:00:00|00:08:00|00:28:00"
+    },
+    {
+        "titulo": "Santo Espíritu de Cristo",
+        "numero": "190",
+        "ruta": "190 - Santo Espiritu de Cristo",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:44:00|01:02:00|01:20:00|01:38:00|01:56:00|02:14:00"
+    },
+    {
+        "titulo": "La nueva proclamad",
+        "numero": "191",
+        "ruta": "191 - La nueva proclamad",
+        "tiempos": "00:00:00|00:09:00|00:28:00|00:45:00|01:05:00|01:24:00|01:43:00|02:00:00|02:19:00|02:38:00|02:57:00|03:15:00|03:34:00|03:52:00|04:12:00|04:29:00|04:49:00"
+    },
+    {
+        "titulo": "Llena mi ser",
+        "numero": "192",
+        "ruta": "192 - Llena mi ser",
+        "tiempos": "00:00:00|00:11:00|00:35:00"
+    },
+    {
+        "titulo": "Dios nos ha dado promesa",
+        "numero": "193",
+        "ruta": "193 - Dios nos ha dado promesa",
+        "tiempos": "00:00:00|00:13:00|00:31:00|00:49:00|01:07:00|01:25:00|01:43:00|02:02:00|02:20:00"
+    },
+    {
+        "titulo": "Vive en mí",
+        "numero": "194",
+        "ruta": "194 - Vive en mi",
+        "tiempos": "00:00:00|00:10:00|00:33:00|00:57:00|01:19:00|01:44:00|02:06:00"
+    },
+    {
+        "titulo": "Abre mis ojos a la luz",
+        "numero": "195",
+        "ruta": "195 - Abre mis ojos a la luz",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:51:00|01:12:00|01:33:00|01:54:00|02:14:00|02:35:00"
+    },
+    {
+        "titulo": "Santo Espíritu de Dios",
+        "numero": "196",
+        "ruta": "196 - Santo Espiritu de Dios",
+        "tiempos": "00:00:00|00:07:00|00:42:00|01:17:00"
+    },
+    {
+        "titulo": "Dulce Espíritu",
+        "numero": "197",
+        "ruta": "197 - Dulce Espiritu",
+        "tiempos": "00:00:00|00:10:00|01:02:00|01:28:00"
+    },
+    {
+        "titulo": "Desciende, Espíritu de amor",
+        "numero": "198",
+        "ruta": "198 - Desciende, Espiritu de amor",
+        "tiempos": "00:00:00|00:14:00|00:43:00|01:12:00|01:40:00"
+    },
+    {
+        "titulo": "Movidos por tu Espíritu",
+        "numero": "199",
+        "ruta": "199 - Movidos por tu Espiritu",
+        "tiempos": "00:00:00|00:13:00|00:36:00|00:48:00|01:11:00|01:23:00|01:45:00"
+    },
+    {
+        "titulo": "Bautízanos hoy",
+        "numero": "200",
+        "ruta": "200 - Bautizanos hoy",
+        "tiempos": "00:00:00|00:13:00|00:29:00|00:44:00|00:59:00|01:15:00|01:29:00"
+    },
+    {
+        "titulo": "Canción del Espíritu",
+        "numero": "201",
+        "ruta": "201 - Cancion del Espiritu",
+        "tiempos": "00:00:00|00:07:00|00:29:00|00:51:00|01:32:00|01:54:00|02:17:00"
+    },
+    {
+        "titulo": "Danos el fuego",
+        "numero": "202",
+        "ruta": "202 - Danos el fuego",
+        "tiempos": "00:00:00|00:22:00|00:54:00|01:26:00|01:59:00"
+    },
+    {
+        "titulo": "Santo Espíritu llena mi vida",
+        "numero": "203",
+        "ruta": "203 - Santo Espiritu llena mi vida",
+        "tiempos": "00:00:00|00:12:00|00:37:00|01:00:00|01:25:00"
+    },
+    {
+        "titulo": "Oh, cantádmelas otra vez",
+        "numero": "204",
+        "ruta": "204 - Oh, cantadmelas otra vez",
+        "tiempos": "00:00:00|00:21:00|00:41:00|00:51:00|01:10:00|01:30:00|01:40:00|01:59:00|02:20:00|02:30:00"
+    },
+    {
+        "titulo": "Dadme la Biblia",
+        "numero": "205",
+        "ruta": "205 - Dadme la Biblia",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:52:00|01:14:00|01:35:00|01:56:00|02:18:00|02:39:00"
+    },
+    {
+        "titulo": "Padre, tu Palabra es mi delicia",
+        "numero": "206",
+        "ruta": "206 - Padre, tu Palabra es mi delicia",
+        "tiempos": "00:00:00|00:11:00|00:32:00|00:54:00|01:16:00|01:39:00|02:00:00"
+    },
+    {
+        "titulo": "Dios nos habla",
+        "numero": "207",
+        "ruta": "207 - Dios nos habla",
+        "tiempos": "00:00:00|00:06:00|00:33:00|01:01:00|01:28:00|01:56:00|02:25:00"
+    },
+    {
+        "titulo": "¡Santa Biblia!",
+        "numero": "208",
+        "ruta": "208 - Santa Biblia",
+        "tiempos": "00:00:00|00:10:00|00:30:00|00:40:00|01:00:00|01:10:00|01:30:00|01:41:00|02:00:00"
+    },
+    {
+        "titulo": "La Biblia nos habla de Cristo",
+        "numero": "209",
+        "ruta": "209 - La Biblia nos habla de Cristo",
+        "tiempos": "00:00:00|00:26:00|00:53:00|01:15:00|01:37:00|01:57:00|02:24:00|02:47:00|03:09:00|03:29:00|03:56:00|04:19:00|04:41:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Huye cual ave",
+        "numero": "210",
+        "ruta": "210 - Huye cual ave",
+        "tiempos": "00:00:00|00:14:00|00:44:00|01:06:00|01:22:00|01:51:00|02:13:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Fija tus ojos en Cristo",
+        "numero": "211",
+        "ruta": "211 - Fija tus ojos en Cristo",
+        "tiempos": "00:00:00|00:23:00|00:56:00|01:29:00|02:02:00|02:35:00|03:08:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A tu puerta Cristo está",
+        "numero": "212",
+        "ruta": "212 - A tu puerta Cristo esta",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:52:00|01:13:00|01:34:00|01:55:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Tierno y amante, Jesús nos invita",
+        "numero": "213",
+        "ruta": "213 - Tierno y amante, Jesus nos invita",
+        "tiempos": "00:00:00|00:14:00|00:28:00|00:42:00|01:14:00|01:27:00|01:41:00|02:13:00|02:27:00|02:41:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Mientras Jesús te llama",
+        "numero": "214",
+        "ruta": "214 - Mientras Jesus te llama",
+        "tiempos": "00:00:00|00:11:00|00:32:00|00:53:00|01:14:00|01:35:00|01:57:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Con voz benigna te llama Jesús",
+        "numero": "215",
+        "ruta": "215 - Con voz benigna te llama Jesus",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:45:00|01:03:00|01:22:00|01:32:00|01:40:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Dios al pródigo llama",
+        "numero": "216",
+        "ruta": "216 - Dios al prodigo llama",
+        "tiempos": "00:00:00|00:12:00|00:26:00|00:40:00|01:07:00|01:22:00|01:35:00|02:03:00|02:17:00|02:30:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Bienvenida da Jesús",
+        "numero": "217",
+        "ruta": "217 00:21|00:38|01:03|01:21|01:45|02:04- Bienvenida da Jesus",
+        "tiempos": "00:00:00|:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A Jesucristo ven sin tardar",
+        "numero": "218",
+        "ruta": "218 - A Jesucristo ven sin tardar",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:52:00|01:13:00|01:35:00|01:56:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Tan triste y tan lejos de Dios",
+        "numero": "219",
+        "ruta": "219 - Tan triste y tan lejos de Dios",
+        "tiempos": "00:00:00|00:15:00|00:47:00|01:03:00|01:19:00|01:36:00|01:51:00|02:08:00|02:24:00|02:41:00|02:57:00|03:13:00|03:29:00|04:02:00|04:18:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Allá la puerta abierta está",
+        "numero": "220",
+        "ruta": "220 - Alla la puerta abierta esta",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:56:00|01:19:00|01:43:00|02:05:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Puertas abiertas encontrarán",
+        "numero": "221",
+        "ruta": "221 - Puertas abiertas encontraran",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:45:00|01:03:00|01:22:00|01:40:00|01:59:00|02:18:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Del trono celestial",
+        "numero": "222",
+        "ruta": "222 - Del trono celestial",
+        "tiempos": "00:00:00|00:24:00|00:46:00|01:10:00|01:32:00|01:56:00|02:18:00|02:42:00|03:04:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Oí la voz del Salvador",
+        "numero": "223",
+        "ruta": "223 - Oi la voz del Salvador",
+        "tiempos": "00:00:00|00:11:00|00:36:00|01:01:00|01:28:00|01:52:00|02:19:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Oí la voz del buen Jesús",
+        "numero": "224",
+        "ruta": "224 - Oi la voz del buen Jesus",
+        "tiempos": "00:00:00|00:10:00|00:36:00|01:01:00|01:27:00|01:53:00|02:17:00|02:43:00|03:08:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Un hombre llegose de noche a Jesús",
+        "numero": "225",
+        "ruta": "225 - Un hombre llegose de noche a Jesus",
+        "tiempos": "00:00:00|00:21:00|00:33:00|00:44:00|01:08:00|01:20:00|01:31:00|01:55:00|02:07:00|02:18:00|02:42:00|02:54:00|03:04:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Buscad primero",
+        "numero": "226",
+        "ruta": "226 - Buscad primero",
+        "tiempos": "00:00:00|00:11:00|00:25:00|00:41:00|00:55:00|01:11:00|01:25:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Preste oídos el humano",
+        "numero": "227",
+        "ruta": "227 - Preste oidos el humano",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:55:00|01:06:00|01:23:00|01:40:00|01:56:00|02:12:00|02:23:00|02:46:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Me buscareis y me hallaréis",
+        "numero": "228",
+        "ruta": "228 - Me buscareis y me hallareis",
+        "tiempos": "00:00:00|00:23:00|00:44:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¿Has pensado lo que puede costar?",
+        "numero": "229",
+        "ruta": "229 - Has pensado lo que puede costar",
+        "tiempos": "00:00:00|00:07:00|00:23:00|00:40:00|00:57:00|01:14:00|01:30:00|01:47:00|02:03:00|02:21:00|02:37:00|02:54:00|03:11:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Abre tu corazón",
+        "numero": "230",
+        "ruta": "230 - Abre tu corazon",
+        "tiempos": "00:00:00|00:14:00|00:43:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Todo en el altar",
+        "numero": "231",
+        "ruta": "231 - Todo en el altar",
+        "tiempos": "00:00:00|00:21:00|00:36:00|00:51:00|01:21:00|01:35:00|01:50:00|02:19:00|02:34:00|02:49:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Entrégate en oración",
+        "numero": "232",
+        "ruta": "232 - Entregate en oracion",
+        "tiempos": "00:00:00|00:12:00|00:26:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Ven a la Fuente de vida",
+        "numero": "233",
+        "ruta": "233 - Ven a la Fuente de vida",
+        "tiempos": "00:00:00|00:18:00|00:37:00|00:56:00|01:15:00|01:35:00|01:54:00|02:15:00|02:34:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¿Temes que en la lucha?",
+        "numero": "234",
+        "ruta": "234 - Temes que en la lucha",
+        "tiempos": "00:00:00|00:09:00|00:20:00|00:30:00|00:52:00|01:04:00|01:14:00|01:36:00|01:47:00|01:58:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "La razón de vivir",
+        "numero": "235",
+        "ruta": "235 - La razon de vivir",
+        "tiempos": "00:00:00|00:13:00|00:27:00|00:40:00|00:55:00|01:21:00|01:35:00|01:56:00|02:10:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A Jesús entrega todo",
+        "numero": "236",
+        "ruta": "236 - A Jesus entrega todo",
+        "tiempos": "00:00:00|00:14:00|00:46:00|01:19:00|01:50:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Jesús hoy espera entrar en tu ser",
+        "numero": "237",
+        "ruta": "237 - Jesus hoy espera entrar en tu ser",
+        "tiempos": "00:00:00|00:14:00|00:30:00|00:46:00|01:01:00|01:18:00|01:34:00|01:51:00|02:06:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Yo escucho, buen Jesús",
+        "numero": "238",
+        "ruta": "238 - Yo escucho, buen Jesus",
+        "tiempos": "00:00:00|00:15:00|00:38:00|01:00:00|01:22:00|01:43:00|02:05:00"
+    },
+    {
+        "titulo": "De Dios vagaba lejos yo",
+        "numero": "239",
+        "ruta": "239 - De Dios vagaba lejos yo",
+        "tiempos": "00:00:00|00:11:00|00:33:00|00:56:00|01:18:00|01:41:00|02:04:00|02:25:00|02:47:00"
+    },
+    {
+        "titulo": "Te ruego, oh Dios",
+        "numero": "240",
+        "ruta": "240 - Te ruego, oh Dios",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:55:00|01:17:00|01:41:00|02:02:00|02:25:00|02:48:00"
+    },
+    {
+        "titulo": "Perdón te ruego, mi Señor y Dios",
+        "numero": "241",
+        "ruta": "241 - Perdon te ruego, mi Senor y Dios",
+        "tiempos": "00:00:00|00:16:00|00:52:00|01:28:00|02:04:00"
+    },
+    {
+        "titulo": "Una es, Señor, mi petición",
+        "numero": "242",
+        "ruta": "242 - Una es, Senor, mi peticion",
+        "tiempos": "00:00:00|00:05:00|00:27:00|00:48:00|01:10:00|01:32:00|01:53:00|02:15:00|02:37:00"
+    },
+    {
+        "titulo": "Entrego todo a Cristo",
+        "numero": "243",
+        "ruta": "243 - Entrego todo a Cristo",
+        "tiempos": "00:00:00|00:20:00|00:56:00|01:33:00|02:10:00"
+    },
+    {
+        "titulo": "Padre, Dios",
+        "numero": "244",
+        "ruta": "244 - Padre, Dios",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00|01:22:00|01:46:00|02:10:00"
+    },
+    {
+        "titulo": "Cúmplase, oh Cristo, tu voluntad",
+        "numero": "245",
+        "ruta": "245 - Cumplase, oh Cristo, tu voluntad",
+        "tiempos": "00:00:00|00:12:00|00:40:00|01:08:00|01:36:00"
+    },
+    {
+        "titulo": "Te quiero, mi Señor",
+        "numero": "246",
+        "ruta": "246 - Te quiero, mi Senor",
+        "tiempos": "00:00:00|00:16:00|00:33:00|00:51:00|01:08:00|01:26:00|01:43:00|02:01:00|02:18:00"
+    },
+    {
+        "titulo": "Yo te seguiré",
+        "numero": "247",
+        "ruta": "247 - Yo te seguire",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:50:00|01:10:00|01:30:00|01:51:00|02:11:00|02:32:00"
+    },
+    {
+        "titulo": "Que mi vida entera esté",
+        "numero": "248",
+        "ruta": "248 - Que mi vida entera este",
+        "tiempos": "00:00:00|00:17:00|00:41:00|01:06:00|01:31:00|01:56:00|02:20:00|02:45:00|03:09:00"
+    },
+    {
+        "titulo": "Tal como soy",
+        "numero": "249",
+        "ruta": "249 - Tal como soy",
+        "tiempos": "00:00:00|00:13:00|00:47:00|01:21:00|01:55:00"
+    },
+    {
+        "titulo": "Padre, a tus pies me postro",
+        "numero": "250",
+        "ruta": "250 - Padre, a tus pies me postro",
+        "tiempos": "00:00:00|00:10:00|00:33:00|00:48:00|00:57:00|01:20:00|01:35:00|01:43:00|02:06:00|02:21:00"
+    },
+    {
+        "titulo": "No yo, sino él",
+        "numero": "251",
+        "ruta": "251 - No yo, sino el",
+        "tiempos": "00:00:00|00:21:00|00:43:00|01:05:00|01:28:00|01:50:00|02:12:00|02:34:00|02:56:00"
+    },
+    {
+        "titulo": "Dejo el mundo",
+        "numero": "252",
+        "ruta": "252 - Dejo el mundo",
+        "tiempos": "00:00:00|00:08:00|00:29:00|00:50:00|01:11:00|01:32:00|01:53:00|02:14:00|02:34:00"
+    },
+    {
+        "titulo": "Tuyo soy, Jesús",
+        "numero": "253",
+        "ruta": "253 - Tuyo soy, Jesus",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:57:00|01:20:00|01:45:00|02:07:00|02:32:00|02:55:00"
+    },
+    {
+        "titulo": "Anhelo ser limpio",
+        "numero": "254",
+        "ruta": "254 - Anhelo ser limpio",
+        "tiempos": "00:00:00|00:14:00|00:29:00|00:44:00|00:59:00|01:15:00|01:30:00|01:45:00|02:01:00|02:16:00|02:32:00|02:47:00|03:02:00"
+    },
+    {
+        "titulo": "Oh Cristo, te adoro",
+        "numero": "255",
+        "ruta": "255 - Oh Cristo, te adoro",
+        "tiempos": "00:00:00|00:12:00|00:53:00|01:06:00|01:33:00|02:00:00|02:40:00|02:54:00|03:21:00"
+    },
+    {
+        "titulo": "Jesús, yo he prometido",
+        "numero": "256",
+        "ruta": "256 - Jesus, yo he prometido",
+        "tiempos": "00:00:00|00:11:00|00:36:00|01:01:00|01:26:00|01:51:00|02:16:00|02:40:00|03:05:00"
+    },
+    {
+        "titulo": "Oh ven, te invito, Cristo",
+        "numero": "257",
+        "ruta": "257 - Oh ven, te invito, Cristo",
+        "tiempos": "00:00:00|00:14:00|00:39:00|00:52:00|01:16:00|01:29:00|01:53:00|02:08:00|02:33:00"
+    },
+    {
+        "titulo": "Tú dejaste tu trono",
+        "numero": "258",
+        "ruta": "258 - Tu dejaste tu trono",
+        "tiempos": "00:00:00|00:11:00|00:24:00|00:38:00|01:04:00|01:18:00|01:30:00|01:57:00|02:11:00|02:24:00|02:51:00|03:05:00|03:18:00"
+    },
+    {
+        "titulo": "Mi espíritu, alma y cuerpo",
+        "numero": "259",
+        "ruta": "259 - Mi espiritu, alma y cuerpo",
+        "tiempos": "00:00:00|00:16:00|00:37:00|00:58:00|01:18:00|01:39:00|01:59:00"
+    },
+    {
+        "titulo": "Junto a la cruz de Cristo",
+        "numero": "260",
+        "ruta": "260 - Junto a la cruz de Cristo",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:55:00|01:17:00|01:39:00|02:01:00"
+    },
+    {
+        "titulo": "Salvador, a ti me rindo",
+        "numero": "261",
+        "ruta": "261 - Salvador, a ti me rindo",
+        "tiempos": "00:00:00|00:21:00|00:45:00|01:08:00|01:32:00|01:55:00|02:19:00|02:41:00|03:06:00"
+    },
+    {
+        "titulo": "Los tesoros del mundo",
+        "numero": "262",
+        "ruta": "262 - Los tesoros del mundo",
+        "tiempos": "00:00:00|00:06:00|00:21:00|00:36:00|00:52:00|01:06:00|01:21:00|01:37:00|01:51:00|02:06:00"
+    },
+    {
+        "titulo": "Entra en este corazón",
+        "numero": "263",
+        "ruta": "263 - Entra en este corazon",
+        "tiempos": "00:00:00|00:08:00|00:32:00|00:47:00|01:06:00|01:26:00|01:45:00"
+    },
+    {
+        "titulo": "Un día más por Cristo",
+        "numero": "264",
+        "ruta": "264 - Un dia mas por Cristo",
+        "tiempos": "00:00:00|00:16:00|00:30:00|00:40:00|00:58:00|01:13:00|01:22:00|01:40:00|01:53:00|02:04:00|02:23:00|02:35:00|02:47:00"
+    },
+    {
+        "titulo": "La senda ancha dejaré",
+        "numero": "265",
+        "ruta": "265 - La senda ancha dejare",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:55:00|01:17:00|01:40:00|02:02:00"
+    },
+    {
+        "titulo": "Vivo por Cristo",
+        "numero": "266",
+        "ruta": "266 - Vivo por Cristo",
+        "tiempos": "00:00:00|00:17:00|00:35:00|00:53:00|01:10:00|01:28:00|01:45:00|02:03:00|02:20:00|02:40:00|02:58:00|03:16:00|03:33:00|03:54:00|04:12:00|04:30:00|04:47:00"
+    },
+    {
+        "titulo": "A la cruz de Cristo voy",
+        "numero": "267",
+        "ruta": "267 - A la cruz de Cristo voy",
+        "tiempos": "00:00:00|00:21:00|00:44:00|01:07:00|01:30:00"
+    },
+    {
+        "titulo": "Puedo oír tu voz llamando",
+        "numero": "268",
+        "ruta": "268 - Puedo oir tu voz llamando",
+        "tiempos": "00:00:00|00:14:00|00:46:00|01:18:00|01:50:00|02:22:00|02:53:00"
+    },
+    {
+        "titulo": "Prefiero a mi Cristo",
+        "numero": "269",
+        "ruta": "269 - Prefiero a mi Cristo",
+        "tiempos": "00:00:00|00:19:00|00:39:00|00:57:00|01:15:00|01:34:00|01:53:00|02:11:00|02:30:00|02:48:00|03:07:00|03:26:00|03:44:00"
+    },
+    {
+        "titulo": "Meditar en Jesús",
+        "numero": "270",
+        "ruta": "270 - Meditar en Jesus",
+        "tiempos": "00:00:00|00:12:00|00:25:00|00:38:00|01:00:00|01:14:00|01:27:00|01:49:00|02:02:00|02:15:00|02:37:00|02:51:00|03:05:00"
+    },
+    {
+        "titulo": "Hoy me llama el mundo en vano",
+        "numero": "271",
+        "ruta": "271 - Hoy me llama el mundo en vano",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:48:00|01:07:00|01:27:00|01:46:00"
+    },
+    {
+        "titulo": "De esclavitud",
+        "numero": "272",
+        "ruta": "272 - De esclavitud",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00|01:15:00|01:37:00|01:58:00|02:21:00|02:42:00"
+    },
+    {
+        "titulo": "Tu vida, oh Salvador",
+        "numero": "273",
+        "ruta": "273 - Tu vida, oh Salvador",
+        "tiempos": "00:00:00|00:13:00|00:36:00|00:59:00|01:22:00|01:47:00|02:10:00|02:35:00|02:58:00"
+    },
+    {
+        "titulo": "¿Qué te daré, Maestro?",
+        "numero": "274",
+        "ruta": "274 - Que te dare, Maestro",
+        "tiempos": "00:00:00|00:25:00|00:54:00|01:22:00|01:49:00|02:17:00|02:45:00|03:13:00|03:41:00|04:09:00"
+    },
+    {
+        "titulo": "Humilde oracion",
+        "numero": "275",
+        "ruta": "275 - Humilde oración",
+        "tiempos": "00:00:00|00:10:00|00:35:00"
+    },
+    {
+        "titulo": "Con nuestras mentes",
+        "numero": "276",
+        "ruta": "276 - Con nuestras mentes",
+        "tiempos": "00:00:00|00:05:00|00:29:00|00:53:00|01:16:00|01:40:00|02:04:00"
+    },
+    {
+        "titulo": "Amarte más",
+        "numero": "277",
+        "ruta": "277 - Amarte mas",
+        "tiempos": "00:00:00|00:10:00|00:33:00|00:57:00|01:20:00|01:43:00|02:07:00|02:30:00|02:54:00"
+    },
+    {
+        "titulo": "¿Puede el mundo ver a Jesús en mi?",
+        "numero": "278",
+        "ruta": "278 - Puede el mundo ver a Jesus en mi",
+        "tiempos": "00:00:00|00:09:00|00:20:00|00:30:00|00:41:00|00:52:00|01:13:00|01:23:00|01:35:00|01:56:00|02:06:00"
+    },
+    {
+        "titulo": "Transfórmame a tu imagen",
+        "numero": "279",
+        "ruta": "279 - Transformame a tu imagen",
+        "tiempos": "00:00:00|00:11:00|00:35:00|00:58:00|01:22:00"
+    },
+    {
+        "titulo": "Ser semejante a Jesus",
+        "numero": "280",
+        "ruta": "280 - Ser semejante a Jesus",
+        "tiempos": "00:00:00|00:14:00|00:32:00|00:41:00|00:52:00|01:11:00|01:19:00|01:31:00|01:49:00|01:58:00"
+    },
+    {
+        "titulo": "He decidido seguir a Cristo",
+        "numero": "281",
+        "ruta": "281 - He decidido seguir a Cristo",
+        "tiempos": "00:00:00|00:08:00|00:30:00|00:52:00"
+    },
+    {
+        "titulo": "¡Brilla, Jesús!",
+        "numero": "282",
+        "ruta": "282 - Brilla, Jesus",
+        "tiempos": "00:00:00|00:09:00|00:25:00|00:39:00|01:00:00|01:21:00|01:38:00|01:52:00|02:12:00"
+    },
+    {
+        "titulo": "Ven, Señor Jesús",
+        "numero": "283",
+        "ruta": "283 - Ven, Senor Jesus",
+        "tiempos": "00:00:00|00:10:00"
+    },
+    {
+        "titulo": "Me dice el Salvador",
+        "numero": "284",
+        "ruta": "284 - Me dice el Salvador",
+        "tiempos": "00:00:00|00:28:00|00:51:00|01:14:00|01:37:00|01:59:00|02:21:00|02:52:00|03:16:00"
+    },
+    {
+        "titulo": "Confíuo en Jesucristo",
+        "numero": "285",
+        "ruta": "285 - Confio en Jesucristo",
+        "tiempos": "00:00:00|00:18:00|00:39:00|00:59:00|01:20:00|01:40:00|02:01:00"
+    },
+    {
+        "titulo": "Hay una fuente sin igual",
+        "numero": "286",
+        "ruta": "286 - Hay una fuente sin igual",
+        "tiempos": "00:00:00|00:08:00|00:30:00|00:51:00|01:19:00|01:35:00|01:52:00|02:07:00|02:18:00|02:40:00"
+    },
+    {
+        "titulo": "Rey de mi vida",
+        "numero": "287",
+        "ruta": "287 - Rey de mi vida",
+        "tiempos": "00:00:00|00:10:00|00:36:00|01:01:00|01:26:00|01:52:00|02:17:00"
+    },
+    {
+        "titulo": "Al contemplarte, mi Salvador",
+        "numero": "288",
+        "ruta": "288 - Al contemplarte, mi Salvador",
+        "tiempos": "00:00:00|00:10:00|00:36:00|01:01:00|01:27:00|01:52:00|02:17:00|02:43:00|03:09:00"
+    },
+    {
+        "titulo": "¿Qué me puede dar perdón?",
+        "numero": "289",
+        "ruta": "289 - Que me puede dar perdon",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:52:00|01:13:00|01:34:00|01:55:00"
+    },
+    {
+        "titulo": "Fuente de la vida eterna",
+        "numero": "290",
+        "ruta": "290 - Fuente de la vida eterna",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:53:00|01:15:00|01:36:00|01:58:00"
+    },
+    {
+        "titulo": "Perdido, fui a mi Jesús",
+        "numero": "291",
+        "ruta": "291 - Perdido, fui a mi Jesus",
+        "tiempos": "00:00:00|00:09:00|00:32:00|00:54:00|01:17:00|01:40:00|02:02:00|02:25:00|02:47:00"
+    },
+    {
+        "titulo": "Por fe en Cristo, el Redentor",
+        "numero": "292",
+        "ruta": "292 - Por fe en Cristo, el Redentor",
+        "tiempos": "00:00:00|00:07:00|00:26:00|00:39:00|00:53:00|01:11:00|01:23:00|01:37:00|01:55:00|02:08:00"
+    },
+    {
+        "titulo": "¿Quieres ser salvo de toda maldad?",
+        "numero": "293",
+        "ruta": "293 - Quieres ser salvo de toda maldad",
+        "tiempos": "00:00:00|00:19:00|00:30:00|00:39:00|01:00:00|01:11:00|01:20:00|01:41:00|01:52:00|02:01:00"
+    },
+    {
+        "titulo": "En Jesús por fe confío",
+        "numero": "294",
+        "ruta": "294 - En Jesus por fe confio",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:43:00|00:52:00|01:10:00|01:23:00|01:36:00|01:55:00|02:08:00"
+    },
+    {
+        "titulo": "Las manos, Padre",
+        "numero": "295",
+        "ruta": "295 - Las manos, Padre",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:48:00|01:07:00|01:27:00|01:47:00"
+    },
+    {
+        "titulo": "Comprado con sangre por Cristo",
+        "numero": "296",
+        "ruta": "296 - Comprado con sangre por Cristo",
+        "tiempos": "00:00:00|00:16:00|00:24:00|00:32:00|00:50:00|01:06:00|01:24:00|01:40:00|01:58:00|02:14:00"
+    },
+    {
+        "titulo": "Salvado con sangre por Cristo",
+        "numero": "297",
+        "ruta": "297 - Salvado con sangre por Cristo",
+        "tiempos": "00:00:00|00:07:00|00:26:00|00:45:00|01:03:00|01:22:00|01:41:00"
+    },
+    {
+        "titulo": "Al Calvario, solo, Jesús ascendió",
+        "numero": "298",
+        "ruta": "298 - Al Calvario, solo, Jesus ascendio",
+        "tiempos": "00:00:00|00:25:00|00:50:00|01:16:00|01:29:00|01:40:00|02:07:00|02:19:00|02:31:00"
+    },
+    {
+        "titulo": "Hay vida en mirar",
+        "numero": "299",
+        "ruta": "299 - Hay vida en mirar",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00|01:22:00|01:45:00|01:58:00|02:10:00"
+    },
+    {
+        "titulo": "Lejos de mi Padre Dios",
+        "numero": "300",
+        "ruta": "300 - Lejos de mi Padre Dios",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:57:00|01:20:00|01:44:00|02:07:00|02:30:00|02:53:00"
+    },
+    {
+        "titulo": "Cristo es mi amante Salvador",
+        "numero": "301",
+        "ruta": "301 - Cristo es mi amante Salvador",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:42:00|00:52:00|01:14:00|01:37:00|01:58:00|02:20:00|02:42:00"
+    },
+    {
+        "titulo": "Grato es contar la historia",
+        "numero": "302",
+        "ruta": "302 - Grato es contar la historia",
+        "tiempos": "00:00:00|00:25:00|00:46:00|01:06:00|01:28:00|01:48:00|02:09:00|02:29:00|02:50:00|03:11:00|03:31:00|03:52:00|04:13:00"
+    },
+    {
+        "titulo": "Sublime gracia",
+        "numero": "303",
+        "ruta": "303 - Sublime gracia",
+        "tiempos": "00:00:00|00:16:00|00:53:00|01:29:00"
+    },
+    {
+        "titulo": "Mi Redentor, el Rey de gloria",
+        "numero": "304",
+        "ruta": "304 - Mi Redentor, el Rey de gloria",
+        "tiempos": "00:00:00|00:14:00|00:40:00|00:59:00|01:20:00|01:47:00|02:06:00|02:25:00|02:49:00|03:07:00|03:26:00|03:50:00|04:08:00"
+    },
+    {
+        "titulo": "Maravillosa su gracia es",
+        "numero": "305",
+        "ruta": "305 - Maravillosa su gracia es",
+        "tiempos": "00:00:00|00:11:00|00:25:00|00:38:00|01:05:00|01:18:00|01:31:00|01:58:00|02:11:00|02:25:00"
+    },
+    {
+        "titulo": "Llegó Jesús",
+        "numero": "306",
+        "ruta": "306 - Llego Jesus",
+        "tiempos": "00:00:00|00:11:00|00:24:00|00:37:00|00:49:00|01:02:00|01:15:00|01:27:00|01:40:00|01:52:00|02:05:00|02:17:00|02:30:00|02:43:00|02:56:00|03:08:00|03:20:00"
+    },
+    {
+        "titulo": "Roca de la eternidad",
+        "numero": "307",
+        "ruta": "307 - Roca de la eternidad",
+        "tiempos": "00:00:00|00:07:00|00:21:00|00:35:00|00:49:00|01:03:00|01:17:00"
+    },
+    {
+        "titulo": "Dios descendió",
+        "numero": "308",
+        "ruta": "308 - Dios descendio",
+        "tiempos": "00:00:00|00:08:00|00:24:00|00:38:00|00:48:00|01:08:00|01:29:00|01:49:00|02:10:00|02:29:00|02:50:00|03:00:00|03:16:00|03:30:00|03:48:00"
+    },
+    {
+        "titulo": "La voz de Jesús",
+        "numero": "309",
+        "ruta": "309 - La voz de Jesus",
+        "tiempos": "00:00:00|00:12:00|00:27:00|00:41:00|00:56:00|01:11:00|01:26:00|01:40:00|01:55:00|02:10:00|02:25:00|02:40:00|02:54:00"
+    },
+    {
+        "titulo": "Cristo, centro de mi vida",
+        "numero": "310",
+        "ruta": "310 - Cristo, centro de mi vida",
+        "tiempos": "00:00:00|00:08:00|00:26:00|00:44:00|01:02:00|01:21:00|01:38:00"
+    },
+    {
+        "titulo": "Cuando junte Jesús las naciones",
+        "numero": "311",
+        "ruta": "311 - Cuando junte Jesus las naciones",
+        "tiempos": "00:00:00|00:17:00|00:28:00|00:38:00|00:48:00|00:59:00|01:09:00|01:19:00|01:29:00|01:40:00|01:49:00|02:00:00|02:10:00"
+    },
+    {
+        "titulo": "Día grande viene",
+        "numero": "312",
+        "ruta": "312 - Dia grande viene",
+        "tiempos": "00:00:00|00:07:00|00:17:00|00:27:00|00:37:00|00:47:00|00:59:00|01:07:00|01:17:00|01:26:00|01:39:00|01:46:00|01:57:00"
+    },
+    {
+        "titulo": "La hora del Juicio",
+        "numero": "313",
+        "ruta": "313 - La hora del Juicio",
+        "tiempos": "00:00:00|00:11:00|00:35:00|01:00:00|01:24:00|01:49:00|02:13:00|02:38:00|03:02:00"
+    },
+    {
+        "titulo": "Cristo, Rey Omnipotente",
+        "numero": "314",
+        "ruta": "314 - Cristo, Rey Omnipotente",
+        "tiempos": "00:00:00|00:08:00|00:29:00|00:44:00|01:04:00|01:20:00|01:40:00"
+    },
+    {
+        "titulo": "El Juicio empezó",
+        "numero": "315",
+        "ruta": "315 - El Juicio empezo",
+        "tiempos": "00:00:00|00:13:00|00:28:00|00:41:00|01:01:00|01:09:00|01:23:00|01:36:00|01:57:00|02:04:00|02:19:00|02:32:00|02:52:00"
+    },
+    {
+        "titulo": "Hay un mundo feliz más allá",
+        "numero": "316",
+        "ruta": "316 - Hay un mundo feliz mas alla",
+        "tiempos": "00:00:00|00:12:00|00:35:00|00:57:00|01:20:00|01:42:00|02:05:00"
+    },
+    {
+        "titulo": "En el hogar do nunca habrá",
+        "numero": "317",
+        "ruta": "317 - En el hogar do nunca habra",
+        "tiempos": "00:00:00|00:09:00|00:33:00|00:56:00|01:19:00|01:42:00|02:05:00"
+    },
+    {
+        "titulo": "En la mansión de mi Señor",
+        "numero": "318",
+        "ruta": "318 - En la mansion de mi Senor",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:53:00|01:14:00|01:35:00|01:56:00|02:17:00|02:38:00"
+    },
+    {
+        "titulo": "Cuando mi lucha termine al final",
+        "numero": "319",
+        "ruta": "319 - Cuando mi lucha termine al final",
+        "tiempos": "00:00:00|00:14:00|00:41:00|01:11:00|01:37:00|02:06:00|02:33:00"
+    },
+    {
+        "titulo": "Jamás se dice adiós allá",
+        "numero": "320",
+        "ruta": "320 - Jamas se dice adios alla",
+        "tiempos": "00:00:00|00:07:00|00:27:00|00:47:00|01:07:00|01:27:00|01:46:00"
+    },
+    {
+        "titulo": "Allá sobre montes",
+        "numero": "321",
+        "ruta": "321 - Alla sobre montes",
+        "tiempos": "00:00:00|00:14:00|00:39:00|01:01:00|01:19:00|01:31:00|01:43:00|02:06:00|02:22:00|02:48:00|03:10:00"
+    },
+    {
+        "titulo": "Busquemos la patria",
+        "numero": "322",
+        "ruta": "322 - Busquemos la patria",
+        "tiempos": "00:00:00|00:10:00|00:35:00|00:46:00|00:59:00|01:11:00|01:24:00|01:36:00"
+    },
+    {
+        "titulo": "He de conocerle entonces",
+        "numero": "323",
+        "ruta": "323 - He de conocerle entonces",
+        "tiempos": "00:00:00|00:12:00|00:25:00|00:38:00|01:05:00|01:18:00|01:32:00|01:58:00|02:11:00|02:24:00|02:51:00|03:04:00|03:17:00"
+    },
+    {
+        "titulo": "Pronto yo veré a Jesús",
+        "numero": "324",
+        "ruta": "324 - Pronto yo vere a Jesus",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:56:00|01:18:00|01:41:00|02:03:00"
+    },
+    {
+        "titulo": "No puede el mundo ser mi hogar",
+        "numero": "325",
+        "ruta": "325 - No puede el mundo ser mi hogar",
+        "tiempos": "00:00:00|00:09:00|00:33:00|00:56:00|01:19:00|01:43:00|02:06:00"
+    },
+    {
+        "titulo": "Un día yo he de faltar",
+        "numero": "326",
+        "ruta": "326 - Un dia yo he de faltar",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:53:00|01:15:00|01:36:00|01:58:00|02:19:00|02:41:00"
+    },
+    {
+        "titulo": "Jerusalén, mi amado hogar",
+        "numero": "327",
+        "ruta": "327 - Jerusalen, mi amado hogar",
+        "tiempos": "00:00:00|00:08:00|00:27:00|00:46:00|01:05:00|01:24:00|01:43:00|02:02:00|02:21:00|02:39:00"
+    },
+    {
+        "titulo": "¿Nos veremos junto al río?",
+        "numero": "328",
+        "ruta": "328 - Nos veremos junto al rio",
+        "tiempos": "00:00:00|00:24:00|00:44:00|01:07:00|01:27:00|01:49:00|02:09:00|02:32:00|02:52:00"
+    },
+    {
+        "titulo": "En la célica morada",
+        "numero": "329",
+        "ruta": "329 - En la celica morada",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:47:00|01:10:00|01:31:00|01:50:00"
+    },
+    {
+        "titulo": "Hay un feliz Edén",
+        "numero": "330",
+        "ruta": "330 - Hay un feliz Eden",
+        "tiempos": "00:00:00|00:18:00|00:32:00|00:45:00|00:59:00|01:12:00|01:26:00"
+    },
+    {
+        "titulo": "La mañana gloriosa",
+        "numero": "331",
+        "ruta": "331 - La manana gloriosa",
+        "tiempos": "00:00:00|00:12:00|00:32:00|00:43:00|00:58:00|01:19:00|01:29:00"
+    },
+    {
+        "titulo": "En la tierra adonde iré",
+        "numero": "332",
+        "ruta": "332 - En la tierra adonde ire",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:51:00|01:12:00|01:33:00|01:53:00"
+    },
+    {
+        "titulo": "Aunque en esta vida",
+        "numero": "333",
+        "ruta": "333 - Aunque en esta vida",
+        "tiempos": "00:00:00|00:05:00|00:21:00|00:36:00|00:51:00|01:06:00|01:22:00|01:37:00|01:52:00|02:07:00|02:23:00|02:38:00|02:53:00"
+    },
+    {
+        "titulo": "Cuánto anhelo llegar",
+        "numero": "334",
+        "ruta": "334 - Cuanto anhelo llegar",
+        "tiempos": "00:00:00|00:23:00|00:35:00|00:47:00|01:13:00|01:37:00|02:03:00|02:27:00"
+    },
+    {
+        "titulo": "Mi hogar celestial",
+        "numero": "335",
+        "ruta": "335 - Mi hogar celestial",
+        "tiempos": "00:00:00|00:25:00|00:51:00|01:18:00|01:44:00|02:11:00|02:37:00"
+    },
+    {
+        "titulo": "Del bello país he leído",
+        "numero": "336",
+        "ruta": "336 - Del bello pais he leido",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:53:00|01:15:00|01:32:00|01:48:00|01:58:00|02:20:00|02:42:00|03:04:00"
+    },
+    {
+        "titulo": "Nunca más adiós",
+        "numero": "337",
+        "ruta": "337 - Nunca mas adios",
+        "tiempos": "00:00:00|00:13:00|00:42:00|01:09:00|01:24:00|01:39:00|02:08:00|02:35:00|02:50:00|03:04:00|03:34:00|04:01:00|04:15:00"
+    },
+    {
+        "titulo": "Las riberas de dicha inmortal",
+        "numero": "338",
+        "ruta": "338 - Las riberas de dicha inmortal",
+        "tiempos": "00:00:00|00:18:00|00:39:00|01:00:00|01:22:00|01:43:00|02:04:00"
+    },
+    {
+        "titulo": "A veces oigo un himno",
+        "numero": "339",
+        "ruta": "339 - A veces oigo un himno",
+        "tiempos": "00:00:00|00:24:00|00:42:00|00:59:00|01:18:00|01:35:00|01:53:00|02:11:00|02:28:00|02:46:00"
+    },
+    {
+        "titulo": "¡Oh, qué música divina!",
+        "numero": "340",
+        "ruta": "340 - Oh, que musica divina",
+        "tiempos": "00:00:00|00:07:00|00:24:00|00:43:00|01:00:00|01:19:00|01:37:00"
+    },
+    {
+        "titulo": "Más cerca del hogar",
+        "numero": "341",
+        "ruta": "341 - Mas cerca del hogar",
+        "tiempos": "00:00:00|00:14:00|00:38:00|01:05:00|01:28:00"
+    },
+    {
+        "titulo": "Después del río",
+        "numero": "342",
+        "ruta": "342 - Despues del rio",
+        "tiempos": "00:00:00|00:17:00|00:34:00|00:50:00|01:06:00|01:22:00|01:38:00|01:57:00|02:15:00|02:31:00|02:47:00|03:03:00|03:19:00"
+    },
+    {
+        "titulo": "Quiero llegar a ser parte del cielo",
+        "numero": "343",
+        "ruta": "343 - Quiero llegar a ser parte del cielo",
+        "tiempos": "00:00:00|00:11:00|00:40:00|01:12:00|01:42:00|02:02:00|02:30:00"
+    },
+    {
+        "titulo": "Entonad un himno",
+        "numero": "344",
+        "ruta": "344 - Entonad un himno",
+        "tiempos": "00:00:00|00:11:00|00:23:00|00:34:00|00:59:00|01:11:00|01:23:00|01:48:00|02:00:00|02:12:00|02:36:00|02:48:00|03:00:00"
+    },
+    {
+        "titulo": "Canta y tus penas se irán",
+        "numero": "345",
+        "ruta": "345 - Canta y tus penas se iran",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:46:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "¡Feliz el día!",
+        "numero": "346",
+        "ruta": "346 - Feliz el dia",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:46:00|01:02:00|01:24:00|01:40:00|01:56:00|02:17:00|02:32:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Con gozo canto al Señor",
+        "numero": "347",
+        "ruta": "347 - Con gozo canto al Senor",
+        "tiempos": "00:00:00|00:10:00|00:39:00|00:57:00|01:20:00|01:42:00|02:06:00|02:29:00|02:52:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Dicha grande",
+        "numero": "348",
+        "ruta": "348 - Dicha grande",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:49:00|01:08:00|01:28:00|01:37:00|01:52:00|02:08:00|02:28:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Gran gozo hay en mi alma hoy",
+        "numero": "349",
+        "ruta": "349 - Gran gozo hay en mi alma hoy",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:50:00|01:11:00|01:32:00|01:53:00|02:13:00|02:34:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Andando en la luz de Dios",
+        "numero": "350",
+        "ruta": "350 - Andando en la luz de Dios",
+        "tiempos": "00:00:00|00:23:00|00:34:00|00:44:00|00:55:00|01:06:00|01:17:00|01:28:00|01:39:00|01:49:00|02:01:00|02:13:00|02:24:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Yo tengo gozo",
+        "numero": "351",
+        "ruta": "351 - Yo tengo gozo",
+        "tiempos": "00:00:00|00:06:00|00:16:00|00:25:00|00:34:00|00:43:00|00:52:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Gozaos, Cristo es Rey",
+        "numero": "352",
+        "ruta": "352 - Gozaos, Cristo es Rey",
+        "tiempos": "00:00:00|00:09:00|00:32:00|00:48:00|01:11:00|01:27:00|01:49:00|02:06:00|02:28:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Suenan melodías en mi ser",
+        "numero": "353",
+        "ruta": "353 - Suenan melodias en mi ser",
+        "tiempos": "00:00:00|00:07:00|00:27:00|00:46:00|00:56:00|01:06:00|01:25:00|01:44:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Voy caminando",
+        "numero": "354",
+        "ruta": "354 - Voy caminando",
+        "tiempos": "00:00:00|00:09:00|00:18:00|00:27:00|00:46:00|00:54:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Yo voy feliz",
+        "numero": "355",
+        "ruta": "355 - Yo voy feliz",
+        "tiempos": "00:00:00|00:16:00|00:35:00|00:53:00|01:11:00|01:29:00|01:48:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Gozo es conocer a Cristo",
+        "numero": "356",
+        "ruta": "356 - Gozo es conocer a Cristo",
+        "tiempos": "00:00:00|00:05:00|00:22:00|00:38:00|00:54:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Jesús, tú eres mi alegría",
+        "numero": "357",
+        "ruta": "357 - Jesus, tu eres mi alegria",
+        "tiempos": "00:00:00|00:16:00|00:39:00|01:01:00|01:19:00|01:49:00|02:19:00|02:47:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "En el seno de mi alma",
+        "numero": "358",
+        "ruta": "358 - En el seno de mi alma",
+        "tiempos": "00:00:00|00:12:00|00:27:00|00:41:00|01:10:00|01:24:00|01:38:00|02:07:00|02:34:00|03:01:00|03:13:00|03:27:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Regocijaos siempre",
+        "numero": "359",
+        "ruta": "359 - Regocijaos siempre",
+        "tiempos": "00:00:00|00:09:00|00:20:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "En Jesucristo, mártir de paz",
+        "numero": "360",
+        "ruta": "360 - En Jesucristo, martir de paz",
+        "tiempos": "00:00:00|00:12:00|00:39:00|01:06:00|01:34:00|02:00:00|02:28:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Percibe mi alma un son",
+        "numero": "361",
+        "ruta": "361 - Percibe mi alma un son",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:52:00|01:15:00|01:36:00|01:58:00|02:19:00|02:41:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Con sin igual amor",
+        "numero": "362",
+        "ruta": "362 - Con sin igual amor",
+        "tiempos": "00:00:00|00:17:00|00:42:00|01:08:00|01:33:00|01:59:00|02:23:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Hay un canto nuevo en mi ser",
+        "numero": "363",
+        "ruta": "363 - Hay un canto nuevo en mi ser",
+        "tiempos": "00:00:00|00:08:00|00:29:00|00:49:00|01:10:00|01:30:00|01:50:00|02:10:00|02:31:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Jesús da paz",
+        "numero": "364",
+        "ruta": "364 - Jesus da paz",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00|01:22:00",
+        "color": "0x572004"
+    },
+    {
+        "titulo": "Elevemos al Señor",
+        "numero": "365",
+        "ruta": "365 - Elevemos al Senor",
+        "tiempos": "00:00:00|00:13:00|00:34:00|00:57:00|01:19:00|01:42:00|02:04:00"
+    },
+    {
+        "titulo": "En Cristo hallo amigo",
+        "numero": "366",
+        "ruta": "366 - En Cristo hallo amigo",
+        "tiempos": "00:00:00|00:13:00|00:25:00|00:36:00|00:47:00|00:58:00|01:10:00|01:21:00|01:32:00|01:50:00|02:02:00|02:19:00"
+    },
+    {
+        "titulo": "Gracias, Dios",
+        "numero": "367",
+        "ruta": "367 - Gracias, Dios",
+        "tiempos": "00:00:00|00:05:00"
+    },
+    {
+        "titulo": "Padre amado",
+        "numero": "368",
+        "ruta": "368 - Padre amado",
+        "tiempos": "00:00:00|00:16:00|00:32:00|00:47:00|01:03:00|01:20:00|01:37:00|01:53:00|02:09:00"
+    },
+    {
+        "titulo": "Gratitud y alabanza",
+        "numero": "369",
+        "ruta": "369 - Gratitud y alabanza",
+        "tiempos": "00:00:00|00:08:00"
+    },
+    {
+        "titulo": "Por la excelsa majestad",
+        "numero": "370",
+        "ruta": "370 - Por la excelsa majestad",
+        "tiempos": "00:00:00|00:09:00|00:25:00|00:41:00|00:57:00|01:13:00|01:28:00|01:44:00|02:00:00"
+    },
+    {
+        "titulo": "Jesús te ama",
+        "numero": "371",
+        "ruta": "371 - Jesus te ama",
+        "tiempos": "00:00:00|00:11:00|00:25:00|00:38:00|01:05:00|01:19:00|01:32:00"
+    },
+    {
+        "titulo": "¿Cómo agradecer?",
+        "numero": "372",
+        "ruta": "372 - Como agradecer",
+        "tiempos": "00:00:00|00:08:00|00:37:00|00:50:00|01:05:00|01:32:00|01:59:00|02:28:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Mi Redentor es Cristo",
+        "numero": "373",
+        "ruta": "373 - Mi Redentor es Cristo",
+        "tiempos": "00:00:00|00:15:00|00:36:00|00:56:00|01:16:00|01:37:00|01:57:00|02:18:00|02:38:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Dulce comunión",
+        "numero": "374",
+        "ruta": "374 - Dulce comunion",
+        "tiempos": "00:00:00|00:09:00|00:21:00|00:32:00|00:54:00|01:05:00|01:16:00|01:38:00|01:49:00|02:00:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Sed puros y santos",
+        "numero": "375",
+        "ruta": "375 - Sed puros y santos",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:47:00|01:08:00|01:27:00|01:47:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Dulce oración",
+        "numero": "376",
+        "ruta": "376 - Dulce oracion",
+        "tiempos": "00:00:00|00:12:00|00:26:00|00:46:00|01:07:00|01:21:00|01:42:00|02:04:00|02:18:00|02:39:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A los pies de Jesucristo",
+        "numero": "377",
+        "ruta": "377 - A los pies de Jesucristo",
+        "tiempos": "00:00:00|00:12:00|00:38:00|01:04:00|01:31:00|01:57:00|02:24:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¡Oh, qué amigo nos es Cristo!",
+        "numero": "378",
+        "ruta": "378 - Oh, que amigo nos es Cristo",
+        "tiempos": "00:00:00|00:10:00|00:30:00|00:49:00|01:02:00|01:27:00|01:53:00|02:18:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Habla, Senor, a mi alma",
+        "numero": "379",
+        "ruta": "379 - Habla, Senor, a mi alma",
+        "tiempos": "00:00:00|00:15:00|00:33:00|00:50:00|01:08:00|01:25:00|01:43:00|02:00:00|02:17:00|02:34:00|02:52:00|03:09:00|03:26:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Ando con Cristo",
+        "numero": "380",
+        "ruta": "380 - Ando con Cristo",
+        "tiempos": "00:00:00|00:23:00|00:35:00|00:46:00|00:59:00|01:10:00|01:23:00|01:34:00|01:45:00|01:57:00|02:11:00|02:22:00|02:32:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "De mañana veo su faz",
+        "numero": "381",
+        "ruta": "381 - De manana veo su faz",
+        "tiempos": "00:00:00|00:11:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "A solas al huerto yo voy",
+        "numero": "382",
+        "ruta": "382 - A solas al huerto yo voy",
+        "tiempos": "00:00:00|00:12:00|00:24:00|00:37:00|00:49:00|01:01:00|01:12:00|01:24:00|01:36:00|01:50:00|02:03:00|02:17:00|02:29:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Habla a tu Dios de mañana",
+        "numero": "383",
+        "ruta": "383 - Habla a tu Dios de manana",
+        "tiempos": "00:00:00|00:08:00|00:30:00|00:51:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "El jardín de oración",
+        "numero": "384",
+        "ruta": "384 - El jardin de oracion",
+        "tiempos": "00:00:00|00:21:00|00:35:00|00:49:00|01:03:00|01:17:00|01:31:00|01:44:00|01:58:00|02:12:00|02:26:00|02:40:00|02:53:00|03:07:00|03:21:00|03:35:00|03:49:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Hablando con Jesús",
+        "numero": "385",
+        "ruta": "385 - Hablando con Jesus",
+        "tiempos": "00:00:00|00:08:00|00:20:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Hay un lugar de paz",
+        "numero": "386",
+        "ruta": "386 - Hay un lugar de paz",
+        "tiempos": "00:00:00|00:25:00|00:48:00|01:17:00|01:39:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Aparte del mundo",
+        "numero": "387",
+        "ruta": "387 - Aparte del mundo",
+        "tiempos": "00:00:00|00:13:00|00:29:00|00:45:00|01:00:00|01:16:00|01:32:00|01:48:00|02:05:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Debo decir a Cristo",
+        "numero": "388",
+        "ruta": "388 - Debo decir a Cristo",
+        "tiempos": "00:00:00|00:11:00|00:24:00|00:37:00|00:51:00|01:04:00|01:17:00|01:30:00|01:43:00|01:56:00|02:09:00|02:23:00|02:36:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Conversar con Jesucristo",
+        "numero": "389",
+        "ruta": "389 - Conversar con Jesucristo",
+        "tiempos": "00:00:00|00:11:00|00:37:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Soy yo, Señor",
+        "numero": "390",
+        "ruta": "390 - Soy yo, Senor",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:40:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¿Le importará a Jesús?",
+        "numero": "391",
+        "ruta": "391 - Le importara a Jesus",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:59:00|01:24:00|01:48:00|02:13:00|02:38:00|03:03:00"
+    },
+    {
+        "titulo": "Hay quien vela mis pisadas",
+        "numero": "392",
+        "ruta": "392 - Hay quien vela mis pisadas",
+        "tiempos": "00:00:00|00:08:00|00:30:00|00:51:00|01:13:00|01:34:00|01:56:00|02:17:00|02:39:00|03:00:00"
+    },
+    {
+        "titulo": "Mi fe contempla a ti",
+        "numero": "393",
+        "ruta": "393 - Mi fe contempla a ti",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:46:00|01:01:00|01:23:00|01:39:00"
+    },
+    {
+        "titulo": "¡Cuán firme cimiento!",
+        "numero": "394",
+        "ruta": "394 - Cuan firme cimiento",
+        "tiempos": "00:00:00|00:09:00|00:27:00|00:55:00|01:12:00|01:40:00|01:57:00|02:15:00|02:25:00|02:51:00"
+    },
+    {
+        "titulo": "¡Oh, cuán dulce es fiar en Cristo!",
+        "numero": "395",
+        "ruta": "395 - Oh, cuan dulce es fiar en Cristo",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00|01:22:00|01:46:00|02:10:00"
+    },
+    {
+        "titulo": "¡Oh qué Salvador!",
+        "numero": "396",
+        "ruta": "396 - Oh que Salvador",
+        "tiempos": "00:00:00|00:10:00|00:21:00|00:33:00|00:44:00|01:01:00|01:24:00|01:35:00|01:53:00|02:16:00|02:27:00|02:44:00|02:56:00|03:07:00|03:18:00"
+    },
+    {
+        "titulo": "Oh buen Señor, velada está",
+        "numero": "397",
+        "ruta": "397 - Oh buen Senor, velada esta",
+        "tiempos": "00:00:00|00:13:00|00:41:00|01:08:00|01:36:00"
+    },
+    {
+        "titulo": "Cuando sopla airada la tempestad",
+        "numero": "398",
+        "ruta": "398 - Cuando sopla airada la tempestad",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:57:00|01:21:00|01:44:00|01:56:00|02:08:00"
+    },
+    {
+        "titulo": "En estos tiempos",
+        "numero": "399",
+        "ruta": "399 - En estos tiempos",
+        "tiempos": "00:00:00|00:20:00|00:44:00|00:56:00|01:08:00|01:33:00|01:44:00|01:57:00|02:21:00|02:32:00"
+    },
+    {
+        "titulo": "Castillo fuerte es nuestro Dios",
+        "numero": "400",
+        "ruta": "400 - Castillo fuerte es nuestro Dios",
+        "tiempos": "00:00:00|00:09:00|00:40:00|01:12:00|01:42:00|02:14:00|02:44:00|03:16:00|03:47:00"
+    },
+    {
+        "titulo": "Eterna Roca es mi Jesús",
+        "numero": "401",
+        "ruta": "401 - Eterna Roca es mi Jesus",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:57:00|01:20:00|01:44:00|02:07:00"
+    },
+    {
+        "titulo": "¡Oh!, salvo en la Roca",
+        "numero": "402",
+        "ruta": "402 - Oh, salvo en la Roca",
+        "tiempos": "00:00:00|00:15:00|00:33:00|00:51:00|01:09:00|01:26:00|01:45:00|02:03:00|02:22:00|02:41:00|03:00:00|03:19:00|03:37:00"
+    },
+    {
+        "titulo": "Cuando en la lucha",
+        "numero": "403",
+        "ruta": "403 - Cuando en la lucha",
+        "tiempos": "00:00:00|00:12:00|00:29:00|00:44:00|01:15:00|01:46:00|02:17:00|02:49:00"
+    },
+    {
+        "titulo": "A cualquiera parte",
+        "numero": "404",
+        "ruta": "404 - A cualquiera parte",
+        "tiempos": "00:00:00|00:04:00|00:29:00|00:42:00|00:54:00|01:06:00|01:18:00|01:31:00|01:42:00|01:55:00|02:08:00|02:20:00"
+    },
+    {
+        "titulo": "Sé quién es Jesús",
+        "numero": "405",
+        "ruta": "405 - Se quien es Jesus",
+        "tiempos": "00:00:00|00:11:00|00:25:00|00:52:00|01:05:00"
+    },
+    {
+        "titulo": "Jesús es mi luz",
+        "numero": "406",
+        "ruta": "406 - Jesus es mi luz",
+        "tiempos": "00:00:00|00:10:00|00:22:00|00:33:00|00:56:00|01:19:00|01:42:00|01:54:00|02:05:00|02:28:00|02:40:00|02:51:00"
+    },
+    {
+        "titulo": "Muy cerca de mi Redentor",
+        "numero": "407",
+        "ruta": "407 - Muy cerca de mi Redentor",
+        "tiempos": "00:00:00|00:21:00|00:44:00|01:08:00|01:31:00|01:54:00|02:17:00"
+    },
+    {
+        "titulo": "Cristo me ayuda por el a vivir",
+        "numero": "408",
+        "ruta": "408 - Cristo me ayuda por el a vivir",
+        "tiempos": "00:00:00|00:19:00|00:50:00|01:20:00|01:35:00|01:50:00|02:21:00|02:36:00|02:51:00|03:22:00|03:37:00|03:52:00"
+    },
+    {
+        "titulo": "Si mi debíl fe flaqueare",
+        "numero": "409",
+        "ruta": "409 - Si mi debil fe flaqueare",
+        "tiempos": "00:00:00|00:19:00|00:39:00|00:59:00|01:20:00|01:40:00|02:01:00|02:21:00|02:42:00"
+    },
+    {
+        "titulo": "Cuando te quiero",
+        "numero": "410",
+        "ruta": "410 - Cuando te quiero",
+        "tiempos": "00:00:00|00:15:00|00:41:00|00:59:00|01:25:00|01:44:00|02:11:00|02:29:00|02:55:00"
+    },
+    {
+        "titulo": "Bajo sus alas",
+        "numero": "411",
+        "ruta": "411 - Bajo sus alas",
+        "tiempos": "00:00:00|00:17:00|00:34:00|00:50:00|01:22:00|01:38:00|01:54:00|02:26:00|02:43:00|02:59:00"
+    },
+    {
+        "titulo": "Todas las promesas",
+        "numero": "412",
+        "ruta": "412 - Todas las promesas",
+        "tiempos": "00:00:00|00:06:00|00:16:00|00:24:00|00:34:00|00:43:00|00:52:00|01:00:00|01:10:00|01:18:00|01:28:00|01:36:00|01:46:00"
+    },
+    {
+        "titulo": "Si la carga es pesada",
+        "numero": "413",
+        "ruta": "413 - Si la carga es pesada",
+        "tiempos": "00:00:00|00:18:00|00:41:00|01:04:00|01:27:00|01:53:00|02:17:00"
+    },
+    {
+        "titulo": "¡Oh, buen Maestro, despierta!",
+        "numero": "414",
+        "ruta": "414 - Oh, buen Maestro, despierta",
+        "tiempos": "00:00:00|00:16:00|00:34:00|00:50:00|01:03:00|01:17:00|01:35:00|01:52:00|02:08:00|02:21:00|02:34:00|02:52:00|03:09:00|03:25:00|03:38:00|03:51:00"
+    },
+    {
+        "titulo": "Salvo en los tiernos brazos",
+        "numero": "415",
+        "ruta": "415 - Salvo en los tiernos brazos",
+        "tiempos": "00:00:00|00:07:00|00:27:00|00:47:00|01:08:00|01:28:00|01:48:00|02:08:00|02:28:00|02:48:00"
+    },
+    {
+        "titulo": "¡Oh!, tenga yo la ardiente fe",
+        "numero": "416",
+        "ruta": "416 - Oh, tenga yo la ardiente fe",
+        "tiempos": "00:00:00|00:07:00|00:24:00|00:38:00|00:55:00|01:09:00|01:25:00|01:40:00|01:56:00"
+    },
+    {
+        "titulo": "Dame la fe de mi Jesús",
+        "numero": "417",
+        "ruta": "417 - Dame la fe de mi Jesus",
+        "tiempos": "00:00:00|00:15:00|00:35:00|00:57:00|01:17:00|01:39:00|01:59:00|02:18:00|02:39:00"
+    },
+    {
+        "titulo": "Padre, yo vengo a ti",
+        "numero": "418",
+        "ruta": "418 - Padre, yo vengo a ti",
+        "tiempos": "00:00:00|00:03:00|00:25:00|00:46:00|01:10:00|01:31:00|01:53:00|02:17:00|02:38:00|03:00:00"
+    },
+    {
+        "titulo": "Por la justicia de Jesús",
+        "numero": "419",
+        "ruta": "419 - Por la justicia de Jesus",
+        "tiempos": "00:00:00|00:08:00|00:24:00|00:43:00|00:57:00|01:16:00|01:35:00"
+    },
+    {
+        "titulo": "Nunca desmayes",
+        "numero": "420",
+        "ruta": "420 - Nunca desmayes",
+        "tiempos": "00:00:00|00:11:00|00:31:00|00:52:00|01:11:00|01:33:00|01:51:00|02:13:00|02:32:00"
+    },
+    {
+        "titulo": "Cariñoso Salvador",
+        "numero": "421",
+        "ruta": "421 - Carinoso Salvador",
+        "tiempos": "00:00:00|00:09:00|00:29:00|00:52:00|01:12:00|01:35:00|01:55:00"
+    },
+    {
+        "titulo": "Nada puede ya faltarme",
+        "numero": "422",
+        "ruta": "422 - Nada puede ya faltarme",
+        "tiempos": "00:00:00|00:10:00|00:30:00|00:51:00|01:10:00|01:30:00|01:50:00|02:10:00|02:30:00"
+    },
+    {
+        "titulo": "Pertenezco a mi Rey",
+        "numero": "423",
+        "ruta": "423 - Pertenezco a mi Rey",
+        "tiempos": "00:00:00|00:14:00|00:31:00|00:47:00|01:04:00|01:20:00|01:37:00|01:54:00|02:10:00|02:27:00|02:44:00|03:00:00|03:16:00"
+    },
+    {
+        "titulo": "¿Cómo podré estar triste?",
+        "numero": "424",
+        "ruta": "424 - Como podre estar triste",
+        "tiempos": "00:00:00|00:16:00|00:37:00|00:53:00|01:10:00|01:30:00|01:51:00|02:08:00|02:25:00|02:45:00|03:07:00|03:23:00|03:40:00"
+    },
+    {
+        "titulo": "Día en día",
+        "numero": "425",
+        "ruta": "425 - Dia en dia",
+        "tiempos": "00:00:00|00:13:00|00:32:00|00:51:00|01:07:00|01:26:00|01:39:00|02:00:00|02:26:00"
+    },
+    {
+        "titulo": "Tengo paz",
+        "numero": "426",
+        "ruta": "426 - Tengo paz",
+        "tiempos": "00:00:00|00:21:00|00:40:00|01:00:00|01:22:00|01:41:00|02:01:00|02:23:00|02:53:00|03:02:00"
+    },
+    {
+        "titulo": "Lleva todo tu pesar a Cristo",
+        "numero": "427",
+        "ruta": "427 - Lleva todo tu pesar a Cristo",
+        "tiempos": "00:00:00|00:14:00|00:35:00|00:58:00|01:19:00|01:42:00|02:04:00"
+    },
+    {
+        "titulo": "Su oveja soy",
+        "numero": "428",
+        "ruta": "428 - Su oveja soy",
+        "tiempos": "00:00:00|00:11:00|00:24:00|00:36:00"
+    },
+    {
+        "titulo": "Él puede",
+        "numero": "429",
+        "ruta": "429 - El puede",
+        "tiempos": "00:00:00|00:09:00|00:20:00|00:30:00|00:42:00"
+    },
+    {
+        "titulo": "Solo no estoy",
+        "numero": "430",
+        "ruta": "430 - Solo no estoy",
+        "tiempos": "00:00:00|00:11:00|00:26:00|00:39:00|01:07:00|01:21:00|01:35:00"
+    },
+    {
+        "titulo": "A el mis problemas le doy",
+        "numero": "431",
+        "ruta": "431 - A el mis problemas le doy",
+        "tiempos": "00:00:00|00:20:00|00:41:00|01:09:00|01:30:00"
+    },
+    {
+        "titulo": "Como el ciervo",
+        "numero": "432",
+        "ruta": "432 - Como el ciervo",
+        "tiempos": "00:00:00|00:25:00|00:51:00|01:18:00|01:44:00|02:11:00|02:36:00"
+    },
+    {
+        "titulo": "Conmigo marcha un ángel",
+        "numero": "433",
+        "ruta": "433 - Conmigo marcha un angel",
+        "tiempos": "00:00:00|00:13:00|00:40:00|01:05:00|01:30:00|01:57:00|02:23:00|02:49:00|03:13:00"
+    },
+    {
+        "titulo": "Jesús es mi vida",
+        "numero": "434",
+        "ruta": "434 - Jesus es mi vida",
+        "tiempos": "00:00:00|00:19:00|00:41:00|01:01:00|01:27:00|01:41:00|02:01:00|02:22:00|02:48:00"
+    },
+    {
+        "titulo": "Dios sabe, Dios oye, Dios ve",
+        "numero": "435",
+        "ruta": "435 - Dios sabe, Dios oye, Dios ve",
+        "tiempos": "00:00:00|00:14:00|00:46:00|01:16:00|01:47:00|02:17:00|02:46:00"
+    },
+    {
+        "titulo": "Él vive hoy",
+        "numero": "436",
+        "ruta": "436 - El vive hoy",
+        "tiempos": "00:00:00|00:08:00|00:31:00|00:53:00|01:15:00|01:37:00|02:10:00|02:21:00|02:43:00"
+    },
+    {
+        "titulo": "Tu presencia, Padre amado, da consuelo",
+        "numero": "437",
+        "ruta": "437 - Tu presencia, Padre amado, da consuelo",
+        "tiempos": "00:00:00|00:09:00"
+    },
+    {
+        "titulo": "Mira hacia Dios",
+        "numero": "438",
+        "ruta": "438 - Mira hacia Dios",
+        "tiempos": "00:00:00|00:12:00|00:38:00|00:51:00|01:03:00|01:29:00|01:42:00|01:55:00|02:20:00|02:33:00"
+    },
+    {
+        "titulo": "¡Oh!, quién pudiera andar con Dios",
+        "numero": "439",
+        "ruta": "439 - Oh, quien pudiera andar con Dios",
+        "tiempos": "00:00:00|00:15:00|00:32:00|00:48:00|01:20:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Quiero, Jesús, contigo andar",
+        "numero": "440",
+        "ruta": "440 - Quiero, Jesus, contigo andar",
+        "tiempos": "00:00:00|00:13:00|00:45:00|01:14:00|01:29:00|01:44:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Jesús, te necesito",
+        "numero": "441",
+        "ruta": "441 - Jesus, te necesito",
+        "tiempos": "00:00:00|00:47:00|01:11:00|01:35:00|01:58:00|02:21:00|02:44:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "¡Oh! ¡Maestro y Salvador!",
+        "numero": "442",
+        "ruta": "442 - Oh Maestro y Salvador",
+        "tiempos": "00:00:00|00:17:00|00:45:00|01:12:00|01:22:00|01:39:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Hay un lugar do quiero estar, cerca de ti",
+        "numero": "443",
+        "ruta": "443 - Hay un lugar do quiero estar, cerca de ti",
+        "tiempos": "00:00:00|00:24:00|00:48:00|01:12:00|01:36:00|02:00:00|02:24:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "No me pases",
+        "numero": "444",
+        "ruta": "444 - No me pases",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:47:00|01:06:00|01:25:00|01:44:00|02:05:00|02:24:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Más de Jesús",
+        "numero": "445",
+        "ruta": "445 - Mas de Jesus",
+        "tiempos": "00:00:00|00:10:00|00:31:00|00:52:00|01:12:00|01:33:00|01:53:00|02:14:00|02:34:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Más cerca, oh Dios, de ti",
+        "numero": "446",
+        "ruta": "446 - Mas cerca, oh Dios, de ti",
+        "tiempos": "00:00:00|00:28:00|00:51:00|01:16:00|01:39:00|02:05:00|02:41:00|02:54:00|03:18:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Más santidad dame",
+        "numero": "447",
+        "ruta": "447 - Mas santidad dame",
+        "tiempos": "00:00:00|00:07:00|00:25:00|00:43:00|01:00:00|01:18:00|01:35:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Salvador, mi bien eterno",
+        "numero": "448",
+        "ruta": "448 - Salvador, mi bien eterno",
+        "tiempos": "00:00:00|00:25:00|00:49:00|01:12:00|01:34:00|01:57:00|02:19:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Cristo, mi piloto sé",
+        "numero": "449",
+        "ruta": "449 - Cristo, mi piloto se",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00|01:14:00|01:36:00|01:58:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Oh Jesús, Pastor divino",
+        "numero": "450",
+        "ruta": "450 - Oh Jesus, Pastor divino",
+        "tiempos": "00:00:00|00:37:00|00:58:00|01:14:00|01:34:00|01:50:00|02:11:00|02:30:00|02:52:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Cerca, más cerca",
+        "numero": "451",
+        "ruta": "451 - Cerca, mas cerca",
+        "tiempos": "00:00:00|00:23:00|00:58:00|01:22:00|01:56:00|02:20:00|02:55:00|03:19:00|03:54:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Contigo quiero andar",
+        "numero": "452",
+        "ruta": "452 - Contigo quiero andar",
+        "tiempos": "00:00:00|00:19:00|00:40:00|01:02:00|01:29:00|01:43:00|01:57:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Cómo ser cual Cristo",
+        "numero": "453",
+        "ruta": "453 - Como ser cual Cristo",
+        "tiempos": "00:00:00|00:13:00|00:37:00|01:02:00|01:27:00|01:52:00|02:17:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Yo quisiera andar con Cristo",
+        "numero": "454",
+        "ruta": "454 - Yo quisiera andar con Cristo",
+        "tiempos": "00:00:00|00:11:00|00:37:00|00:57:00|01:04:00|01:30:00|01:49:00|01:57:00|02:16:00|02:22:00|02:42:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Mi mano ten",
+        "numero": "455",
+        "ruta": "455 - Mi mano ten",
+        "tiempos": "00:00:00|00:17:00|00:35:00|00:53:00|01:10:00|01:28:00|01:46:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Como la mujer de junto al pozo",
+        "numero": "456",
+        "ruta": "456 - Como la mujer de junto al pozo",
+        "tiempos": "00:00:00|00:10:00|00:27:00|00:32:00|00:48:00|00:54:00|01:05:00|01:15:00|01:31:00|01:37:00|01:47:00|01:57:00|02:13:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "More en mí la belleza del Salvador",
+        "numero": "457",
+        "ruta": "457 - More en mi la belleza del Salvador",
+        "tiempos": "00:00:00|00:07:00|00:24:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Orad por mí",
+        "numero": "458",
+        "ruta": "458 - Orad por mi",
+        "tiempos": "00:00:00|00:13:00|00:43:00|01:16:00|01:31:00|01:46:00|02:18:00|02:49:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Háblame más de Cristo",
+        "numero": "459",
+        "ruta": "459 - Hablame mas de Cristo",
+        "tiempos": "00:00:00|00:11:00|00:23:00|00:35:00|01:00:00|01:24:00|01:49:00|02:01:00|02:13:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Quiero estar cerca de Cristo",
+        "numero": "460",
+        "ruta": "460 - Quiero estar cerca de Cristo",
+        "tiempos": "00:00:00|00:15:00|00:31:00|00:46:00|01:15:00|01:44:00|02:14:00|02:43:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "A tu lado anhelo estar",
+        "numero": "461",
+        "ruta": "461 - A tu lado anhelo estar",
+        "tiempos": "00:00:00|00:24:00|00:43:00|00:50:00|01:08:00|01:14:00|01:39:00|01:57:00|02:04:00|02:28:00|02:46:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Dame a Cristo",
+        "numero": "462",
+        "ruta": "462 - Dame a Cristo",
+        "tiempos": "00:00:00|00:28:00|00:59:00|01:29:00|01:58:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Mi oración",
+        "numero": "463",
+        "ruta": "463 - Mi oracion",
+        "tiempos": "00:00:00|00:15:00|00:33:00|00:51:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Ven, inspíranos",
+        "numero": "464",
+        "ruta": "464 - Ven, inspiranos",
+        "tiempos": "00:00:00|00:14:00|00:30:00|00:45:00|01:14:00|01:30:00|01:44:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Ven junto a mí",
+        "numero": "465",
+        "ruta": "465 - Ven junto a mi",
+        "tiempos": "00:00:00|00:22:00|00:46:00|01:10:00|01:33:00|01:58:00|02:21:00",
+        "color": "0xff0000"
+    },
+    {
+        "titulo": "Guíame, ¡oh Salvador!",
+        "numero": "466",
+        "ruta": "466 - Guiame, oh Salvador",
+        "tiempos": "00:00:00|00:21:00|00:45:00|01:08:00|01:31:00|01:55:00|02:18:00"
+    },
+    {
+        "titulo": "¡Siempre el Salvador conmigo!",
+        "numero": "467",
+        "ruta": "467 - Siempre el Salvador conmigo",
+        "tiempos": "00:00:00|00:18:00|00:27:00|00:34:00|00:55:00|01:03:00|01:11:00|01:31:00|01:39:00|01:47:00|02:07:00|02:23:00"
+    },
+    {
+        "titulo": "Paso a paso Dios me guía",
+        "numero": "468",
+        "ruta": "468 - Paso a paso Dios me guia",
+        "tiempos": "00:00:00|00:07:00|00:24:00|00:37:00|00:50:00|01:07:00|01:20:00|01:32:00|01:49:00|02:03:00"
+    },
+    {
+        "titulo": "Jesús me guía",
+        "numero": "469",
+        "ruta": "469 - Jesus me guia",
+        "tiempos": "00:00:00|00:27:00|00:40:00|00:53:00|01:19:00|01:39:00|01:46:00|02:13:00|02:27:00|02:39:00|03:07:00|03:21:00|03:34:00"
+    },
+    {
+        "titulo": "Guíame, Dios",
+        "numero": "470",
+        "ruta": "470 - Guiame, Dios",
+        "tiempos": "00:00:00|00:11:00|00:42:00"
+    },
+    {
+        "titulo": "Condúceme, Maestro",
+        "numero": "471",
+        "ruta": "471 - Conduceme, Maestro",
+        "tiempos": "00:00:00|00:12:00|00:33:00|00:54:00|01:14:00|01:36:00|01:56:00"
+    },
+    {
+        "titulo": "Jesús, mi guía es",
+        "numero": "472",
+        "ruta": "472 - Jesus, mi guia es",
+        "tiempos": "00:00:00|00:20:00|00:41:00|01:04:00|01:24:00"
+    },
+    {
+        "titulo": "Háblame, y hablaré",
+        "numero": "473",
+        "ruta": "473 - Hablame, y hablare",
+        "tiempos": "00:00:00|00:09:00|00:33:00|00:55:00"
+    },
+    {
+        "titulo": "¿Qué me importan?",
+        "numero": "474",
+        "ruta": "474 - Que me importan",
+        "tiempos": "00:00:00|00:24:00|00:38:00|00:51:00|01:18:00|01:39:00|01:58:00|02:12:00|02:38:00"
+    },
+    {
+        "titulo": "El camino es escabroso",
+        "numero": "475",
+        "ruta": "475 - El camino es escabroso",
+        "tiempos": "00:00:00|00:18:00|00:33:00|00:45:00|01:00:00|01:14:00|01:28:00|01:40:00|01:54:00|02:08:00|02:22:00|02:34:00|02:48:00"
+    },
+    {
+        "titulo": "¿Muy lejos el hogar está?",
+        "numero": "476",
+        "ruta": "476 - Muy lejos el hogar esta",
+        "tiempos": "00:00:00|00:21:00|00:44:00|01:07:00|01:30:00|01:53:00|02:05:00|02:27:00"
+    },
+    {
+        "titulo": "Los que aman al Señor",
+        "numero": "477",
+        "ruta": "477 - Los que aman al Senor",
+        "tiempos": "00:00:00|00:09:00|00:28:00|00:36:00|00:55:00|01:13:00|01:21:00|01:40:00|01:58:00|02:06:00"
+    },
+    {
+        "titulo": "Sé fiel siempre, hermano",
+        "numero": "478",
+        "ruta": "478 - Se fiel siempre, hermano",
+        "tiempos": "00:00:00|00:08:00|00:19:00|00:35:00|00:50:00|01:01:00|01:11:00|01:32:00|01:43:00|01:59:00"
+    },
+    {
+        "titulo": "De la mano, Señor",
+        "numero": "479",
+        "ruta": "479 - De la mano, Senor",
+        "tiempos": "00:00:00|00:22:00|00:45:00|01:08:00|01:31:00"
+    },
+    {
+        "titulo": "Digno eres, oh Señor",
+        "numero": "480",
+        "ruta": "480 - Digno eres, oh Senor",
+        "tiempos": "00:00:00|00:12:00|00:25:00|00:39:00|01:06:00|01:20:00|01:33:00|02:01:00|02:14:00|02:28:00"
+    },
+    {
+        "titulo": "Voy al cielo",
+        "numero": "481",
+        "ruta": "481 - Voy al cielo",
+        "tiempos": "00:00:00|00:16:00|00:41:00|00:53:00|01:05:00|01:18:00|01:30:00|01:55:00"
+    },
+    {
+        "titulo": "Quiero cantar",
+        "numero": "482",
+        "ruta": "482 - Quiero cantar",
+        "tiempos": "00:00:00|00:14:00|00:29:00|00:46:00|01:02:00|01:19:00|01:52:00|02:08:00"
+    },
+    {
+        "titulo": "Cuando al cielo lleguemos",
+        "numero": "483",
+        "ruta": "483 - Cuando al cielo lleguemos",
+        "tiempos": "00:00:00|00:08:00|00:27:00|00:47:00|01:05:00|01:25:00|01:44:00"
+    },
+    {
+        "titulo": "Busca al Señor",
+        "numero": "484",
+        "ruta": "484 - Busca al Senor",
+        "tiempos": "00:00:00|00:19:00|00:40:00|01:02:00|01:23:00|01:45:00|02:06:00"
+    },
+    {
+        "titulo": "Unidos en verdad",
+        "numero": "485",
+        "ruta": "485 - Unidos en verdad",
+        "tiempos": "00:00:00|00:11:00|00:25:00|00:38:00|00:51:00|01:05:00|01:31:00|01:45:00"
+    },
+    {
+        "titulo": "En los pasos de Jesús",
+        "numero": "486",
+        "ruta": "486 - En los pasos de Jesus",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:48:00|01:08:00"
+    },
+    {
+        "titulo": "Cristo, eres justo Rey",
+        "numero": "487",
+        "ruta": "487 - Cristo, eres justo Rey",
+        "tiempos": "00:00:00|00:18:00|00:49:00|01:03:00|01:26:00|01:47:00|02:17:00"
+    },
+    {
+        "titulo": "Al andar con Jesús",
+        "numero": "488",
+        "ruta": "488 - Al andar con Jesus",
+        "tiempos": "00:00:00|00:13:00|00:32:00|00:43:00|00:59:00|01:13:00|01:28:00|01:44:00|01:58:00|02:12:00|02:28:00|02:42:00|02:57:00"
+    },
+    {
+        "titulo": "Solo anhelo, Cristo amado",
+        "numero": "489",
+        "ruta": "489 - Solo anhelo, Cristo amado",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:48:00|01:07:00|01:27:00|01:46:00"
+    },
+    {
+        "titulo": "Mejor que los sacrificios",
+        "numero": "490",
+        "ruta": "490 - Mejor que los sacrificios",
+        "tiempos": "00:00:00|00:15:00|00:32:00|00:58:00|01:08:00|01:25:00|01:51:00|02:01:00|02:18:00|02:44:00"
+    },
+    {
+        "titulo": "Levántate, cristiano",
+        "numero": "491",
+        "ruta": "491 - Levantate, cristiano",
+        "tiempos": "00:00:00|00:24:00|00:41:00|00:58:00|01:14:00|01:30:00|01:46:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "¡Trabajad! ¡Trabajad!",
+        "numero": "492",
+        "ruta": "492 - Trabajad Trabajad",
+        "tiempos": "00:00:00|00:22:00|00:35:00|00:48:00|01:12:00|01:25:00|01:38:00|02:03:00|02:15:00|02:29:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Hoy quiero trabajar contigo",
+        "numero": "493",
+        "ruta": "493 - Hoy quiero trabajar contigo",
+        "tiempos": "00:00:00|00:09:00|00:27:00|00:46:00|01:05:00|01:23:00|01:43:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Cerca un alma agobiada está",
+        "numero": "494",
+        "ruta": "494 - Cerca un alma agobiada esta",
+        "tiempos": "00:00:00|00:14:00|00:33:00|00:41:00|00:52:00|01:10:00|01:19:00|01:29:00|01:38:00|01:47:00|01:56:00|02:06:00|02:15:00|02:24:00|02:33:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Mi deber",
+        "numero": "495",
+        "ruta": "495 - Mi deber",
+        "tiempos": "00:00:00|00:28:00|00:44:00|00:55:00|01:07:00|01:29:00|01:46:00|02:08:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Sus manos somos",
+        "numero": "496",
+        "ruta": "496 - Sus manos somos",
+        "tiempos": "00:00:00|00:22:00|00:45:00|01:08:00|01:30:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Manos",
+        "numero": "497",
+        "ruta": "497 - Manos",
+        "tiempos": "00:00:00|00:21:00|00:37:00|00:50:00|01:04:00|01:20:00|01:36:00|01:49:00|02:04:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Puedes demostrar con tus manos",
+        "numero": "498",
+        "ruta": "498 - Puedes demostrar con tus manos",
+        "tiempos": "00:00:00|00:12:00|00:28:00|00:50:00|01:05:00|01:18:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Jesús anduvo por aquí",
+        "numero": "499",
+        "ruta": "499 - Jesus anduvo por aqui",
+        "tiempos": "00:00:00|00:06:00|00:25:00|00:43:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Hazme tu siervo",
+        "numero": "500",
+        "ruta": "500 - Hazme tu siervo",
+        "tiempos": "00:00:00|00:06:00|00:30:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Mi vida al servicio de Dios",
+        "numero": "501",
+        "ruta": "501 - Mi vida al servicio de Dios",
+        "tiempos": "00:00:00|00:15:00|00:33:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Brilla en el sitio donde estés",
+        "numero": "502",
+        "ruta": "502 - Brilla en el sitio donde estes",
+        "tiempos": "00:00:00|00:08:00|00:19:00|00:30:00|00:40:00|00:51:00|01:01:00|01:12:00|01:22:00|01:33:00|01:42:00|01:54:00|02:04:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Oh Dios, que deseas la vida",
+        "numero": "503",
+        "ruta": "503 - Oh Dios, que deseas la vida",
+        "tiempos": "00:00:00|00:05:00|00:22:00|00:38:00|01:10:00|01:26:00|01:42:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Señor de todos",
+        "numero": "504",
+        "ruta": "504 - Senor de todos",
+        "tiempos": "00:00:00|00:11:00|00:36:00|01:02:00|01:27:00|01:53:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Hijo del reino",
+        "numero": "505",
+        "ruta": "505 - Hijo del reino",
+        "tiempos": "00:00:00|00:12:00|00:24:00|00:37:00|00:49:00|01:01:00|01:13:00|01:25:00"
+    },
+    {
+        "titulo": "¡De pie, de pie, cristianos!",
+        "numero": "506",
+        "ruta": "506 - De pie, de pie, cristianos",
+        "tiempos": "00:00:00|00:18:00|00:39:00|00:59:00|01:20:00|01:40:00|02:01:00|02:21:00|02:42:00"
+    },
+    {
+        "titulo": "Tentado, no cedas",
+        "numero": "507",
+        "ruta": "507 - Tentado, no cedas",
+        "tiempos": "00:00:00|00:07:00|00:44:00|01:02:00|01:38:00|01:57:00|02:33:00"
+    },
+    {
+        "titulo": "Contendamos siempre por nuestra fe",
+        "numero": "508",
+        "ruta": "508 - Contendamos siempre por nuestra fe",
+        "tiempos": "00:00:00|00:30:00|00:42:00|00:53:00|01:17:00|01:39:00|02:03:00|02:25:00"
+    },
+    {
+        "titulo": "¡Firmes! ¡Fuertes!",
+        "numero": "509",
+        "ruta": "509 - Firmes Fuertes",
+        "tiempos": "00:00:00|00:11:00|00:33:00|00:56:00|01:19:00|01:41:00|02:04:00"
+    },
+    {
+        "titulo": "¿Quién está por Cristo?",
+        "numero": "510",
+        "ruta": "510 - Quien esta por Cristo",
+        "tiempos": "00:00:00|00:16:00|00:34:00|00:52:00|01:10:00|01:28:00|01:45:00|02:03:00|02:21:00|02:39:00|02:56:00|03:15:00|03:32:00"
+    },
+    {
+        "titulo": "Marcharé en la divina luz",
+        "numero": "511",
+        "ruta": "511 - Marchare en la divina luz",
+        "tiempos": "00:00:00|00:08:00|00:29:00|00:51:00|01:12:00|01:35:00|01:55:00|02:17:00|02:39:00"
+    },
+    {
+        "titulo": "Nunca estéis desanimados",
+        "numero": "512",
+        "ruta": "512 - Nunca esteis desanimados",
+        "tiempos": "00:00:00|00:17:00|00:36:00|00:54:00|01:12:00|01:31:00|01:49:00|02:07:00|02:26:00|02:44:00"
+    },
+    {
+        "titulo": "Honra al hombre de valor",
+        "numero": "513",
+        "ruta": "513 - Honra al hombre de valor",
+        "tiempos": "00:00:00|00:24:00|00:38:00|00:51:00|01:04:00|01:17:00|01:31:00"
+    },
+    {
+        "titulo": "¡Despertad, despertad, oh cristianos!",
+        "numero": "514",
+        "ruta": "514 - Despertad, despertad, oh cristianos",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00|01:15:00|01:37:00|01:59:00|02:21:00|02:44:00"
+    },
+    {
+        "titulo": "Despliegue el cristiano su santa bandera",
+        "numero": "515",
+        "ruta": "515 - Despliegue el cristiano su santa bandera",
+        "tiempos": "00:00:00|00:08:00|00:20:00|00:32:00|00:43:00|00:54:00|01:06:00|01:18:00|01:29:00"
+    },
+    {
+        "titulo": "¡Firmes y adelante!",
+        "numero": "516",
+        "ruta": "516 - Firmes y adelante",
+        "tiempos": "00:00:00|00:15:00|00:36:00|00:56:00|01:19:00|01:40:00|02:00:00|02:23:00|02:44:00|03:04:00|03:27:00|03:48:00|04:08:00"
+    },
+    {
+        "titulo": "De pie, oh grey de Dios",
+        "numero": "517",
+        "ruta": "517 - De pie, oh grey de Dios",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00|01:15:00"
+    },
+    {
+        "titulo": "Jesús está buscando voluntarios hoy",
+        "numero": "518",
+        "ruta": "518 - Jesus esta buscando voluntarios hoy",
+        "tiempos": "00:00:00|00:17:00|00:35:00|00:52:00|01:10:00|01:28:00|01:46:00|02:04:00|02:21:00|02:39:00|02:57:00|03:15:00|03:33:00|03:50:00|04:08:00|04:26:00|04:43:00"
+    },
+    {
+        "titulo": "Despierta, hermano, sin demorar",
+        "numero": "519",
+        "ruta": "519 - Despierta, hermano, sin demorar",
+        "tiempos": "00:00:00|00:12:00|00:38:00|01:05:00"
+    },
+    {
+        "titulo": "¡Adelante! manda el Señor",
+        "numero": "520",
+        "ruta": "520 - Adelante manda el Senor",
+        "tiempos": "00:00:00|00:16:00|00:33:00|00:52:00|01:09:00|01:27:00|01:44:00"
+    },
+    {
+        "titulo": "Al Cristo ved",
+        "numero": "521",
+        "ruta": "521 - Al Cristo ved",
+        "tiempos": "00:00:00|00:18:00|00:35:00|00:53:00|01:11:00|01:29:00|01:46:00|02:04:00|02:21:00|02:39:00"
+    },
+    {
+        "titulo": "Suenen las palabras",
+        "numero": "522",
+        "ruta": "522 - Suenen las palabras",
+        "tiempos": "00:00:00|00:10:00|00:22:00|00:32:00|00:44:00|00:55:00|01:07:00|01:18:00|01:29:00|01:40:00|01:52:00|02:03:00|02:14:00"
+    },
+    {
+        "titulo": "Los sabios dan su ciencia",
+        "numero": "523",
+        "ruta": "523 - Los sabios dan su ciencia",
+        "tiempos": "00:00:00|00:09:00|00:30:00|00:51:00|01:12:00|01:33:00|01:54:00"
+    },
+    {
+        "titulo": "Traían en silencio presentes al Señor",
+        "numero": "524",
+        "ruta": "524 - Traian en silencio presentes al Senor",
+        "tiempos": "00:00:00|00:16:00|00:34:00|00:52:00|01:10:00|01:28:00|01:46:00|02:04:00|02:22:00|02:40:00"
+    },
+    {
+        "titulo": "Con gratitud, llegamos",
+        "numero": "525",
+        "ruta": "525 - Con gratitud, llegamos",
+        "tiempos": "00:00:00|00:07:00|00:29:00|00:51:00"
+    },
+    {
+        "titulo": "Oh, mi patria, te prometo hoy",
+        "numero": "526",
+        "ruta": "526 - Oh, mi patria, te prometo hoy",
+        "tiempos": "00:00:00|00:21:00|00:43:00|01:04:00|01:26:00|01:48:00|02:09:00"
+    },
+    {
+        "titulo": "Señor Jehová, omnipotente Dios",
+        "numero": "527",
+        "ruta": "527 - Senor Jehova, omnipotente Dios",
+        "tiempos": "00:00:00|00:08:00|00:49:00|01:31:00"
+    },
+    {
+        "titulo": "Por montañas, muy cansado",
+        "numero": "528",
+        "ruta": "528 - Por montanas, muy cansado",
+        "tiempos": "00:00:00|00:25:00|00:51:00|01:17:00|01:41:00|02:06:00|02:31:00|02:56:00|03:21:00"
+    },
+    {
+        "titulo": "Iglesia de Cristo",
+        "numero": "529",
+        "ruta": "529 - Iglesia de Cristo",
+        "tiempos": "00:00:00|00:13:00|00:30:00|00:46:00|01:01:00|01:17:00|01:32:00"
+    },
+    {
+        "titulo": "Somos un pequeño pueblo muy feliz",
+        "numero": "530",
+        "ruta": "530 - Somos un pequeno pueblo muy feliz",
+        "tiempos": "00:00:00|00:09:00|00:18:00|00:29:00|00:49:00"
+    },
+    {
+        "titulo": "La familia de Dios",
+        "numero": "531",
+        "ruta": "531 - La familia de Dios",
+        "tiempos": "00:00:00|00:08:00|00:27:00|00:45:00|01:05:00"
+    },
+    {
+        "titulo": "Sagrado es el amor",
+        "numero": "532",
+        "ruta": "532 - Sagrado es el amor",
+        "tiempos": "00:00:00|00:12:00|00:37:00|01:02:00|01:28:00"
+    },
+    {
+        "titulo": "Cuán bueno y agradable",
+        "numero": "533",
+        "ruta": "533 - Cuan bueno y agradable",
+        "tiempos": "00:00:00|00:09:00|00:32:00"
+    },
+    {
+        "titulo": "En tu nombre comenzamos",
+        "numero": "534",
+        "ruta": "534 - En tu nombre comenzamos",
+        "tiempos": "00:00:00|00:13:00|00:33:00|00:52:00|01:11:00|01:34:00|01:56:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Las faenas terminadas",
+        "numero": "535",
+        "ruta": "535 - Las faenas terminadas",
+        "tiempos": "00:00:00|00:10:00|00:28:00|00:44:00|01:01:00|01:18:00|01:35:00"
+    },
+    {
+        "titulo": "En sombras de la tarde",
+        "numero": "536",
+        "ruta": "536 - En sombras de la tarde",
+        "tiempos": "00:00:00|00:08:00|00:31:00|00:54:00|01:16:00|01:38:00|02:01:00"
+    },
+    {
+        "titulo": "Sábado santo",
+        "numero": "537",
+        "ruta": "537 - Sabado santo",
+        "tiempos": "00:00:00|00:14:00|00:54:00|01:33:00|02:11:00"
+    },
+    {
+        "titulo": "Hoy es día de reposo",
+        "numero": "538",
+        "ruta": "538 - Hoy es dia de reposo",
+        "tiempos": "00:00:00|00:08:00|00:30:00|00:51:00|01:13:00|01:34:00|01:56:00"
+    },
+    {
+        "titulo": "¡Oh, día delicioso!",
+        "numero": "539",
+        "ruta": "539 - Oh, dia delicioso",
+        "tiempos": "00:00:00|00:22:00|00:47:00|01:11:00|01:36:00|02:00:00|02:24:00"
+    },
+    {
+        "titulo": "Ya asoma el sol brillante",
+        "numero": "540",
+        "ruta": "540 - Ya asoma el sol brillante",
+        "tiempos": "00:00:00|00:12:00|00:25:00|00:37:00|00:49:00|01:02:00|01:14:00"
+    },
+    {
+        "titulo": "Señor, reposamos",
+        "numero": "541",
+        "ruta": "541 - Senor, reposamos",
+        "tiempos": "00:00:00|00:18:00|00:39:00|01:08:00|01:38:00|01:58:00|02:18:00"
+    },
+    {
+        "titulo": "Amo tu sábado",
+        "numero": "542",
+        "ruta": "542 - Amo tu sabado",
+        "tiempos": "00:00:00|00:18:00|00:51:00|01:20:00|01:52:00"
+    },
+    {
+        "titulo": "No te olvides nunca del día del Señor",
+        "numero": "543",
+        "ruta": "543 - No te olvides nunca del dia del Senor",
+        "tiempos": "00:00:00|00:07:00|00:27:00|00:46:00|01:05:00|01:24:00|01:42:00|02:01:00|02:20:00|02:39:00"
+    },
+    {
+        "titulo": "Hoy el sábado glorioso",
+        "numero": "544",
+        "ruta": "544 - Hoy el sabado glorioso",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00"
+    },
+    {
+        "titulo": "Santo día",
+        "numero": "545",
+        "ruta": "545 - Santo dia",
+        "tiempos": "00:00:00|00:08:00|00:32:00|00:55:00|01:19:00|01:42:00|02:06:00"
+    },
+    {
+        "titulo": "Santo sábado, bendito",
+        "numero": "546",
+        "ruta": "546 - Santo sabado, bendito",
+        "tiempos": "00:00:00|00:11:00|00:33:00|00:44:00|01:05:00|01:16:00|01:36:00"
+    },
+    {
+        "titulo": "Sábado es",
+        "numero": "547",
+        "ruta": "547 - Sabado es",
+        "tiempos": "00:00:00|00:17:00|00:32:00|00:44:00"
+    },
+    {
+        "titulo": "Mi corazón se llena de alegría",
+        "numero": "548",
+        "ruta": "548 - Mi corazon se llena de alegria",
+        "tiempos": "00:00:00|00:08:00|00:46:00|01:05:00|01:25:00|01:44:00"
+    },
+    {
+        "titulo": "Ya el fin se acerca",
+        "numero": "549",
+        "ruta": "549 - Ya el fin se acerca",
+        "tiempos": "00:00:00|00:20:00|00:42:00|01:03:00|01:25:00|01:46:00|02:08:00|02:29:00|02:52:00"
+    },
+    {
+        "titulo": "Día santo del Señor",
+        "numero": "550",
+        "ruta": "550 - Dia santo del Senor",
+        "tiempos": "00:00:00|00:08:00|00:28:00|00:48:00|01:08:00|01:27:00|01:47:00"
+    },
+    {
+        "titulo": "Embajador soy de mi Rey",
+        "numero": "551",
+        "ruta": "551 - Embajador soy de mi Rey",
+        "tiempos": "00:00:00|00:11:00|00:24:00|00:36:00|01:01:00|01:15:00|01:26:00|01:51:00|02:05:00|02:16:00"
+    },
+    {
+        "titulo": "¡Oh!, cuánto necesita",
+        "numero": "552",
+        "ruta": "552 - Oh, cuanto necesita",
+        "tiempos": "00:00:00|00:09:00|00:23:00|00:34:00|00:59:00|01:12:00|01:24:00|01:48:00|02:01:00|02:13:00"
+    },
+    {
+        "titulo": "¿Os pusisteis a arar?",
+        "numero": "553",
+        "ruta": "553 - Os pusisteis a arar",
+        "tiempos": "00:00:00|00:11:00|00:23:00|00:39:00|00:54:00|01:18:00|01:34:00|01:44:00|01:59:00"
+    },
+    {
+        "titulo": "Con Cristo avanza hoy",
+        "numero": "554",
+        "ruta": "554 - Con Cristo avanza hoy",
+        "tiempos": "00:00:00|00:18:00|00:40:00|00:57:00|01:19:00|01:36:00|01:58:00"
+    },
+    {
+        "titulo": "Hoy gozoso medito",
+        "numero": "555",
+        "ruta": "555 - Hoy gozoso medito",
+        "tiempos": "00:00:00|00:09:00|00:32:00|00:44:00|00:57:00|01:09:00|01:21:00|01:32:00|01:46:00|02:09:00|02:20:00"
+    },
+    {
+        "titulo": "Yo quiero siempre brillar",
+        "numero": "556",
+        "ruta": "556 - Yo quiero siempre brillar",
+        "tiempos": "00:00:00|00:09:00|00:20:00"
+    },
+    {
+        "titulo": "¿Qué estás haciendo por Cristo?",
+        "numero": "557",
+        "ruta": "557 - Que estas haciendo por Cristo",
+        "tiempos": "00:00:00|00:06:00|00:23:00|00:39:00|00:56:00|01:12:00|01:28:00|01:45:00|02:02:00|02:18:00"
+    },
+    {
+        "titulo": "Ama a tus prójimos",
+        "numero": "558",
+        "ruta": "558 - Ama a tus projimos",
+        "tiempos": "00:00:00|00:11:00|00:24:00|00:37:00|00:50:00|01:04:00|01:16:00|01:30:00|01:56:00|02:09:00|02:35:00"
+    },
+    {
+        "titulo": "No te dé temor",
+        "numero": "559",
+        "ruta": "559 - No te de temor",
+        "tiempos": "00:00:00|00:21:00|00:44:00|01:06:00|01:28:00|01:50:00|02:12:00|02:35:00|02:57:00"
+    },
+    {
+        "titulo": "Cristo está buscando obreros",
+        "numero": "560",
+        "ruta": "560 - Cristo esta buscando obreros",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:59:00|01:22:00|01:47:00|02:11:00|02:35:00|02:58:00"
+    },
+    {
+        "titulo": "Oigo del Señor la voz llamando",
+        "numero": "561",
+        "ruta": "561 - Oigo del Senor la voz llamando",
+        "tiempos": "00:00:00|00:11:00|00:34:00|00:59:00|01:22:00|01:47:00|02:11:00|02:35:00|02:59:00"
+    },
+    {
+        "titulo": "Esparcid la luz de Cristo",
+        "numero": "562",
+        "ruta": "562 - Esparcid la luz de Cristo",
+        "tiempos": "00:00:00|00:07:00|00:26:00|00:45:00|01:03:00|01:22:00|01:40:00"
+    },
+    {
+        "titulo": "Escuchad, Jesús nos dice",
+        "numero": "563",
+        "ruta": "563 - Escuchad, Jesus nos dice",
+        "tiempos": "00:00:00|00:09:00|00:31:00|00:53:00|01:15:00|01:38:00|01:59:00"
+    },
+    {
+        "titulo": "Pronto la noche viene",
+        "numero": "564",
+        "ruta": "564 - Pronto la noche viene",
+        "tiempos": "00:00:00|00:10:00|00:32:00|00:54:00|01:15:00|01:36:00|01:57:00|02:19:00|02:40:00"
+    },
+    {
+        "titulo": "¡Ve, ve oh Sion!",
+        "numero": "565",
+        "ruta": "565 - Ve, ve oh Sion",
+        "tiempos": "00:00:00|00:43:00|01:03:00|01:21:00|01:40:00|02:19:00|02:39:00|02:59:00|03:17:00|03:37:00|04:15:00"
+    },
+    {
+        "titulo": "Centinelas del Maestro",
+        "numero": "566",
+        "ruta": "566 - Centinelas del Maestro",
+        "tiempos": "00:00:00|00:40:00|01:01:00|01:22:00|01:42:00|02:03:00|02:23:00"
+    },
+    {
+        "titulo": "Si en valles de peligros",
+        "numero": "567",
+        "ruta": "567 - Si en valles de peligros",
+        "tiempos": "00:00:00|00:16:00|00:38:00|00:57:00|01:10:00|01:22:00|01:38:00|01:58:00|02:18:00|02:31:00|02:42:00|02:58:00|03:20:00|03:39:00|03:52:00|04:04:00|04:20:00|04:40:00|05:00:00|05:13:00|05:24:00"
+    },
+    {
+        "titulo": "Hay lugar en la amplia viña",
+        "numero": "568",
+        "ruta": "568 - Hay lugar en la amplia vina",
+        "tiempos": "00:00:00|00:19:00|00:39:00|01:00:00|01:20:00|01:41:00|02:02:00|02:22:00|02:42:00|03:03:00|03:24:00|03:45:00|04:05:00"
+    },
+    {
+        "titulo": "Id y predicad el evangelio",
+        "numero": "569",
+        "ruta": "569 - Id y predicad el evangelio",
+        "tiempos": "00:00:00|00:08:00|00:19:00|00:29:00|00:43:00|00:58:00|01:08:00|01:18:00|01:28:00|01:42:00|01:57:00|02:07:00|02:17:00|02:27:00|02:41:00|02:56:00"
+    },
+    {
+        "titulo": "Voluntario del Senor",
+        "numero": "570",
+        "ruta": "570 - Voluntario del Señor",
+        "tiempos": "00:00:00|00:04:00|00:18:00|00:30:00|00:43:00|00:56:00|01:09:00|01:22:00|01:35:00|01:48:00"
+    },
+    {
+        "titulo": "La historia de Cristo contemos",
+        "numero": "571",
+        "ruta": "571 - La historia de Cristo contemos",
+        "tiempos": "00:00:00|00:08:00|00:33:00|00:53:00|01:08:00|01:17:00|01:37:00|01:53:00|02:02:00"
+    },
+    {
+        "titulo": "Pescadores de hombres",
+        "numero": "572",
+        "ruta": "572 - Pescadores de hombres",
+        "tiempos": "00:00:00|00:20:00|00:41:00|01:02:00|01:23:00|01:44:00|02:06:00"
+    },
+    {
+        "titulo": "Te envío a ti",
+        "numero": "573",
+        "ruta": "573 - Te envio a ti",
+        "tiempos": "00:00:00|00:12:00|00:40:00|01:09:00|01:39:00|02:00:00"
+    },
+    {
+        "titulo": "Testimonio",
+        "numero": "574",
+        "ruta": "574 - Testimonio",
+        "tiempos": "00:00:00|00:17:00|00:38:00|00:57:00|01:17:00|01:36:00|01:56:00"
+    },
+    {
+        "titulo": "Tocad trompeta ya",
+        "numero": "575",
+        "ruta": "575 - Tocad trompeta ya",
+        "tiempos": "00:00:00|00:18:00|00:38:00|00:57:00|01:16:00|01:35:00|01:55:00|02:13:00|02:33:00"
+    },
+    {
+        "titulo": "Proclamo hoy que soy cristiano",
+        "numero": "576",
+        "ruta": "576 - Proclamo hoy que soy cristiano",
+        "tiempos": "00:00:00|00:10:00|00:37:00|01:02:00|01:28:00|01:54:00|02:20:00"
+    },
+    {
+        "titulo": "Yo quiero trabajar",
+        "numero": "577",
+        "ruta": "577 - Yo quiero trabajar",
+        "tiempos": "00:00:00|00:09:00|00:20:00|00:31:00|00:52:00|01:14:00|01:36:00|01:48:00|01:59:00"
+    },
+    {
+        "titulo": "El pueblo que conoce a su Dios",
+        "numero": "578",
+        "ruta": "578 - El pueblo que conoce a su Dios",
+        "tiempos": "00:00:00|00:20:00|00:42:00|00:58:00|01:15:00|01:37:00|01:53:00"
+    },
+    {
+        "titulo": "La fuente veo",
+        "numero": "579",
+        "ruta": "579 - La fuente veo",
+        "tiempos": "00:00:00|00:20:00|00:40:00|01:00:00|01:20:00|01:40:00|02:00:00|02:20:00|02:41:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Las aguas del bautismo",
+        "numero": "580",
+        "ruta": "580 - Las aguas del bautismo",
+        "tiempos": "00:00:00|00:10:00|00:33:00|00:56:00|01:19:00|01:41:00|02:04:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "El pan de vida soy",
+        "numero": "581",
+        "ruta": "581 - El pan de vida soy",
+        "tiempos": "00:00:00|00:24:00|00:46:00|01:08:00|01:31:00|01:55:00"
+    },
+    {
+        "titulo": "Hoy venimos cual hermanos",
+        "numero": "582",
+        "ruta": "582 - Hoy venimos cual hermanos",
+        "tiempos": "00:00:00|00:11:00|00:34:00|00:56:00|01:18:00"
+    },
+    {
+        "titulo": "La Cena de la Comunión",
+        "numero": "583",
+        "ruta": "583 - La Cena de la Comunion",
+        "tiempos": "00:00:00|00:22:00|00:48:00|01:13:00|01:38:00"
+    },
+    {
+        "titulo": "Amémonos, hermanos",
+        "numero": "584",
+        "ruta": "584 - Amemonos, hermanos",
+        "tiempos": "00:00:00|00:26:00|00:52:00|01:17:00|01:43:00|02:09:00|02:34:00"
+    },
+    {
+        "titulo": "De rodillas partimos hoy el pan",
+        "numero": "585",
+        "ruta": "585 - De rodillas partimos hoy el pan",
+        "tiempos": "00:00:00|00:27:00|00:53:00|01:18:00|01:43:00|02:08:00|02:33:00"
+    },
+    {
+        "titulo": "En memoria de mí",
+        "numero": "586",
+        "ruta": "586 - En memoria de mi",
+        "tiempos": "00:00:00|00:10:00|00:48:00|01:16:00|01:46:00|02:15:00"
+    },
+    {
+        "titulo": "Te dedicamos, oh Señor",
+        "numero": "587",
+        "ruta": "587 - Te dedicamos, oh Senor",
+        "tiempos": "00:00:00|00:11:00|00:36:00|00:59:00"
+    },
+    {
+        "titulo": "Ven, alma que lloras",
+        "numero": "588",
+        "ruta": "588 - Ven, alma que lloras",
+        "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00|01:22:00|01:46:00|02:10:00"
+    },
+    {
+        "titulo": "Perfecto amor",
+        "numero": "589",
+        "ruta": "589 - Perfecto amor",
+        "tiempos": "00:00:00|00:11:00|00:33:00|00:55:00|01:18:00|01:41:00|02:03:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Guía a ti, Señor",
+        "numero": "590",
+        "ruta": "590 - Guia a ti, Senor",
+        "tiempos": "00:00:00|00:15:00|00:39:00|00:50:00|01:01:00|01:23:00|01:35:00|01:45:00|02:19:00|02:29:00|02:52:00|03:04:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Todo es bello en el hogar",
+        "numero": "591",
+        "ruta": "591 - Todo es bello en el hogar",
+        "tiempos": "00:00:00|00:08:00|00:27:00|00:45:00|01:03:00|01:22:00|01:40:00|01:59:00|02:17:00|02:35:00|02:54:00|03:12:00|03:31:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Si Dios está, ¡feliz hogar!",
+        "numero": "592",
+        "ruta": "592 - Si Dios esta, feliz hogar",
+        "tiempos": "00:00:00|00:14:00|00:46:00|01:19:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Hogar de mis recuerdos",
+        "numero": "593",
+        "ruta": "593 - Hogar de mis recuerdos",
+        "tiempos": "00:00:00|00:25:00|00:46:00|01:07:00|01:27:00|01:49:00|02:09:00|02:33:00|02:56:00|03:17:00|03:34:00|03:55:00|04:16:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Señor, gracias por mi hogar",
+        "numero": "594",
+        "ruta": "594 - Senor, gracias por mi hogar",
+        "tiempos": "00:00:00|00:14:00|00:36:00|00:58:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Feliz hogar",
+        "numero": "595",
+        "ruta": "595 - Feliz hogar",
+        "tiempos": "00:00:00|00:24:00|00:48:00|01:13:00|01:37:00|02:01:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Edificamos familias",
+        "numero": "596",
+        "ruta": "596 - Edificamos familias",
+        "tiempos": "00:00:00|00:08:00|00:21:00|00:32:00|00:56:00|01:09:00|01:21:00|01:44:00|02:09:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Oración por un niño",
+        "numero": "597",
+        "ruta": "597 - Oracion por un nino",
+        "tiempos": "00:00:00|00:20:00|00:43:00|01:05:00|01:28:00",
+        "color": "0x000000"
+    },
+    {
+        "titulo": "Cristo, yo te seguiré",
+        "numero": "598",
+        "ruta": "598 - Cristo, yo te seguire",
+        "tiempos": "00:00:00|00:13:00|00:28:00|00:42:00|00:56:00|01:10:00|01:25:00"
+    },
+    {
+        "titulo": "En este bello día",
+        "numero": "599",
+        "ruta": "599 - En este bello dia",
+        "tiempos": "00:00:00|00:16:00|00:34:00|00:53:00|01:10:00|01:29:00|01:46:00|02:05:00|02:22:00"
+    },
+    {
+        "titulo": "Cuando venga Jesucristo",
+        "numero": "600",
+        "ruta": "600 - Cuando venga Jesucristo",
+        "tiempos": "00:00:00|00:31:00|00:51:00|01:11:00|01:31:00|01:51:00|02:11:00|02:31:00|02:51:00"
+    },
+    {
+        "titulo": "Cuando leo en la Biblia",
+        "numero": "601",
+        "ruta": "601 - Cuando leo en la Biblia",
+        "tiempos": "00:00:00|00:11:00|00:25:00|00:38:00|00:51:00|01:04:00|01:17:00|01:30:00|01:43:00"
+    },
+    {
+        "titulo": "Es el amor divino",
+        "numero": "602",
+        "ruta": "602 - Es el amor divino",
+        "tiempos": "00:00:00|00:18:00|00:34:00|00:49:00|01:05:00|01:21:00|01:36:00|01:53:00|02:10:00|02:25:00"
+    },
+    {
+        "titulo": "Yo temprano busco a Cristo",
+        "numero": "603",
+        "ruta": "603 - Yo temprano busco a Cristo",
+        "tiempos": "00:00:00|00:14:00|00:36:00|00:58:00|01:21:00|01:44:00|02:06:00"
+    },
+    {
+        "titulo": "Bellas las manitas son",
+        "numero": "604",
+        "ruta": "604 - Bellas las manitas son",
+        "tiempos": "00:00:00|00:10:00|00:29:00|00:49:00|01:07:00|01:26:00|01:45:00|02:04:00|02:23:00"
+    },
+    {
+        "titulo": "Jesús tiene tiempo",
+        "numero": "605",
+        "ruta": "605 - Jesus tiene tiempo",
+        "tiempos": "00:00:00|00:05:00|00:18:00|00:30:00|00:44:00"
+    },
+    {
+        "titulo": "Llama Jesús, el Buen Pastor",
+        "numero": "606",
+        "ruta": "606 - Llama Jesus, el Buen Pastor",
+        "tiempos": "00:00:00|00:08:00|00:32:00|00:56:00|01:19:00|01:42:00|02:06:00"
+    },
+    {
+        "titulo": "Nítido rayo por Cristo",
+        "numero": "607",
+        "ruta": "607 - Nitido rayo por Cristo",
+        "tiempos": "00:00:00|00:23:00|00:44:00|01:06:00|01:24:00|01:43:00|02:02:00|02:22:00|02:41:00"
+    },
+    {
+        "titulo": "Corazones siempre alegres",
+        "numero": "608",
+        "ruta": "608 - Corazones siempre alegres",
+        "tiempos": "00:00:00|00:17:00|00:35:00|00:55:00|01:13:00|01:31:00|01:48:00|02:08:00|02:25:00"
+    },
+    {
+        "titulo": "¡Oh jóvenes, venid!",
+        "numero": "609",
+        "ruta": "609 - Oh jovenes, venid",
+        "tiempos": "00:00:00|00:24:00|00:37:00|00:50:00|01:01:00|01:14:00|01:27:00|01:39:00|01:51:00|02:03:00|02:16:00|02:29:00|02:40:00|02:53:00|03:05:00|03:18:00|03:29:00"
+    },
+    {
+        "titulo": "Escuchamos tu llamada",
+        "numero": "610",
+        "ruta": "610 - Escuchamos tu llamada",
+        "tiempos": "00:00:00|00:17:00|00:36:00|00:53:00|01:12:00|01:31:00|01:48:00|02:06:00|02:25:00|02:42:00|03:01:00|03:20:00|03:37:00"
+    },
+    {
+        "titulo": "Oh, juventud del Rey",
+        "numero": "611",
+        "ruta": "611 - Oh, juventud del Rey",
+        "tiempos": "00:00:00|00:19:00|00:43:00"
+    },
+    {
+        "titulo": "Jesús te necesita hoy",
+        "numero": "612",
+        "ruta": "612 - Jesus te necesita hoy",
+        "tiempos": "00:00:00|00:08:00|00:19:00|00:29:00|00:38:00|00:48:00|00:58:00|01:08:00|01:18:00"
+    },
+    {
+        "titulo": "Hoy nos toca trabajar",
+        "numero": "613",
+        "ruta": "613 - Hoy nos toca trabajar",
+        "tiempos": "00:00:00|00:17:00|00:37:00|00:56:00|01:11:00|01:25:00|01:45:00|02:04:00|02:19:00|02:33:00|02:53:00|03:11:00|03:27:00"
+    },
+    {
+        "titulo": "Amenes",
+        "numero": "614",
+        "ruta": "614 - Amenes",
+        "tiempos": "00:00:00"
+    }
+]

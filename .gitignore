@@ -1,2 +1,4 @@
-Assets/
+Assets/*
+!Assets/infohimnos.json
+!Assets/upscale.ipynb
 __pycache__/
