@@ -1,38 +1,19 @@
 import tkinter as tk
 from tkinter import ttk
 import json
-import sv_ttk
 
 from player import *
 from music import *
 
-class App(tk.Tk):
-    def __init__(self) -> None:
+class Finder(ttk.Frame):
+    def __init__(self, settings) -> None:
         super().__init__()
-        WIDTH=700
-        HEIGHT=700
-        self.settings = {
-            "theme": "dark",
-            "keep_aspect_ratio": True,
-            "player": {
-                "geometry": "800x600",
-                "fullscreen": False
-            },
-            "path": {
-                "letras": "Assets/Letras",
-                "cantado": "Assets/Musica/Cantado",
-                "fondos": "Assets/Fondos",
-                "instrumental": "Assets/Musica/Instrumental",
-                "indices": "Assets/indices.json"
-            },
-        }
-        sv_ttk.set_theme(self.settings["theme"])
+        self.settings = settings
 
-        self.title("Himnario Adventista")
         self.mixer = Music()
+        self.playing = False
+        self.player = None
 
-        self.geometry(f"{WIDTH}x{HEIGHT}")
-        self.minsize(WIDTH, HEIGHT)
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(4, weight=1)
 
@@ -40,10 +21,6 @@ class App(tk.Tk):
         self.setup_modeselector()
         self.setup_search()
 
-        self.playing = False
-        self.player = None
-
-        #self.switch_theme()
         self.bind("<Button-1>", self._takeout_focus)
     
     def setup_modeselector(self):
@@ -62,7 +39,7 @@ class App(tk.Tk):
         self.search.bind("<Return>", self._start_player)
 
     def get_listahimnos(self):
-        datafile = self.settings["path"]["indices"]
+        datafile = self.settings.get_indexes_path()
         fhandler = open(datafile, "r", encoding="utf-8")
         infohimnos = json.load(fhandler)
         self.titulos = {}
@@ -83,15 +60,6 @@ class App(tk.Tk):
                 rango = tema["rango"]
                 for numero in range(rango[0], rango[1]+1):
                     self.numeros[numero]["tema"] = nombretema
-
-
-    def switch_theme(self):
-        self.switch = ttk.Checkbutton(self,
-            text="Tema Oscuro",
-            style="Switch.TCheckbutton",
-            command=sv_ttk.toggle_theme)
-        self.switch.config()
-        self.switch.grid(row=4, column=0, sticky="sw", padx=20, pady=20)
 
     
     def _start_player(self, _=None):

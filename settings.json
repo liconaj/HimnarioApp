@@ -1,0 +1,19 @@
+{
+    "themes": [
+        "light",
+        "dark"
+    ],
+    "theme": "light",
+    "player": {
+        "aspect_ratio": "keep",
+        "geometry": "800x600",
+        "fullscreen": false
+    },
+    "path": {
+        "lyrics": "Assets/Letras",
+        "voice": "Assets/Musica/Cantado",
+        "instrumental": "Assets/Musica/instrumental",
+        "backgrounds": "Assets/Fondos",
+        "indexes": "Assets/indices.json"
+    }
+}

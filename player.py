@@ -2,11 +2,12 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
 import screeninfo
+import settings
 
 import glob
 
 class Player(tk.Toplevel):
-    def __init__(self, settings, modo, infohimno, music=None):
+    def __init__(self, settings: settings.Settings, modo: str, infohimno: dict, music=None):
         super().__init__()
         self.music = music
         self.settings = settings
@@ -39,11 +40,11 @@ class Player(tk.Toplevel):
         self.update_canvas()
 
     def setup_window(self):
-        self.keep_aspect_ratio = self.settings["keep_aspect_ratio"]
-        self.geometry(self.settings["player"]["geometry"])
+        self.aspect_ratio = self.settings.get_player_aspectratio()
+        self.geometry(self.settings.get_player_geometry())
         self.minsize(800,600)
         self.configure(background="black")
-        self.fullscreen = self.settings["player"]["fullscreen"]
+        self.fullscreen = self.settings.get_player_fullscreen()
         if self.fullscreen:
             self.activate_fullscreen()
         self.width = self.winfo_width()
@@ -54,13 +55,17 @@ class Player(tk.Toplevel):
 
     def play_music(self):
         self.playingmusic = False
-        if self.modo != "Solo letra":
-            musicpath = self.settings["path"][self.modo.lower()]
-            self.musicfile = f"{musicpath}/{self.ruta}.mp3"
-            self.music.load(self.musicfile)
-            self.music.play()
-            self.playingmusic = True
-            self.synchronize()
+        if self.modo == "Solo letra":
+            return
+        elif self.modo == "Cantado":
+            musicpath = self.settings.get_voice_path()
+        elif self.modo == "Instrumental":
+            musicpath = self.settings.get_instrumental_path()
+        self.musicfile = f"{musicpath}/{self.ruta}.mp3"
+        self.music.load(self.musicfile)
+        self.music.play()
+        self.playingmusic = True
+        self.synchronize()
     
     def synchronize(self):
         if self.slideindex < len(self.tiempos)-1:
@@ -112,7 +117,7 @@ class Player(tk.Toplevel):
         if self.slideindex != oldindex:
             if inposed and self.playingmusic:
                 self.music.set_time(self.tiempos[self.slideindex])
-            if self.keep_aspect_ratio:
+            if self.aspect_ratio == "keep":
                 if self.slideindex == 0:
                     self.bgimg = self.bgimg1
                 else:
@@ -143,14 +148,14 @@ class Player(tk.Toplevel):
     def set_slide(self):
         nwidth = self.width
         nheight = self.height
-        if self.keep_aspect_ratio:
+        if self.aspect_ratio == "keep":
             if nwidth > nheight * 4/3:
                 nwidth = int(nheight * 4/3)
             else:
                 nheight = int(nwidth * 3/4)
         if nwidth==0 or nheight==0:
             return
-        if self.keep_aspect_ratio:
+        if self.aspect_ratio == "keep":
             bgimg = self.bgimg.resize((self.width, self.height))
             image = self.image.resize((nwidth, nheight))
             x = int((self.width - nwidth)/2)
@@ -162,7 +167,7 @@ class Player(tk.Toplevel):
             self.slide = ImageTk.PhotoImage(image)
 
     def get_images(self):
-        imgfolder = f"{self.settings['path']['letras']}/{self.ruta}"
+        imgfolder = f"{self.settings.get_lyrics_path()}/{self.ruta}"
         imgfiles = [fn for fn in glob.glob(f"{imgfolder}/*")]
         self.images = [Image.open(img) for img in imgfiles]
         self.image1 = None
@@ -170,7 +175,7 @@ class Player(tk.Toplevel):
         self.transalpha = 0
         self.image = self.images[0]
 
-        bgfolder = f"{self.settings['path']['fondos']}"
+        bgfolder = f"{self.settings.get_backgrounds_path()}"
         tema = self.tema
         tema = tema.replace("ó", "o")
         tema = tema.replace("í", "i")
@@ -230,8 +235,8 @@ class Player(tk.Toplevel):
         self.music.toggle_pause()
     
     def _exit(self, _=None):
-        self.settings["player"]["geometry"] = self.geometry()
-        self.settings["player"]["fullscreen"] = self.fullscreen
+        self.settings.set_player_geometry(self.geometry())
+        self.settings.set_player_fullscreen(self.fullscreen)
         self.killed = True
         self.music.quit()
         self.destroy()
