@@ -1,76 +1,113 @@
 import tkinter as tk
 from tkinter import ttk
 import json
+import sv_ttk
 
 from player import *
+from music import *
 
 class App(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
-        WIDTH=600
+        WIDTH=700
         HEIGHT=700
-        self.config = {
+        self.settings = {
+            "theme": "dark",
+            "keep_aspect_ratio": True,
+            "player": {
+                "geometry": "800x600",
+                "fullscreen": False
+            },
             "path": {
                 "letras": "Assets/Letras",
-                "infohimnos": "Assets/infohimnos.json"
+                "cantado": "Assets/Musica/Cantado",
+                "fondos": "Assets/Fondos",
+                "instrumental": "Assets/Musica/Instrumental",
+                "indices": "Assets/indices.json"
             },
         }
+        sv_ttk.set_theme(self.settings["theme"])
 
         self.title("Himnario Adventista")
+        self.mixer = Music()
 
         self.geometry(f"{WIDTH}x{HEIGHT}")
         self.minsize(WIDTH, HEIGHT)
-        self.grid_columnconfigure((0,1,2), weight=1)
-        self.grid_rowconfigure((0,1,2), weight=1)
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(4, weight=1)
 
         self.get_listahimnos()
+        self.setup_modeselector()
         self.setup_search()
 
         self.playing = False
         self.player = None
 
+        #self.switch_theme()
         self.bind("<Button-1>", self._takeout_focus)
+    
+    def setup_modeselector(self):
+        self.modeselector = PlayModeSelector(self)
+        self.modeselector.config(width=50)
+        self.modeselector.grid(row=0, column=0, padx=20, pady=20)
+
 
     def setup_search(self):
-        self.playmode = None
-        self.playmode_selector = ttk.Notebook(self)        
-        self.playmode_selector.grid(row=0, column=1, padx=20, pady=10)
-        self.playmode_tabs = {}
-        self.playmode_tabs["Solo letra"] = SearchFrame(self.playmode_selector)
-        self.playmode_tabs["Cantado"] = SearchFrame(self.playmode_selector)
-        self.playmode_tabs["Instrumental"] = SearchFrame(self.playmode_selector)
-        for k, v in self.playmode_tabs.items():
-            self.playmode_selector.add(v, text=k)        
-        self.playmode_selector.bind("<<NotebookTabChanged>>", self._on_change_playmode)
+        self.searchframe = ttk.Frame(self, style="Card.TFrame", width=50)
+        self.searchframe.grid(row=1, column=0, padx=20, ipady=0)
+        self.searchframe.columnconfigure(2, weight=1)
+        self.searchframe.rowconfigure(0, weight=1)
 
-        self.search = SearchEntries(self.playmode_selector, self.titulos, self.numeros)
+        self.search = SearchEntries(self.searchframe, self.titulos, self.numeros)
         self.search.bind("<Return>", self._start_player)
 
     def get_listahimnos(self):
-        datafile = self.config["path"]["infohimnos"]
+        datafile = self.settings["path"]["indices"]
         fhandler = open(datafile, "r", encoding="utf-8")
         infohimnos = json.load(fhandler)
         self.titulos = {}
         self.numeros = {}
-        for info in infohimnos:
+        for info in infohimnos["lista"]:
             self.numeros[int(info["numero"])] = info
             self.titulos[info["titulo"]] = info
+        self.temas = infohimnos["temas"]
+        for tema in self.temas:
+            nombretema = tema["nombre"]
+            if tema["hassubs"]:
+                for sub in tema["subtemas"]:
+                    nombresub = f'{nombretema} - {sub["nombre"]}'
+                    rango = sub["rango"]
+                    for numero in range(rango[0], rango[1]+1):
+                        self.numeros[numero]["tema"] = nombresub
+            else:
+                rango = tema["rango"]
+                for numero in range(rango[0], rango[1]+1):
+                    self.numeros[numero]["tema"] = nombretema
+
+
+    def switch_theme(self):
+        self.switch = ttk.Checkbutton(self,
+            text="Tema Oscuro",
+            style="Switch.TCheckbutton",
+            command=sv_ttk.toggle_theme)
+        self.switch.config()
+        self.switch.grid(row=4, column=0, sticky="sw", padx=20, pady=20)
 
     
     def _start_player(self, _=None):
         number = self.search.getnumber()
+        infohimno = self.numeros[number]
+        modo = self.modeselector.getmode()
         if number is None:
             return
         if self.player is not None and self.player.winfo_exists():
-            self.player._exit()
-        if self.player is None or not self.player.winfo_exists():
-            infohimno = self.numeros[number]
-            modo = self.playmode.upper()
-            self.player = Player(self.config, modo, infohimno)
+            self.player.new_song(modo, infohimno)
+        else:
+            self.player = Player(self.settings, modo, infohimno, self.mixer)
     
     def _on_change_playmode(self, _=None):
-        id = self.playmode_selector.select()
-        name = self.playmode_selector.tab(id, "text")
+        id = self.searchframe.select()
+        name = self.searchframe.tab(id, "text")
         self.playmode = name
         self.search.place_entries(self.playmode_tabs[name])
     
@@ -78,7 +115,29 @@ class App(tk.Tk):
         if event.widget == self:
             self.focus()
     
-
+class PlayModeSelector(ttk.Frame):
+    def __init__(self, root, *args, **kwargs):
+        super().__init__(root, *args, **kwargs)
+        self.columnconfigure(3, weight=1)
+        self.mode = tk.IntVar(value=1)
+        self.modes = ["Solo letra", "Cantado", "Instrumental"]
+        self.addmode(0)
+        self.addmode(1)
+        self.addmode(2)
+    
+    def addmode(self, value):
+        text = self.modes[value]
+        button = ttk.Radiobutton(self,
+            text=text,
+            variable=self.mode,
+            value=value,
+            style="Toggle.TButton",
+            width=12)
+        button.grid(row=0, column=value, padx=5, pady=5)
+        #self.modes[text] = button
+    
+    def getmode(self):
+        return self.modes[self.mode.get()]
 
 class SearchFrame(ttk.Frame):
     def __init__(self, root):
@@ -86,31 +145,26 @@ class SearchFrame(ttk.Frame):
         self.columnconfigure((0,1), weight=1)
 
 class SearchEntries():
-    def __init__(self, master, titulos, numeros):
-        self.master = master
+    def __init__(self, root, titulos, numeros):
+        self.master = root
         self.titulos = titulos
         self.numeros = numeros
         self.setup_numberentry()
         self.setup_titleentry()
         self.selected_number = None
-        self.selected_title = None
-
-    def place_entries(self, root):
-        self.numberentry.grid(
-            row=0, column=0,
-            padx=(20,5), pady=20,
-            sticky="ew", in_=root)
-        self.titleentry.grid(
-            row=0, column=1,
-            padx=(5,20), pady=20,
-            sticky="ew", in_=root)
+        self.selected_title = None    
+        
 
     def setup_numberentry(self):
         self.numbertext = tk.StringVar()
         self.numberentry = PlaceholderEntry(self.master, "#")
-        self.numberentry.config(justify="center", width=10,
+        self.numberentry.config(justify="center", width=8,
             font="Arial 16 bold",
             textvariable=self.numbertext)
+        self.numberentry.grid(
+            row=0, column=0,
+            padx=(20,5), pady=20,
+            sticky="ew")
         self.numbertext.trace("w", lambda *args: self._validate_number())
     
     def bind(self, sequence, func):
@@ -126,6 +180,11 @@ class SearchEntries():
         self.titleentry.config(justify="center", width=40,
             font="Arial 16 bold",
             textvariable=self.titletext)        
+        self.titleentry.grid(
+            row=0, column=1,
+            padx=(5,20), pady=20,
+            sticky="ew",
+            columnspan=2)
         self.titletext.trace("w", lambda *args: self._validate_title())
     
     def _validate_number(self):
@@ -165,8 +224,8 @@ class PlaceholderEntry(ttk.Entry):
         super().__init__(container, *args, **kwargs)
         self.placeholder = placeholder
         self.insert("0", self.placeholder)
-        self.bind("<FocusIn>", self._clear_placeholder)
-        self.bind("<FocusOut>", self._add_placeholder)
+        #self.bind("<FocusIn>", self._clear_placeholder)
+        #self.bind("<FocusOut>", self._add_placeholder)
 
     def _clear_placeholder(self, _=None):
         self.delete("0", "end")
