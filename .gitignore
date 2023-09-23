@@ -1,3 +1,4 @@
+settings.json
 Assets/*
 !Assets/infohimnos.json
 __pycache__/
