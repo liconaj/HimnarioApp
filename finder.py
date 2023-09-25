@@ -157,6 +157,7 @@ class SearchEntries(ttk.Frame):
             sticky="ew")
         self.titletext.trace("w", lambda *args: self._validate_title())
         self.titleentry.bind("<Tab>", self._on_focus_result)
+        self.titleentry.bind("<Down>", self._on_focus_result)
     
     def setup_playbutton(self):
         playfile = Image.open("Assets/Iconos/play_light.png")
@@ -166,7 +167,7 @@ class SearchEntries(ttk.Frame):
     
     def setup_resultslist(self):
         self.results = ttk.Frame(self)
-        self.results.grid(row=1, column=0, columnspan=3, pady=20)
+        self.results.grid(row=1, column=0, columnspan=3, pady=10)
         self.results.columnconfigure(2,weight=1)
         self.scrollbar = ttk.Scrollbar(self.results)
         self.scrollbar.grid(row=0,column=1, sticky="nsw")
@@ -183,7 +184,9 @@ class SearchEntries(ttk.Frame):
         self.resultslist.grid(row=0, column=0)
         self.resultslist.bind("<<TreeviewSelect>>", self._on_select)
         self.resultslist.bind("<Tab>", self._on_next_tab)
+        self.resultslist.bind("<Down>", self._on_next_tab)
         self.resultslist.bind("<Shift-Tab>", self._on_prev_tab)
+        self.resultslist.bind("<Up>", self._on_prev_tab)
         self.show_alltitles()
     
     def show_alltitles(self):
@@ -283,8 +286,8 @@ class SearchEntries(ttk.Frame):
         self.resultslist.selection_set(titulos[nexti])
     
     def _on_focus_result(self, _=None):
-        self.resultslist.focus_set()
         items = self.resultslist.get_children()
+        self.resultslist.focus_set()
         if len(items) > 0:
             self.resultslist.selection_set(items[0])
         return "break"
@@ -309,7 +312,6 @@ class SearchEntries(ttk.Frame):
             self.numbertext.set(n)
         if currtitle != title:
             self.titletext.set(title)
-
 
 
 def normalizetxt(texto):

@@ -50,6 +50,8 @@ class Player(tk.Toplevel):
         self.height = self.winfo_height()
         self.config(cursor="none")
         self.monitors = screeninfo.get_monitors()
+        self.focus_force()
+        self.lift()
     
 
     def play_music(self):
