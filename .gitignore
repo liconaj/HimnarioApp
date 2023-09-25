@@ -3,5 +3,4 @@ build/
 dist/
 Assets/*
 !Assets/infohimnos.json
-settings.json
 __pycache__/
