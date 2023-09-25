@@ -40,7 +40,6 @@ class Player(tk.Toplevel):
         self.update_canvas()
 
     def setup_window(self):
-        self.aspect_ratio = self.settings.get_player_aspectratio()
         self.geometry(self.settings.get_player_geometry())
         self.minsize(800,600)
         self.configure(background="black")
@@ -72,7 +71,7 @@ class Player(tk.Toplevel):
             nexttime = self.tiempos[self.slideindex+1]
             if self.music.get_time() > nexttime:
                 self.change_slide("next")
-        if self.music.has_ended():
+        if self.music.has_ended() and self.settings.get_player_exit_on_finish():
             self.after(0, self._exit)
         self.after(10, self.synchronize)
 
@@ -117,18 +116,20 @@ class Player(tk.Toplevel):
         if self.slideindex != oldindex:
             if inposed and self.playingmusic:
                 self.music.set_time(self.tiempos[self.slideindex])
-            if self.aspect_ratio == "keep":
+            if self.settings.get_player_aspectratio():
                 if self.slideindex == 0:
                     self.bgimg = self.bgimg1
                 else:
                     self.bgimg = self.bgimg2
-            self.transalpha = 0.0
-            self.image1 = self.image.copy()
-            self.image2 = self.images[self.slideindex]
-            self.transition()
-            #self.image = self.images[self.slideindex]
-            #self.set_slide()
-            #self.update_canvas()
+            if self.settings.get_player_transitions():
+                self.transalpha = 0.0
+                self.image1 = self.image.copy()
+                self.image2 = self.images[self.slideindex]
+                self.transition()
+            else:
+                self.image = self.images[self.slideindex]
+                self.set_slide()
+                self.update_canvas()
     
     def transition(self):
         if self.killed:
@@ -148,14 +149,14 @@ class Player(tk.Toplevel):
     def set_slide(self):
         nwidth = self.width
         nheight = self.height
-        if self.aspect_ratio == "keep":
+        if self.settings.get_player_aspectratio():
             if nwidth > nheight * 4/3:
                 nwidth = int(nheight * 4/3)
             else:
                 nheight = int(nwidth * 3/4)
         if nwidth==0 or nheight==0:
             return
-        if self.aspect_ratio == "keep":
+        if self.settings.get_player_aspectratio():
             bgimg = self.bgimg.resize((self.width, self.height))
             image = self.image.resize((nwidth, nheight))
             x = int((self.width - nwidth)/2)

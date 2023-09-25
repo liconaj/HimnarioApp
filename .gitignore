@@ -1,4 +1,6 @@
 settings.json
+build/
+dist/
 Assets/*
 !Assets/infohimnos.json
 __pycache__/

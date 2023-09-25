@@ -9,11 +9,12 @@ from finder import *
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        WIDTH=700
+        WIDTH=800
         HEIGHT=700
         self.title("Himnario Adventista")
         self.geometry(f"{WIDTH}x{HEIGHT}")
         self.minsize(WIDTH, HEIGHT)
+        self.iconbitmap("Assets/icon.ico")
         self.protocol("WM_DELETE_WINDOW", self._exit)
 
         self.settings = settings.Settings()

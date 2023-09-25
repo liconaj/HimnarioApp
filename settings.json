@@ -5,7 +5,9 @@
     ],
     "theme": "light",
     "player": {
-        "aspect_ratio": "keep",
+        "exit_on_finish": true,
+        "transitions": false,
+        "aspect_ratio": true,
         "geometry": "800x600",
         "fullscreen": false
     },
