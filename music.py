@@ -30,6 +30,8 @@ class Music():
         return mx.music.get_pos() - self.timestamp
     
     def set_time(self, time):
+        if self.has_ended():
+            self.play()
         self.timestamp = mx.music.get_pos() - time       
         time = time/1000
         mx.music.rewind()        

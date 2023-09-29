@@ -1,7 +1,8 @@
 import sv_ttk
 import json
 import os
-
+import tkinter as tk
+from tkinter import ttk
 
 SETTINGS_FILE = "settings.json"
 DEFAULT_SETTINGS = {
@@ -22,6 +23,9 @@ DEFAULT_SETTINGS = {
         "indexes": "Assets/indices.json"
     }
 }
+
+class SettingsUI(ttk.Frame):
+    pass
 
 class Settings():
     def __init__(self) -> None:

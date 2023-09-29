@@ -37,7 +37,6 @@ class Player(tk.Toplevel):
         self.get_images()
         self.play_music()
         self.set_slide()
-        self.update_canvas()
 
     def setup_window(self):
         self.geometry(self.settings.get_player_geometry())
@@ -131,7 +130,6 @@ class Player(tk.Toplevel):
             else:
                 self.image = self.images[self.slideindex]
                 self.set_slide()
-                self.update_canvas()
     
     def transition(self):
         if self.killed:
@@ -140,12 +138,10 @@ class Player(tk.Toplevel):
             self.image = Image.blend(self.image1, self.image2, self.transalpha)
             self.transalpha += 0.334
             self.set_slide()
-            self.update_canvas()
             self.after(1, self.transition)
         else:
             self.image = self.image2
             self.set_slide()
-            self.update_canvas()
             self.transalpha = 0
     
     def set_slide(self):
@@ -168,6 +164,7 @@ class Player(tk.Toplevel):
         else:
             image = self.image.resize((nwidth, nheight))
             self.slide = ImageTk.PhotoImage(image)
+        self.update_canvas()
 
     def get_images(self):
         imgfolder = f"{self.settings.get_lyrics_path()}/{self.ruta}"
@@ -180,6 +177,7 @@ class Player(tk.Toplevel):
 
         bgfolder = f"{self.settings.get_backgrounds_path()}"
         tema = self.tema
+        tema = tema.replace("á", "a")
         tema = tema.replace("ó", "o")
         tema = tema.replace("í", "i")
         tema = tema.replace("ñ", "n")
@@ -191,7 +189,6 @@ class Player(tk.Toplevel):
         self.width = event.width
         self.height = event.height
         self.set_slide()
-        self.update_canvas()
     
     def _on_next(self, event=None):
         if self.transalpha != 0:
@@ -200,7 +197,6 @@ class Player(tk.Toplevel):
         if self.changed: return
         self.changed = True
         self.change_slide("next",True)
-        #self.update_canvas()
     
     def _on_prev(self, _=None):
         if self.transalpha != 0:
@@ -209,7 +205,6 @@ class Player(tk.Toplevel):
         if self.changed: return
         self.changed = True
         self.change_slide("prev",True)
-        #self.update_canvas()
     
     def activate_fullscreen(self):
         self.fullscreen = True
