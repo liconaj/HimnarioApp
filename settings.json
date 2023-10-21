@@ -3,13 +3,14 @@
         "light",
         "dark"
     ],
-    "theme": "light",
+    "theme": "dark",
     "player": {
-        "exit_on_finish": false,
-        "transitions": false,
+        "exit_on_finish": true,
+        "transitions": true,
         "aspect_ratio": true,
         "geometry": "800x600",
-        "fullscreen": false
+        "fullscreen": true,
+        "remember_geometry": false
     },
     "path": {
         "lyrics": "Assets/Letras",

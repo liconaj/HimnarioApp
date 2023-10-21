@@ -123,6 +123,7 @@ class PlayModeSelector(ttk.Frame):
 class SearchEntries(ttk.Frame):
     def __init__(self, root):
         super().__init__(root)
+        self.root = root
         self.titulos = root.titulos
         self.numeros = root.numeros
         self.start_player = root._start_player
@@ -145,10 +146,12 @@ class SearchEntries(ttk.Frame):
             padx=(0,5),
             sticky="ew")
         self.numbertext.trace("w", lambda *args: self._validate_number())
+        self.add_on_updatesettings(self.numberentry.update_placeholder)
     
     def setup_titleentry(self):
         self.titletext = tk.StringVar()
         self.titleentry = PlaceholderEntry(self, self.titletext, "Título del himno")
+        
         self.titleentry.config(justify="center", width=39,
             font="Arial 16 bold",
             textvariable=self.titletext)        
@@ -159,23 +162,27 @@ class SearchEntries(ttk.Frame):
         self.titletext.trace("w", lambda *args: self._validate_title())
         self.titleentry.bind("<Tab>", self._on_focus_result)
         self.titleentry.bind("<Down>", self._on_focus_result)
+        self.add_on_updatesettings(self.titleentry.update_placeholder)
     
     def setup_playbutton(self):
-        self.playimg_dark = ImageTk.PhotoImage(Image.open("Assets/Iconos/play_dark.png"))
-        self.playimg_light = ImageTk.PhotoImage(Image.open("Assets/Iconos/play_light.png"))
+        self.playimg = {}
+        self.playimg["dark"] = ImageTk.PhotoImage(Image.open("Assets/Iconos/play_dark.png"))
+        self.playimg["light"] = ImageTk.PhotoImage(Image.open("Assets/Iconos/play_light.png"))
+        self.playimg["dark_ready"] = ImageTk.PhotoImage(Image.open("Assets/Iconos/play_dark_ready.png"))
+        self.playimg["light_ready"] = ImageTk.PhotoImage(Image.open("Assets/Iconos/play_light_ready.png"))
         self.playbutton = ttk.Button(self, command=self.start_player)
         self.update_playbutton()
         self.playbutton.grid(row=0, column=2, padx=(5,0), sticky="nsw")
+        self.add_on_updatesettings(self.update_playbutton)
     
     def update_playbutton(self):
         theme = sv_ttk.get_theme()
         ready = self.getnumber() is not None
-        if (theme == "light" and ready) or (theme == "dark" and not ready):
-                self.playbutton.config(image=self.playimg_dark)
-        else:
-            self.playbutton.config(image=self.playimg_light)
+        playimg = theme
+        if ready:
+            playimg += "_ready"
+        self.playbutton.config(image=self.playimg[playimg])
 
-    
     def setup_resultslist(self):
         self.results = ttk.Frame(self)
         self.results.grid(row=1, column=0, columnspan=3, pady=10)
@@ -309,6 +316,9 @@ class SearchEntries(ttk.Frame):
         self.resultslist.selection_set(titulos[nexti])
         self.update_playbutton()
     
+    def add_on_updatesettings(self,func):
+        self.root.settings._on_update.append(func)
+    
     def _on_focus_result(self, _=None):
         items = self.resultslist.get_children()
         self.resultslist.focus_set()
@@ -350,8 +360,8 @@ class PlaceholderEntry(ttk.Entry):
     def __init__(self, container, textvariable, placeholder, *args, **kwargs):
         super().__init__(container, *args, **kwargs)
         self.colors = {
-            "light": ["#1c1c1c", "#e7e7e7"],
-            "dark": ["#e7e7e7", "#1c1c1c"]
+            "light": ["#1c1c1c", "#d7d7d7"],
+            "dark": ["#e7e7e7", "#4c4c4c"]
         }
         self.is_placeholder = 1
         self.placeholder = f"ㅤ{placeholder}ㅤ"
@@ -362,15 +372,19 @@ class PlaceholderEntry(ttk.Entry):
         self.bind("<FocusOut>", self._on_focus_out)
 
     def hide_placeholder(self):
-        theme = sv_ttk.get_theme()
-        self.config(foreground=self.colors[theme][0])
+        self.is_placeholder = 0
+        self.update_placeholder()
         if self.textvariable.get() == self.placeholder:
             self.textvariable.set("")
         
     def show_placeholder(self):
-        theme = sv_ttk.get_theme()
-        self.config(foreground=self.colors[theme][1])
+        self.is_placeholder = 1
+        self.update_placeholder()
         self.textvariable.set(self.placeholder)
+    
+    def update_placeholder(self):
+        theme = sv_ttk.get_theme()
+        self.config(foreground=self.colors[theme][self.is_placeholder])
 
     def _on_focus_in(self, _=None):
         self.hide_placeholder()
