@@ -158,29 +158,8 @@ class SettingsUI(ttk.Frame):
     
     def setup_playerconf(self):
         self.playerconf = ttk.LabelFrame(self, text="Reproductor de letras") #style="Card.TFrame"
-        self.rowconfigure((0,1,2,3,4), weight=1)
+        self.rowconfigure((1,2,3,4), weight=1)
         self.playerconf.grid(row=1, column=0, padx=(20,20), pady=(10,10), sticky="new")
-        # window size
-        self.windowsize = ttk.Frame(self.playerconf)
-        self.windowsize.columnconfigure((0,1,2,3), weight=1)
-        self.windowsize.grid(row=0, column=0, sticky="nw", padx=20, pady=(20,0))
-        size = self.settings.get_player_size()
-        self.widthtext = tk.StringVar(value=size[0])
-        self.widthtext.trace("w", lambda *args: self._validate_number(self.widthtext))
-        self.heighttext = tk.StringVar(value=size[1])
-        self.heighttext.trace("w", lambda *args: self._validate_number(self.heighttext))
-        self.widthentry = ttk.Entry(self.windowsize, textvariable=self.widthtext, width=5)
-        self.heightentry = ttk.Entry(self.windowsize, textvariable=self.heighttext, width=5)
-        self.widthentry.grid(row=0, column=1, padx=(0,10))
-        self.heightentry.grid(row=0, column=3)
-        self.playerconflabels = {}
-        widthlabel = ttk.Label(self.windowsize, text="Ancho (px):")
-        widthlabel.grid(row=0, column=0, sticky="nsw", padx=(5,5))
-        heightlabel = ttk.Label(self.windowsize, text="Alto (px):")
-        heightlabel.grid(row=0, column=2, sticky="nsw", padx=(10,5))
-        if self.settings.get_player_remember_geometry():
-            self.widthentry.state(["disabled"])
-            self.heightentry.state(["disabled"])
         # variables
         self.playervars = {
             "remember_geometry": tk.BooleanVar(self.playerconf, value=self.settings.get_player_remember_geometry()),
