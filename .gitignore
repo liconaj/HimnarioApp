@@ -4,7 +4,7 @@ Assets/*
 !Assets/indices.json
 !Assets/icon.ico
 !Assets/Iconos/
-Himnario*
+main.*/
 *.exe
 __pycache__/
 settings.json

@@ -1,4 +1,4 @@
-nuitka Himnario.py --onefile^
+nuitka main.py --onefile^
     --enable-plugin=tk-inter^
     --disable-console^
     --product-version="0.0.1"^

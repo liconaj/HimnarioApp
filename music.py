@@ -4,7 +4,7 @@ from pygame import mixer as mx
 class Music():
     def __init__(self) -> None:
         init()
-        init()
+        mx.init()
         self.paused = False
         self.MUSIC_END = USEREVENT+1
         self.timestamp = 0
