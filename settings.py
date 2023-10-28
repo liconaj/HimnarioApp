@@ -10,7 +10,7 @@ DEFAULT_SETTINGS = {
     "themes": ["light", "dark"],
     "theme": "light",
     "player": {
-        "remember_geometry": True,
+        "remember_geometry": False,
         "exit_on_finish": True,
         "transitions": False,
         "aspect_ratio": True,
@@ -34,11 +34,13 @@ class Settings():
         sf = open(SETTINGS_FILE, "r", encoding="utf-8")
         self.settings = json.load(sf)
         sf.close()
-
         self.themes = self.settings.get("themes", DEFAULT_SETTINGS["themes"])
         self.theme = self.settings.get("theme", DEFAULT_SETTINGS["theme"])
         self.player = self.settings.get("player", DEFAULT_SETTINGS["player"])
         self.path = self.settings.get("path", DEFAULT_SETTINGS["path"])
+        if not self.get_player_remember_geometry():
+            self.set_player_fullscreen(DEFAULT_SETTINGS["player"]["fullscreen"])
+            self.set_player_geometry(DEFAULT_SETTINGS["player"]["geometry"])
         self._on_update = list()
         sv_ttk.set_theme(self.theme)
     
@@ -54,12 +56,10 @@ class Settings():
             func()
     
     def save(self):
-        os.remove(SETTINGS_FILE)
-        settings = deepcopy(self.settings)
-        settings["player"]["geometry"] = DEFAULT_SETTINGS["player"]["geometry"]
-        #settings["player"]["fullscreen"] = DEFAULT_SETTINGS["player"]["fullscreen"]
+        if os.path.exists(SETTINGS_FILE):
+            os.remove(SETTINGS_FILE)
         sf = open(SETTINGS_FILE, "w", encoding="utf-8")
-        json.dump(settings, sf, indent=4)
+        json.dump(self.settings, sf, indent=4)
         sf.close()
 
     def get_theme(self):
@@ -122,13 +122,12 @@ class SettingsUI(ttk.Frame):
         self.columnconfigure((0), weight=1)
         self.rowconfigure((0,1,2,3), weight=1)
         self.settings = settings
-        self.set_old_settings()
         self.setup_themesel()
         self.setup_playerconf()
-        self.setup_savereset_button()
+        self.setup_reset_button()
     
     def setup_themesel(self):
-        self.themesel = ttk.LabelFrame(self, text="Tema") #style="Card.TFrame"
+        self.themesel = ttk.LabelFrame(self, text="Tema")
         self.themesel.rowconfigure(2, weight=0)
         self.themesel.grid(row=0, column=0, padx=20, pady=(20,0), sticky="new")
         self.theme = tk.StringVar(value=self.settings.get_theme())
@@ -148,16 +147,14 @@ class SettingsUI(ttk.Frame):
     def change_theme(self, _=None):
         theme = self.theme.get()
         self.settings.set_theme(theme)
-        self.check_changes()
     
     def change_playerconf(self, _=None):
         for var in self.playervars:
             value = self.playervars[var].get()
-            self.settings.settings["player"][var] = value
-        self.check_changes()
+            self.settings.settings["player"][var] = value    
     
     def setup_playerconf(self):
-        self.playerconf = ttk.LabelFrame(self, text="Reproductor de letras") #style="Card.TFrame"
+        self.playerconf = ttk.LabelFrame(self, text="Reproductor de letras")
         self.rowconfigure((1,2,3,4), weight=1)
         self.playerconf.grid(row=1, column=0, padx=(20,20), pady=(10,10), sticky="new")
         # variables
@@ -168,9 +165,9 @@ class SettingsUI(ttk.Frame):
             "exit_on_finish": tk.BooleanVar(self.playerconf, value=self.settings.get_player_exit_on_finish())
         }
         # remember geometry
-        self.remember_geometry = ttk.Checkbutton(self.playerconf, text="Recordar último tamaño y posición al cerrar", command=self.change_playerconf, variable=self.playervars["remember_geometry"])
-        self.remember_geometry.state(["!alternate"])
+        self.remember_geometry = ttk.Checkbutton(self.playerconf, text="Recordar configuración de ventana", command=self.change_playerconf, variable=self.playervars["remember_geometry"])
         self.remember_geometry.grid(row=1, column=0, sticky="nsw", padx=20, pady=(10,0))
+        self.remember_geometry.state(["!alternate"])
         # aspect ratio
         self.aspect_ratio = ttk.Checkbutton(self.playerconf, text="Mantener relación de aspecto", command=self.change_playerconf, variable=self.playervars["aspect_ratio"])
         self.aspect_ratio.grid(row=2, column=0, sticky="nsw", padx=20, pady=(10,0))
@@ -189,35 +186,14 @@ class SettingsUI(ttk.Frame):
         if not number.isdigit():
             text.set(number[:-1])
     
-    def set_old_settings(self):
-        self.old_settings = deepcopy(self.settings.settings)
-
-    def check_changes(self):
-        if self.settings.settings != self.old_settings:
-            self.save_button.config(style="Accent.TButton")
-        else:
-            self.save_button.config(style="TButton")
-
-    
-    def save_changes(self):
-        self.set_old_settings()
-        self.settings.save()
-        self.save_button.config(style="TButton")
-    
     def reset_changes(self):
         if self.settings.settings != DEFAULT_SETTINGS:
-            self.old_settings()
-            self.save_button.config(style="Accent.TButton")
             self.settings.settings = DEFAULT_SETTINGS
             self.theme.set(self.settings.get_theme())
             self.change_theme()
+        for var in self.playervars:
+            self.playervars[var].set(self.settings.settings["player"][var])
     
-    def setup_savereset_button(self):
-        self.savereset_frame = ttk.Frame(self)
-        self.savereset_frame.columnconfigure((0,1), weight=0)
-        self.savereset_frame.grid(row=4, sticky="es")
-        self.save_button = ttk.Button(self.savereset_frame,text="Guardar", command=self.save_changes)
-        self.reset_button = ttk.Button(self.savereset_frame,text="Restablecer", command=self.reset_changes)
-        self.save_button.config(style="TButton")
-        self.save_button.grid(row=0,column=1,sticky="se",padx=(10,20),pady=20)
-        self.reset_button.grid(row=0,column=0,sticky="se",padx=(20,10),pady=20)
+    def setup_reset_button(self):
+        self.reset_button = ttk.Button(self,text="Restablecer", command=self.reset_changes)
+        self.reset_button.grid(row=4,sticky="sw",padx=20,pady=20)

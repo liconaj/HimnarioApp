@@ -28,6 +28,7 @@ class App(tk.Tk):
     
     
     def _exit(self):
+        self.settings.save()
         self.quit()
 
 if __name__ == "__main__":

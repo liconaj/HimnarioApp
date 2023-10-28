@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
-import screeninfo
 import settings
 
 import glob
@@ -48,7 +47,7 @@ class Player(tk.Toplevel):
         self.width = self.winfo_width()
         self.height = self.winfo_height()
         self.config(cursor="none")
-        self.monitors = screeninfo.get_monitors()
+        self.iconbitmap("Assets/icon.ico")
         self.focus_force()
         self.lift()
     
@@ -190,7 +189,7 @@ class Player(tk.Toplevel):
         self.height = event.height
         self.set_slide()
     
-    def _on_next(self, event=None):
+    def _on_next(self, _=None):
         if self.transalpha != 0:
             self.after(1, self._on_next)
             return
@@ -226,15 +225,13 @@ class Player(tk.Toplevel):
             self.deactivate_fullscreen()
         else:
             self.activate_fullscreen()
-        #self.fullscreen = not self.fullscreen
-        #self.attributes("-fullscreen", self.fullscreen)
     
     def _toggle_pause(self, _=None):
         self.music.toggle_pause()
     
     def _exit(self, _=None):
-        self.settings.set_player_geometry(self.geometry())
         self.settings.set_player_fullscreen(self.fullscreen)
+        self.settings.set_player_geometry(self.geometry())
         self.killed = True
         self.music.quit()
         self.destroy()

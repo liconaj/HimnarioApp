@@ -2,5 +2,9 @@ settings.json
 build/
 dist/
 Assets/*
-!Assets/infohimnos.json
+!Assets/indices.json
+!Assets/icon.ico
+!Assets/Iconos/
+Himnario*
+*.exe
 __pycache__/

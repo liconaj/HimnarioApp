@@ -1,12 +1,12 @@
-import pygame
-import pygame.mixer as mx
+from pygame import init, USEREVENT
+from pygame import mixer as mx
 
 class Music():
     def __init__(self) -> None:
-        pygame.init()
-        mx.init()
+        init()
+        init()
         self.paused = False
-        self.MUSIC_END = pygame.USEREVENT+1
+        self.MUSIC_END = USEREVENT+1
         self.timestamp = 0
         mx.music.set_endevent(self.MUSIC_END)
 
@@ -43,5 +43,6 @@ class Music():
         return True
 
     def quit(self):
+        self.timestamp = 0
         mx.music.fadeout(500)
         mx.music.unload()
