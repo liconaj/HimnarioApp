@@ -137,9 +137,9 @@ class Player(tk.Toplevel):
             return
         if self.transalpha < 1.0:
             self.image = Image.blend(self.image1, self.image2, self.transalpha)
-            self.transalpha += 0.334
+            self.transalpha += 0.5
             self.set_slide()
-            self.after(1, self.transition)
+            self.after(5, self.transition)
         else:
             self.image = self.image2
             self.set_slide()

@@ -205,7 +205,7 @@ class SettingsUI(ttk.Frame):
         self.aspect_ratio.grid(row=2, column=0, sticky="nsw", padx=20, pady=(10,0))
         self.aspect_ratio.state(["!alternate"])
         # transitions
-        self.transitions = ttk.Checkbutton(self.playerconf, text="Mostrar transiciones (EXPERIMENTAL)", command=self.change_playerconf, variable=self.playervars["transitions"])
+        self.transitions = ttk.Checkbutton(self.playerconf, text="Mostrar transiciones (Advertencia: puede llegar a ser lento)", command=self.change_playerconf, variable=self.playervars["transitions"])
         self.transitions.grid(row=3, column=0, sticky="nsw", padx=20, pady=(10,0))
         self.transitions.state(["!alternate"])
         # exit on finish
