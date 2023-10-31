@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import ImageTk, Image
 import settings
+import screeninfo
 
 import glob
 
@@ -38,12 +39,13 @@ class Player(tk.Toplevel):
         self.set_slide()
 
     def setup_window(self):
-        self.geometry(self.settings.get_player_geometry())
         self.minsize(800,600)
         self.configure(background="black")
         self.fullscreen = self.settings.get_player_fullscreen()
         if self.fullscreen:
             self.activate_fullscreen()
+        else:
+            self.geometry(self.settings.get_player_geometry())
         self.width = self.winfo_width()
         self.height = self.winfo_height()
         self.config(cursor="none")
@@ -208,12 +210,15 @@ class Player(tk.Toplevel):
     def activate_fullscreen(self):
         self.fullscreen = True
         self.old_geometry = self.geometry()
-        self.overrideredirect(True)
-        self.state("zoomed")
+        x, y = self.winfo_x(), self.winfo_y()
+        for m in screeninfo.get_monitors():
+            if x >= m.x and y >= m.y and x <= m.width and y <= m.height:
+                self.overrideredirect(True)
+                self.geometry(f"{m.width}x{m.height}+{m.x}+{m.y}")
+                break
     
     def deactivate_fullscreen(self):
-        self.fullscreen = False
-        self.state("normal")
+        self.fullscreen = False        
         self.geometry(self.old_geometry)
         self.overrideredirect(False)
     

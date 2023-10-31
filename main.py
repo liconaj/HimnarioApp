@@ -16,7 +16,7 @@ class App(tk.Tk):
         self.minsize(WIDTH, HEIGHT)
         self.iconbitmap("Assets/icon.ico")
         self.protocol("WM_DELETE_WINDOW", self._exit)
-        self.settings = settings.Settings()
+        self.settings = settings.Settings(self)
         self.notebook = ttk.Notebook(self)
         self.notebook.pack(fill="both", expand=True)
 

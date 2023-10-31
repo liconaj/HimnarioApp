@@ -1,9 +1,11 @@
 import sv_ttk
 import json
 import os
+import sys
 import tkinter as tk
 from tkinter import ttk
 from copy import deepcopy
+import ctypes
 
 SETTINGS_FILE = "settings.json"
 DEFAULT_SETTINGS = {
@@ -28,7 +30,8 @@ DEFAULT_SETTINGS = {
 
 
 class Settings():
-    def __init__(self) -> None:
+    def __init__(self, root) -> None:
+        self.root = root
         if not os.path.exists(SETTINGS_FILE):
             self.reset()           
         sf = open(SETTINGS_FILE, "r", encoding="utf-8")
@@ -42,7 +45,8 @@ class Settings():
             self.set_player_fullscreen(DEFAULT_SETTINGS["player"]["fullscreen"])
             self.set_player_geometry(DEFAULT_SETTINGS["player"]["geometry"])
         self._on_update = list()
-        sv_ttk.set_theme(self.theme)
+        self.set_theme(self.theme)
+        #sv_ttk.set_theme(self.theme)
     
     def reset(self):
         if os.path.exists(SETTINGS_FILE):
@@ -107,6 +111,8 @@ class Settings():
     def set_theme(self, theme):
         sv_ttk.set_theme(theme)
         self.settings["theme"] = theme
+        self.root.update()
+        self._windows_set_titlebar_color(theme)
         self.update()
     
     def set_player_fullscreen(self, fullscreen):
@@ -115,10 +121,36 @@ class Settings():
     def set_player_geometry(self, geometry):
         self.settings["player"]["geometry"] = geometry
 
+    def _windows_set_titlebar_color(self, color_mode: str):
+        window = self.root
+        if sys.platform.startswith("win"):
+            if color_mode.lower() == "dark":
+                value = 1
+            elif color_mode.lower() == "light":
+                value = 0
+            else:
+                return
+            try:
+                hwnd = ctypes.windll.user32.GetParent(window.winfo_id())
+                DWMWA_USE_IMMERSIVE_DARK_MODE = 20
+                DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1 = 19
+                # try with DWMWA_USE_IMMERSIVE_DARK_MODE
+                if ctypes.windll.dwmapi.DwmSetWindowAttribute(hwnd, DWMWA_USE_IMMERSIVE_DARK_MODE,
+                                                              ctypes.byref(ctypes.c_int(value)),
+                                                              ctypes.sizeof(ctypes.c_int(value))) != 0:
+
+                    # try with DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20h1
+                    ctypes.windll.dwmapi.DwmSetWindowAttribute(hwnd, DWMWA_USE_IMMERSIVE_DARK_MODE_BEFORE_20H1,
+                                                               ctypes.byref(ctypes.c_int(value)),
+                                                               ctypes.sizeof(ctypes.c_int(value)))
+            except Exception as err:
+                print(err)
+
 
 class SettingsUI(ttk.Frame):
     def __init__(self, root, settings: Settings) -> None:
         super().__init__(root)
+        self.root = root
         self.columnconfigure((0), weight=1)
         self.rowconfigure((0,1,2,3), weight=1)
         self.settings = settings
