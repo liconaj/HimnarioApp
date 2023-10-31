@@ -1,0 +1,4 @@
+pygame>=2.5.2
+screeninfo>=0.8.1
+Pillow>=10.0.1
+sv_ttk>=2.5.5

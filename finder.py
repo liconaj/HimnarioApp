@@ -2,8 +2,6 @@ import json
 import re
 import unicodedata
 
-import sv_ttk
-
 from music import *
 from player import *
 
@@ -76,23 +74,8 @@ class Finder(ttk.Frame):
             self.focus()
 
 
-class ResultsList(ttk.Frame):
-    def __init__(self, root):
-        super().__init__(root)
-        self.scrollbar = ttk.Scrollbar(self)
-        self.scrollbar.pack(side="right", fill="y")
-        self.resultslist = ttk.Treeview(self,
-                                        columns=("1", "2"),
-                                        height=10,
-                                        selectmode="browse",
-                                        show=("tree",),
-                                        yscrollcommand=self.scrollbar.set)
-        self.scrollbar.config(command=self.resultslist.yview)
-        self.resultslist.pack(expand=True, fill="both")
-
-
 class PlayModeSelector(ttk.Frame):
-    def __init__(self, root, *args, **kwargs):
+    def __init__(self, root: Finder, *args, **kwargs):
         super().__init__(root, *args, **kwargs)
         self.columnconfigure(3, weight=1)
         self.mode = tk.IntVar(value=1)
@@ -101,7 +84,7 @@ class PlayModeSelector(ttk.Frame):
         self.addmode(1)
         self.addmode(2)
 
-    def addmode(self, value):
+    def addmode(self, value: int):
         text = self.modes[value]
         button = ttk.Radiobutton(self,
                                  text=text,
@@ -117,9 +100,10 @@ class PlayModeSelector(ttk.Frame):
 
 
 class SearchEntries(ttk.Frame):
-    def __init__(self, root):
+    def __init__(self, root: Finder):
         super().__init__(root)
         self.root = root
+        self.settings = root.settings
         self.titulos = root.titulos
         self.numeros = root.numeros
         self.start_player = root.start_player
@@ -161,17 +145,17 @@ class SearchEntries(ttk.Frame):
         self.add_on_updatesettings(self.titleentry.update_placeholder)
 
     def setup_playbutton(self):
-        self.playimg = {"dark": ImageTk.PhotoImage(Image.open("Assets/Iconos/play_dark.png")),
-                        "light": ImageTk.PhotoImage(Image.open("Assets/Iconos/play_light.png")),
-                        "dark_ready": ImageTk.PhotoImage(Image.open("Assets/Iconos/play_dark_ready.png")),
-                        "light_ready": ImageTk.PhotoImage(Image.open("Assets/Iconos/play_light_ready.png"))}
+        self.playimg = {"dark": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_dark.png")),
+                        "light": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_light.png")),
+                        "dark_ready": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_dark_ready.png")),
+                        "light_ready": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_light_ready.png"))}
         self.playbutton = ttk.Button(self, command=self.start_player)
         self.update_playbutton()
         self.playbutton.grid(row=0, column=2, padx=(5, 0), sticky="nsw")
         self.add_on_updatesettings(self.update_playbutton)
 
     def update_playbutton(self):
-        theme = sv_ttk.get_theme()
+        theme = self.settings.get_theme()
         ready = self.getnumber() is not None
         playimg = theme
         if ready:
@@ -208,14 +192,14 @@ class SearchEntries(ttk.Frame):
         for n, info in self.numeros.items():
             self.resultslist.insert("", index="end", values=(n, info["titulo"]))
 
-    def search_titles(self, titlesearch):
+    def search_titles(self, titlesearch: str):
         self.resultslist.delete(*self.resultslist.get_children())
         for title in self.titulos:
             if normalizetxt(titlesearch) in normalizetxt(title):
                 n = self.titulos[title]["numero"]
                 self.resultslist.insert("", index="end", values=(n, title))
 
-    def mybind(self, sequence, func):
+    def mybind(self, sequence: str, func: callable):
         self.numberentry.bind(sequence, func)
         self.titleentry.bind(sequence, func)
         self.resultslist.bind(sequence, func)
@@ -309,8 +293,8 @@ class SearchEntries(ttk.Frame):
         self.resultslist.selection_set(titulos[nexti])
         self.update_playbutton()
 
-    def add_on_updatesettings(self, func):
-        self.root.settings.on_update.append(func)
+    def add_on_updatesettings(self, func: callable):
+        self.settings.on_update.append(func)
 
     def _on_focus_result(self, _=None):
         items = self.resultslist.get_children()
@@ -343,15 +327,16 @@ class SearchEntries(ttk.Frame):
         self.update_playbutton()
 
 
-def normalizetxt(texto):
+def normalizetxt(texto: str):
     texto = re.sub(r'[^\w\s]', '', texto.lower())
     texto = ''.join(c for c in unicodedata.normalize('NFD', texto) if unicodedata.category(c) != 'Mn')
     return texto
 
 
 class PlaceholderEntry(ttk.Entry):
-    def __init__(self, container, textvariable, placeholder, *args, **kwargs):
-        super().__init__(container, *args, **kwargs)
+    def __init__(self, root: SearchEntries, textvariable: tk.StringVar, placeholder: str, *args, **kwargs):
+        super().__init__(root, *args, **kwargs)
+        self.settings = root.settings
         self.colors = {
             "light": ["#1c1c1c", "#d7d7d7"],
             "dark": ["#e7e7e7", "#4c4c4c"]
@@ -376,7 +361,7 @@ class PlaceholderEntry(ttk.Entry):
         self.textvariable.set(self.placeholder)
 
     def update_placeholder(self):
-        theme = sv_ttk.get_theme()
+        theme = self.settings.get_theme()
         self.config(foreground=self.colors[theme][self.is_placeholder])
 
     def _on_focus_in(self, _=None):

@@ -6,8 +6,10 @@ import tkinter as tk
 from tkinter import ttk
 import ctypes
 
+DATA_DIR = "Data"
 SETTINGS_FILE = "settings.json"
 DEFAULT_SETTINGS = {
+    "version": "0.0.6",
     "themes": ["light", "dark"],
     "theme": "light",
     "player": {
@@ -19,11 +21,11 @@ DEFAULT_SETTINGS = {
         "fullscreen": False,
     },
     "path": {
-        "lyrics": "Assets/Letras",
-        "voice": "Assets/Musica/Cantado",
-        "instrumental": "Assets/Musica/instrumental",
-        "backgrounds": "Assets/Fondos",
-        "indexes": "Assets/indices.json"
+        "lyrics": f"{DATA_DIR}/Letras",
+        "voice": f"{DATA_DIR}/Musica/Cantado",
+        "instrumental": f"{DATA_DIR}/Musica/instrumental",
+        "backgrounds": f"{DATA_DIR}/Fondos",
+        "indexes": f"{DATA_DIR}/indices.json"
     }
 }
 
@@ -37,12 +39,15 @@ def reset():
 
 
 class Settings:
-    def __init__(self, root) -> None:
+    def __init__(self, root: tk.Tk) -> None:
         self.root = root
         if not os.path.exists(SETTINGS_FILE):
             reset()
         sf = open(SETTINGS_FILE, "r", encoding="utf-8")
         self.settings = json.load(sf)
+        if self.settings.get("version", "undefined") != DEFAULT_SETTINGS["version"]:
+            self.settings = DEFAULT_SETTINGS
+            reset()
         sf.close()
         self.themes = self.settings.get("themes", DEFAULT_SETTINGS["themes"])
         self.theme = self.settings.get("theme", DEFAULT_SETTINGS["theme"])
@@ -107,17 +112,17 @@ class Settings:
     def get_indexes_path(self):
         return self.path.get("indexes", DEFAULT_SETTINGS["path"]["indexes"])
 
-    def set_theme(self, theme):
+    def set_theme(self, theme: str):
         sv_ttk.set_theme(theme)
         self.settings["theme"] = theme
         self.root.update()
         self._windows_set_titlebar_color(theme)
         self.update()
 
-    def set_player_fullscreen(self, fullscreen):
+    def set_player_fullscreen(self, fullscreen: bool):
         self.settings["player"]["fullscreen"] = fullscreen
 
-    def set_player_geometry(self, geometry):
+    def set_player_geometry(self, geometry: str):
         self.settings["player"]["geometry"] = geometry
 
     def _windows_set_titlebar_color(self, color_mode: str):
@@ -146,7 +151,7 @@ class Settings:
 
 
 class SettingsUI(ttk.Frame):
-    def __init__(self, root, settings: Settings) -> None:
+    def __init__(self, root: tk.Tk, settings: Settings) -> None:
         super().__init__(root)
         self.root = root
         self.columnconfigure(0, weight=1)

@@ -1,9 +1,9 @@
 build/
 dist/
-Assets/*
-!Assets/indices.json
-!Assets/icon.ico
-!Assets/Iconos/
+Data/*
+!Data/indices.json
+!Data/icon.ico
+!Data/Iconos/
 main.*/
 *.exe
 __pycache__/

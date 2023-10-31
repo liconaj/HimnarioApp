@@ -9,7 +9,7 @@ class App(tk.Tk):
         self.title("Himnario Adventista")
         self.geometry(f"{width}x{height}")
         self.minsize(width, height)
-        self.iconbitmap("Assets/icon.ico")
+        self.iconbitmap(f"{st.DATA_DIR}/icon.ico")
         self.protocol("WM_DELETE_WINDOW", self._exit)
         self.settings = st.Settings(self)
         self.notebook = ttk.Notebook(self)

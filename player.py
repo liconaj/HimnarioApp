@@ -20,16 +20,20 @@ class Player(tk.Toplevel):
         self.killed = False
         self.protocol("WM_DELETE_WINDOW", self._exit)
 
-        self.set_infohimno(infohimno)
-        self.setup_window()
-        self.setup_canvas()
-        self.keybindings()
+        self.width, self.height = settings.get_player_size()
 
+        self.set_infohimno(infohimno)
         self.get_images()
-        self.play_music()
+
+        self.setup_canvas()
         self.set_slide()
 
-    def new_song(self, modo, infohimno):
+        self.setup_window()
+        self.keybindings()
+
+        self.play_music()
+
+    def new_song(self, modo: str, infohimno: dict):
         self.modo = modo
         self.changed = False
         self.slideindex = 0
@@ -50,7 +54,7 @@ class Player(tk.Toplevel):
         self.width = self.winfo_width()
         self.height = self.winfo_height()
         self.config(cursor="none")
-        self.iconbitmap("Assets/icon.ico")
+        self.iconbitmap(f"{st.DATA_DIR}/icon.ico")
         self.focus_force()
         self.lift()
 
@@ -78,7 +82,7 @@ class Player(tk.Toplevel):
             self.after(0, self._exit)
         self.after(10, self.synchronize)
 
-    def set_infohimno(self, infohimno):
+    def set_infohimno(self, infohimno: dict):
         self.titulo = infohimno['titulo']
         self.numero = infohimno['numero']
         self.tema = infohimno['tema']
@@ -110,7 +114,7 @@ class Player(tk.Toplevel):
         self.bind("<Escape>", self._exit)
         self.bind("<space>", self._toggle_pause)
 
-    def change_slide(self, direction, inposed=False):
+    def change_slide(self, direction: str, inposed=False):
         oldindex = self.slideindex
         if direction == "prev" and self.slideindex > 0:
             self.slideindex -= 1
