@@ -1441,8 +1441,8 @@
         {
             "titulo": "Bienvenida da Jesús",
             "numero": "217",
-            "ruta": "217 00:21|00:38|01:03|01:21|01:45|02:04- Bienvenida da Jesus",
-            "tiempos": "00:00:00|:00",
+            "ruta": "217 - Bienvenida da Jesus",
+            "tiempos": "00:00:00|00:21:00|00:38:00|01:03:00|01:21:00|01:45:00|02:04:00",
             "color": "0x000000"
         },
         {
@@ -1808,9 +1808,9 @@
             "tiempos": "00:00:00|00:25:00|00:54:00|01:22:00|01:49:00|02:17:00|02:45:00|03:13:00|03:41:00|04:09:00"
         },
         {
-            "titulo": "Humilde oracion",
+            "titulo": "Humilde oración",
             "numero": "275",
-            "ruta": "275 - Humilde oración",
+            "ruta": "275 - Humilde oracion",
             "tiempos": "00:00:00|00:10:00|00:35:00"
         },
         {
@@ -3661,7 +3661,7 @@
         {
             "titulo": "Voluntario del Señor",
             "numero": "570",
-            "ruta": "570 - Voluntario del Señor",
+            "ruta": "570 - Voluntario del Senor",
             "tiempos": "00:00:00|00:04:00|00:18:00|00:30:00|00:43:00|00:56:00|01:09:00|01:22:00|01:35:00|01:48:00"
         },
         {

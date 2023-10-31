@@ -9,7 +9,7 @@ import ctypes
 DATA_DIR = "Data"
 SETTINGS_FILE = "settings.json"
 DEFAULT_SETTINGS = {
-    "version": "0.0.6",
+    "version": "0.0.7",
     "themes": ["light", "dark"],
     "theme": "light",
     "player": {
@@ -23,7 +23,7 @@ DEFAULT_SETTINGS = {
     "path": {
         "lyrics": f"{DATA_DIR}/Letras",
         "voice": f"{DATA_DIR}/Musica/Cantado",
-        "instrumental": f"{DATA_DIR}/Musica/instrumental",
+        "instrumental": f"{DATA_DIR}/Musica/Instrumental",
         "backgrounds": f"{DATA_DIR}/Fondos",
         "indexes": f"{DATA_DIR}/indices.json"
     }
@@ -45,10 +45,10 @@ class Settings:
             reset()
         sf = open(SETTINGS_FILE, "r", encoding="utf-8")
         self.settings = json.load(sf)
+        sf.close()
         if self.settings.get("version", "undefined") != DEFAULT_SETTINGS["version"]:
             self.settings = DEFAULT_SETTINGS
             reset()
-        sf.close()
         self.themes = self.settings.get("themes", DEFAULT_SETTINGS["themes"])
         self.theme = self.settings.get("theme", DEFAULT_SETTINGS["theme"])
         self.player = self.settings.get("player", DEFAULT_SETTINGS["player"])

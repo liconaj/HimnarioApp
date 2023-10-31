@@ -14,6 +14,10 @@ def play():
     mx.music.play()
 
 
+def unload():
+    mx.music.unload()
+
+
 class Music:
     def __init__(self) -> None:
         init()

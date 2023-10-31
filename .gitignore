@@ -6,6 +6,8 @@ Data/Musica/*
 Data/Letras/*
 main.*/
 *.exe
+*.zip
+TRACKERRORS.txt
 __pycache__/
 settings.json
 .vscode/
