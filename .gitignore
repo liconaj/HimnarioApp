@@ -8,3 +8,4 @@ main.*/
 *.exe
 __pycache__/
 settings.json
+.vscode/
