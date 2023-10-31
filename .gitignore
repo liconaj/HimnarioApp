@@ -1,9 +1,9 @@
 build/
 dist/
-Data/*
-!Data/indices.json
-!Data/icon.ico
-!Data/Iconos/
+Data/utils
+Data/logo
+Data/Musica/*
+Data/Letras/*
 main.*/
 *.exe
 __pycache__/
