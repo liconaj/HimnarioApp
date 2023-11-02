@@ -1,15 +1,16 @@
-import sv_ttk
+import ctypes
 import json
 import os
 import sys
 import tkinter as tk
 from tkinter import ttk
-import ctypes
+
+import sv_ttk
 
 DATA_DIR = "Data"
-SETTINGS_FILE = "settings.json"
+SETTINGS_FILE = f"{DATA_DIR}/settings.json"
 DEFAULT_SETTINGS = {
-    "version": "0.0.7",
+    "version": "0.0.8",
     "themes": ["light", "dark"],
     "theme": "light",
     "player": {
@@ -17,7 +18,8 @@ DEFAULT_SETTINGS = {
         "exit_on_finish": True,
         "transitions": False,
         "aspect_ratio": True,
-        "geometry": "800x600",
+        "fullscreen_geometry": None,
+        "normal_geometry": "800x600",
         "fullscreen": False,
     },
     "path": {
@@ -38,6 +40,19 @@ def reset():
     sf.close()
 
 
+def make_dpi_aware():
+    if sys.platform.startswith("win"):
+        # solo funciona desde Windows 8.1
+        ctypes.windll.shcore.SetProcessDpiAwareness(2)
+
+
+def get_screenscale():
+    if sys.platform.startswith("win"):
+        return ctypes.windll.shcore.GetScaleFactorForDevice(0) / 100
+    else:
+        return 1
+
+
 class Settings:
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
@@ -55,7 +70,8 @@ class Settings:
         self.path = self.settings.get("path", DEFAULT_SETTINGS["path"])
         if not self.get_player_remember_geometry():
             self.set_player_fullscreen(DEFAULT_SETTINGS["player"]["fullscreen"])
-            self.set_player_geometry(DEFAULT_SETTINGS["player"]["geometry"])
+            self.set_player_normal_geometry(DEFAULT_SETTINGS["player"]["normal_geometry"])
+            self.set_player_fullscreen_geometry(DEFAULT_SETTINGS["player"]["fullscreen_geometry"])
         self.on_update = list()
         self.set_theme(self.theme)
 
@@ -73,11 +89,14 @@ class Settings:
     def get_theme(self):
         return self.settings["theme"]
 
-    def get_player_geometry(self):
-        return self.player.get("geometry", DEFAULT_SETTINGS["player"]["geometry"])
+    def get_player_normal_geometry(self):
+        return self.player.get("normal_geometry", DEFAULT_SETTINGS["player"]["normal_geometry"])
+
+    def get_player_fullscreen_geometry(self):
+        return self.player.get("fullscreen_geometry", DEFAULT_SETTINGS["player"]["fullscreen_geometry"])
 
     def get_player_size(self):
-        geom = self.get_player_geometry()
+        geom = self.get_player_normal_geometry()
         size = geom.split("+")[0]
         size = size.split("x")
         return int(size[0]), int(size[1])
@@ -122,8 +141,11 @@ class Settings:
     def set_player_fullscreen(self, fullscreen: bool):
         self.settings["player"]["fullscreen"] = fullscreen
 
-    def set_player_geometry(self, geometry: str):
-        self.settings["player"]["geometry"] = geometry
+    def set_player_normal_geometry(self, geometry: str):
+        self.settings["player"]["normal_geometry"] = geometry
+
+    def set_player_fullscreen_geometry(self, geometry: str | None):
+        self.settings["player"]["fullscreen_geometry"] = geometry
 
     def _windows_set_titlebar_color(self, color_mode: str):
         window = self.root

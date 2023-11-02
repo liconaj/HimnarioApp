@@ -4,8 +4,8 @@ from finder import *
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        width = 800
-        height = 700
+        st.make_dpi_aware()
+        width, height = 800, 700
         self.title("Himnario Adventista")
         self.geometry(f"{width}x{height}")
         self.minsize(width, height)

@@ -1,11 +1,12 @@
+import glob
 import tkinter as tk
 from tkinter import ttk
-from PIL import ImageTk, Image
-import settings as st
-import screeninfo
-import music as msc
 
-import glob
+import screeninfo
+from PIL import ImageTk, Image
+
+import music as msc
+import settings as st
 
 
 class Player(tk.Toplevel):
@@ -48,9 +49,11 @@ class Player(tk.Toplevel):
         self.configure(background="black")
         self.fullscreen = self.settings.get_player_fullscreen()
         if self.fullscreen:
-            self.activate_fullscreen()
+            self.overrideredirect(True)
+            self.geometry(self.settings.get_player_fullscreen_geometry())
         else:
-            self.geometry(self.settings.get_player_geometry())
+            self.overrideredirect(False)
+            self.geometry(self.settings.get_player_normal_geometry())
         self.width = self.winfo_width()
         self.height = self.winfo_height()
         self.config(cursor="none")
@@ -216,17 +219,18 @@ class Player(tk.Toplevel):
 
     def activate_fullscreen(self):
         self.fullscreen = True
-        self.old_geometry = self.geometry()
-        x, y = self.winfo_x(), self.winfo_y()
+        self.settings.set_player_normal_geometry(self.geometry())
+        x = self.winfo_x() + self.winfo_width() / 2
+        y = self.winfo_y() + self.winfo_height() / 2
         for m in screeninfo.get_monitors():
-            if m.x <= x <= m.width and m.y <= y <= m.height:
+            if m.x <= x <= m.x + m.width and m.y <= y <= m.y + m.height:
                 self.overrideredirect(True)
                 self.geometry(f"{m.width}x{m.height}+{m.x}+{m.y}")
                 break
 
     def deactivate_fullscreen(self):
         self.fullscreen = False
-        self.geometry(self.old_geometry)
+        self.geometry(self.settings.get_player_normal_geometry())
         self.overrideredirect(False)
 
     def _allow_change(self, _=None):
@@ -243,7 +247,10 @@ class Player(tk.Toplevel):
 
     def _exit(self, _=None):
         self.settings.set_player_fullscreen(self.fullscreen)
-        self.settings.set_player_geometry(self.geometry())
+        if self.fullscreen:
+            self.settings.set_player_fullscreen_geometry(self.geometry())
+        else:
+            self.settings.set_player_normal_geometry(self.geometry())
         self.killed = True
         self.music.quit()
         self.destroy()

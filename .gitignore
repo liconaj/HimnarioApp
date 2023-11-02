@@ -2,9 +2,11 @@ build/
 dist/
 Data/utils
 Data/logo
-Data/Musica/*
+Data/Musica/Cantado/*
+Data/Musica/Instrumental/*
 Data/Letras/*
 main.*/
+!*.txt
 *.exe
 *.zip
 TRACKERRORS.txt

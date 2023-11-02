@@ -1,5 +1,6 @@
 import json
 import re
+
 import unicodedata
 
 from music import *
@@ -86,14 +87,8 @@ class PlayModeSelector(ttk.Frame):
 
     def addmode(self, value: int):
         text = self.modes[value]
-        button = ttk.Radiobutton(self,
-                                 text=text,
-                                 variable=self.mode,
-                                 value=value,
-                                 style="Toggle.TButton",
-                                 width=12)
+        button = ttk.Radiobutton(self, text=text, variable=self.mode, value=value, style="Toggle.TButton", width=12)
         button.grid(row=0, column=value, padx=5, pady=5)
-        # self.modes[text] = button
 
     def getmode(self):
         return self.modes[self.mode.get()]
@@ -118,13 +113,8 @@ class SearchEntries(ttk.Frame):
     def setup_numberentry(self):
         self.numbertext = tk.StringVar()
         self.numberentry = PlaceholderEntry(self, self.numbertext, "#")
-        self.numberentry.config(justify="center", width=5,
-                                font="Arial 16 bold",
-                                textvariable=self.numbertext)
-        self.numberentry.grid(
-            row=0, column=0,
-            padx=(0, 5),
-            sticky="ew")
+        self.numberentry.config(justify="center", width=5, font="Arial 16 bold", textvariable=self.numbertext)
+        self.numberentry.grid(row=0, column=0, padx=(0, 5), sticky="ew")
         self.numbertext.trace("w", lambda *args: self._validate_number())
         self.add_on_updatesettings(self.numberentry.update_placeholder)
 
@@ -132,13 +122,8 @@ class SearchEntries(ttk.Frame):
         self.titletext = tk.StringVar()
         self.titleentry = PlaceholderEntry(self, self.titletext, "Título del himno")
 
-        self.titleentry.config(justify="center", width=39,
-                               font="Arial 16 bold",
-                               textvariable=self.titletext)
-        self.titleentry.grid(
-            row=0, column=1,
-            padx=(5, 5),
-            sticky="ew")
+        self.titleentry.config(justify="center", width=39, font="Arial 16 bold", textvariable=self.titletext)
+        self.titleentry.grid(row=0, column=1, padx=(5, 5), sticky="ew")
         self.titletext.trace("w", lambda *args: self._validate_title())
         self.titleentry.bind("<Tab>", self._on_focus_result)
         self.titleentry.bind("<Down>", self._on_focus_result)
@@ -168,17 +153,13 @@ class SearchEntries(ttk.Frame):
         self.results.columnconfigure(2, weight=1)
         self.scrollbar = ttk.Scrollbar(self.results)
         self.scrollbar.grid(row=0, column=1, sticky="nsw")
-        self.resultslist = ttk.Treeview(self.results,
-                                        height=11,
-                                        columns=("1", "2"),
-                                        selectmode="browse",
-                                        show=("tree",),
-                                        yscrollcommand=self.scrollbar.set)
+        self.resultslist = ttk.Treeview(self.results, height=11, columns=("1", "2"), selectmode="browse",
+                                        show=("tree",), yscrollcommand=self.scrollbar.set)
         self.resultslist.column("#0", width=0, stretch=True)
         self.resultslist.column(1, anchor="center", width=40)
         self.resultslist.column(2, anchor="center", width=560)
         self.scrollbar.config(command=self.resultslist.yview)
-        self.resultslist.grid(row=0, column=0)
+        self.resultslist.grid(row=0, column=0, sticky="ew")
         self.resultslist.bind("<<TreeviewSelect>>", self._on_select)
         self.resultslist.bind("<Tab>", self._on_next_tab)
         self.resultslist.bind("<Down>", self._on_next_tab)
@@ -337,10 +318,7 @@ class PlaceholderEntry(ttk.Entry):
     def __init__(self, root: SearchEntries, textvariable: tk.StringVar, placeholder: str, *args, **kwargs):
         super().__init__(root, *args, **kwargs)
         self.settings = root.settings
-        self.colors = {
-            "light": ["#1c1c1c", "#d7d7d7"],
-            "dark": ["#e7e7e7", "#4c4c4c"]
-        }
+        self.colors = {"light": ["#1c1c1c", "#d7d7d7"], "dark": ["#e7e7e7", "#4c4c4c"]}
         self.is_placeholder = 1
         self.placeholder = f"ㅤ{placeholder}ㅤ"
         self.textvariable = textvariable
