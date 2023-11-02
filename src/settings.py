@@ -10,8 +10,7 @@ import sv_ttk
 DATA_DIR = "Data"
 SETTINGS_FILE = f"{DATA_DIR}/settings.json"
 DEFAULT_SETTINGS = {
-    "version": "0.0.8",
-    "themes": ["light", "dark"],
+    "version": "0.0.0",
     "theme": "light",
     "player": {
         "remember_geometry": False,
@@ -30,6 +29,15 @@ DEFAULT_SETTINGS = {
         "indexes": f"{DATA_DIR}/indices.json"
     }
 }
+
+try:
+    with open("VERSION", "r", encoding="utf-8") as f:
+        version = f.readline().strip()
+        DEFAULT_SETTINGS["version"] = version
+        f.close()
+except IOError:
+    with open("VERSION", "w", encoding="utf-8") as f:
+        f.write(f'{DEFAULT_SETTINGS["version"]}\n')
 
 
 def reset():
@@ -61,10 +69,9 @@ class Settings:
         sf = open(SETTINGS_FILE, "r", encoding="utf-8")
         self.settings = json.load(sf)
         sf.close()
-        if self.settings.get("version", "undefined") != DEFAULT_SETTINGS["version"]:
+        if self.settings.get("version", "unknown") != DEFAULT_SETTINGS["version"]:
             self.settings = DEFAULT_SETTINGS
             reset()
-        self.themes = self.settings.get("themes", DEFAULT_SETTINGS["themes"])
         self.theme = self.settings.get("theme", DEFAULT_SETTINGS["theme"])
         self.player = self.settings.get("player", DEFAULT_SETTINGS["player"])
         self.path = self.settings.get("path", DEFAULT_SETTINGS["path"])
@@ -96,7 +103,10 @@ class Settings:
         return self.player.get("fullscreen_geometry", DEFAULT_SETTINGS["player"]["fullscreen_geometry"])
 
     def get_player_size(self):
-        geom = self.get_player_normal_geometry()
+        if self.get_player_fullscreen():
+            geom = self.get_player_fullscreen_geometry()
+        else:
+            geom = self.get_player_normal_geometry()
         size = geom.split("+")[0]
         size = size.split("x")
         return int(size[0]), int(size[1])

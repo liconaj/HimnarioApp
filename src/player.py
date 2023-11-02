@@ -49,8 +49,22 @@ class Player(tk.Toplevel):
         self.configure(background="black")
         self.fullscreen = self.settings.get_player_fullscreen()
         if self.fullscreen:
+            geom = self.settings.get_player_fullscreen_geometry()
+            size = geom.split("+")[0]
+            w, h = tuple([int(v) for v in size.split("x")])
+            x, y = tuple([int(v) for v in geom.split("+")[1:]])
+            found = False
+            for m in screeninfo.get_monitors():
+                if x == m.x and y == m.y and w == m.width and h == m.height:
+                    found = True
+                    break
             self.overrideredirect(True)
-            self.geometry(self.settings.get_player_fullscreen_geometry())
+            if found:
+                self.geometry(self.settings.get_player_fullscreen_geometry())
+            else:
+                m = screeninfo.get_monitors()[0]
+                self.geometry(f"{m.width}x{m.height}+{m.x}+{m.y}")
+
         else:
             self.overrideredirect(False)
             self.geometry(self.settings.get_player_normal_geometry())

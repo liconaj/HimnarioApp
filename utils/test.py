@@ -1,6 +1,5 @@
 import tkinter as tk
-import music as msc
-import settings as st
+from src import music as msc, settings as st
 import json
 import glob
 from PIL import Image
