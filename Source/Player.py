@@ -6,8 +6,8 @@ import gc
 import screeninfo
 from PIL import ImageTk, Image
 
-import music as msc
-import settings as st
+import Music
+import Settings
 
 
 def get_window_geometry(geom: str, fullscreen: bool) -> str:
@@ -34,7 +34,7 @@ def get_window_geometry(geom: str, fullscreen: bool) -> str:
 
 
 class Player(tk.Toplevel):
-    def __init__(self, root, settings: st.Settings, modo: str, infohimno: dict, music=None):
+    def __init__(self, root, settings: Settings.Settings, modo: str, infohimno: dict, music=None):
         super().__init__()
         self.root = root
         self.music = music
@@ -86,7 +86,6 @@ class Player(tk.Toplevel):
         self.width = self.winfo_width()
         self.height = self.winfo_height()
         self.config(cursor="none")
-        self.iconbitmap(f"{st.DATA_DIR}/icon.ico")
         self.focus_force()
         self.lift()
 
@@ -141,8 +140,8 @@ class Player(tk.Toplevel):
         elif self.modo == "Instrumental":
             musicpath = self.settings.get_instrumental_path()
         self.musicfile = f"{musicpath}/{self.ruta}.mp3"
-        msc.load(self.musicfile)
-        msc.play()
+        Music.load(self.musicfile)
+        Music.play()
         self.playingmusic = True
         self.synchronize()
 

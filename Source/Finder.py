@@ -1,18 +1,23 @@
 import json
 import re
+import tkinter as tk
+from tkinter import ttk
+
+from PIL import ImageTk, Image
 
 import unicodedata
 
-from music import *
-from player import *
+import Music
+import Player
+import Settings
 
 
 class Finder(ttk.Frame):
-    def __init__(self, settings: st.Settings) -> None:
+    def __init__(self, settings: Settings.Settings) -> None:
         super().__init__()
         self.settings = settings
 
-        self.mixer = Music()
+        self.mixer = Music.Music()
         self.playing = False
         self.player = None
 
@@ -68,7 +73,7 @@ class Finder(ttk.Frame):
         if self.player is not None and self.player.winfo_exists():
             self.player.new_song(modo, infohimno)
         else:
-            self.player = Player(self, self.settings, modo, infohimno, self.mixer)
+            self.player = Player.Player(self, self.settings, modo, infohimno, self.mixer)
 
     def _takeout_focus(self, event=None) -> None:
         if event.widget == self:
@@ -130,10 +135,13 @@ class SearchEntries(ttk.Frame):
         self.add_on_updatesettings(self.titleentry.update_placeholder)
 
     def setup_playbutton(self) -> None:
-        self.playimg = {"dark": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_dark.png")),
-                        "light": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_light.png")),
-                        "dark_ready": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_dark_ready.png")),
-                        "light_ready": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_light_ready.png"))}
+        icons_path = self.settings.get_icons_path()
+        self.playimg = {
+            "dark": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_dark.png")),
+            "light": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_light.png")),
+            "dark_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_dark_ready.png")),
+            "light_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_light_ready.png"))
+        }
         self.playbutton = ttk.Button(self, command=self.start_player)
         self.update_playbutton()
         self.playbutton.grid(row=0, column=2, padx=(5, 0), sticky="nsw")

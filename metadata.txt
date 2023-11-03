@@ -1,6 +1,6 @@
 product-name = Himnario Adventista
-file-description = Letra y Música Himnario Iglesia Adventista del Séptimo Día
+file-description = Música y letras himnario Iglesia Adventista del Séptimo Día
 copyright = © 2023 Josué Licona
 company-name = Liconaj
 output-filename = Himnario.exe
-icon-windows = assets/Data/icon.ico
+icon-windows = Data/icon.ico

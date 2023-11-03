@@ -1,7 +1,7 @@
 __pycache__/
 *.exe
 *.zip
-utils/models
-utils/raw
+Utils/models
+Utils/raw
 !*.txt
 settings.json

@@ -7,10 +7,8 @@ from tkinter import ttk
 
 import sv_ttk
 
-DATA_DIR = "Data"
-SETTINGS_FILE = f"{DATA_DIR}/settings.json"
+SETTINGS_FILE = "settings.json"
 DEFAULT_SETTINGS = {
-    "version": "0.0.0",
     "theme": "light",
     "player": {
         "remember_geometry": False,
@@ -22,49 +20,34 @@ DEFAULT_SETTINGS = {
         "fullscreen": False,
     },
     "path": {
-        "lyrics": f"{DATA_DIR}/Letras",
-        "voice": f"{DATA_DIR}/Musica/Cantado",
-        "instrumental": f"{DATA_DIR}/Musica/Instrumental",
-        "backgrounds": f"{DATA_DIR}/Fondos",
-        "indexes": f"{DATA_DIR}/indices.json"
+        "lyrics": "Letras",
+        "voice": "Musica/Cantado",
+        "instrumental": "Musica/Instrumental",
+        "backgrounds": "Fondos",
+        "icons": "Iconos",
+        "indexes": "indices.json",
     }
 }
-
-try:
-    with open("VERSION", "r", encoding="utf-8") as f:
-        version = f.readline().strip()
-        DEFAULT_SETTINGS["version"] = version
-        f.close()
-except IOError:
-    with open("VERSION", "w", encoding="utf-8") as f:
-        f.write(f'{DEFAULT_SETTINGS["version"]}\n')
-
-
-def reset() -> None:
-    if os.path.exists(SETTINGS_FILE):
-        os.remove(SETTINGS_FILE)
-    sf = open(SETTINGS_FILE, 'w')
-    json.dump(DEFAULT_SETTINGS, sf, indent=4)
-    sf.close()
 
 
 def make_dpi_aware() -> None:
     if sys.platform.startswith("win"):
-        # solo funciona desde Windows 8.1
-        ctypes.windll.shcore.SetProcessDpiAwareness(2)
+        try:
+            ctypes.windll.shcore.SetProcessDpiAwareness(2)  # solo funciona en Windows desde la versión 8.1
+        except Exception as err:
+            print(f"\n\nDpiAwareness: versión de Windows incompatible: {err}", file=sys.stderr)
 
 
 class Settings:
-    def __init__(self, root: tk.Tk) -> None:
+    def __init__(self, root: tk.Tk, data_dir: str) -> None:
         self.root = root
-        if not os.path.exists(SETTINGS_FILE):
-            reset()
-        sf = open(SETTINGS_FILE, "r", encoding="utf-8")
+        self.data_dir = data_dir
+        self.settings_file = f"{data_dir}/{SETTINGS_FILE}"
+        if not os.path.exists(self.settings_file):
+            self.reset()
+        sf = open(self.settings_file, "r", encoding="utf-8")
         self.settings = json.load(sf)
         sf.close()
-        if self.settings.get("version", "unknown") != DEFAULT_SETTINGS["version"]:
-            self.settings = DEFAULT_SETTINGS
-            reset()
         self.theme = self.settings.get("theme", DEFAULT_SETTINGS["theme"])
         self.player = self.settings.get("player", DEFAULT_SETTINGS["player"])
         self.path = self.settings.get("path", DEFAULT_SETTINGS["path"])
@@ -75,14 +58,21 @@ class Settings:
         self.on_update = list()
         self.set_theme(self.theme)
 
+    def reset(self) -> None:
+        if os.path.exists(self.settings_file):
+            os.remove(self.settings_file)
+        sf = open(self.settings_file, 'w')
+        json.dump(DEFAULT_SETTINGS, sf, indent=4)
+        sf.close()
+
     def update(self) -> None:
         for func in self.on_update:
             func()
 
     def save(self) -> None:
-        if os.path.exists(SETTINGS_FILE):
-            os.remove(SETTINGS_FILE)
-        sf = open(SETTINGS_FILE, "w", encoding="utf-8")
+        if os.path.exists(self.settings_file):
+            os.remove(self.settings_file)
+        sf = open(self.settings_file, "w", encoding="utf-8")
         json.dump(self.settings, sf, indent=4)
         sf.close()
 
@@ -120,19 +110,28 @@ class Settings:
         return self.player.get("aspect_ratio", DEFAULT_SETTINGS["player"]["aspect_ratio"])
 
     def get_lyrics_path(self) -> str:
-        return self.path.get("lyrics", DEFAULT_SETTINGS["path"]["lyrics"])
+        lyrics = self.path.get("lyrics", DEFAULT_SETTINGS["path"]["lyrics"])
+        return f"{self.data_dir}/{lyrics}"
 
     def get_voice_path(self) -> str:
-        return self.path.get("path", DEFAULT_SETTINGS["path"]["voice"])
+        voice = self.path.get("voice", DEFAULT_SETTINGS["path"]["voice"])
+        return f"{self.data_dir}/{voice}"
+
+    def get_icons_path(self) -> str:
+        icons = self.path.get("icons", DEFAULT_SETTINGS["path"]["icons"])
+        return f"{self.data_dir}/{icons}"
 
     def get_instrumental_path(self) -> str:
-        return self.path.get("instrumental", DEFAULT_SETTINGS["path"]["instrumental"])
+        instrumental = self.path.get("instrumental", DEFAULT_SETTINGS["path"]["instrumental"])
+        return f"{self.data_dir}/{instrumental}"
 
     def get_backgrounds_path(self) -> str:
-        return self.path.get("backgrounds", DEFAULT_SETTINGS["path"]["backgrounds"])
+        backgrounds = self.path.get("backgrounds", DEFAULT_SETTINGS["path"]["backgrounds"])
+        return f"{self.data_dir}/{backgrounds}"
 
     def get_indexes_path(self) -> str:
-        return self.path.get("indexes", DEFAULT_SETTINGS["path"]["indexes"])
+        indexes = self.path.get("indexes", DEFAULT_SETTINGS["path"]["indexes"])
+        return f"{self.data_dir}/{indexes}"
 
     def set_theme(self, theme: str) -> None:
         sv_ttk.set_theme(theme)
@@ -172,7 +171,7 @@ class Settings:
                                                                ctypes.byref(ctypes.c_int(value)),
                                                                ctypes.sizeof(ctypes.c_int(value)))
             except Exception as err:
-                print(err)
+                print(f"\n\nWindowAttribute Modo Oscure: Versión de Windows incompatible: {err}", file=sys.stderr)
 
 
 class SettingsUI(ttk.Frame):
@@ -237,7 +236,7 @@ class SettingsUI(ttk.Frame):
         self.aspect_ratio.state(["!alternate"])
         # transitions
         self.transitions = ttk.Checkbutton(self.playerconf,
-                                           text="Mostrar transiciones (No recomendado)",
+                                           text="Mostrar transiciones",
                                            command=self.change_playerconf, variable=self.playervars["transitions"])
         self.transitions.grid(row=3, column=0, sticky="nsw", padx=20, pady=(10, 0))
         self.transitions.state(["!alternate"])
