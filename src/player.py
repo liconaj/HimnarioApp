@@ -9,6 +9,28 @@ import music as msc
 import settings as st
 
 
+def get_window_geometry(geom: str, fullscreen: bool) -> tuple:
+    size = geom.split("+")[0]
+    w, h = tuple([int(v) for v in size.split("x")])
+    x, y = tuple([int(v) for v in geom.split("+")[1:]])
+    xc, yc = x + w / 2, y + h / 2
+    found = False
+    for m in screeninfo.get_monitors():
+        if (fullscreen and x == m.x and y == m.y and w == m.width and h == m.height) or (
+                m.x <= xc <= m.x + m.width and m.y <= yc <= m.y + m.width):
+            found = True
+            break
+    if not found:
+        m = screeninfo.get_monitors()[0]
+        if fullscreen:
+            x, y = m.x, m.y
+            w, h = m.width, m.height
+        else:
+            x = x % m.width
+            y = y % m.height
+    return x, y, w, h
+
+
 class Player(tk.Toplevel):
     def __init__(self, settings: st.Settings, modo: str, infohimno: dict, music=None):
         super().__init__()
@@ -34,7 +56,7 @@ class Player(tk.Toplevel):
 
         self.play_music()
 
-    def new_song(self, modo: str, infohimno: dict):
+    def new_song(self, modo: str, infohimno: dict) -> None:
         self.modo = modo
         self.changed = False
         self.slideindex = 0
@@ -44,30 +66,18 @@ class Player(tk.Toplevel):
         self.play_music()
         self.set_slide()
 
-    def setup_window(self):
+    def setup_window(self) -> None:
         self.minsize(800, 600)
         self.configure(background="black")
+        self.recall_geometry()
         self.fullscreen = self.settings.get_player_fullscreen()
         if self.fullscreen:
             geom = self.settings.get_player_fullscreen_geometry()
-            size = geom.split("+")[0]
-            w, h = tuple([int(v) for v in size.split("x")])
-            x, y = tuple([int(v) for v in geom.split("+")[1:]])
-            found = False
-            for m in screeninfo.get_monitors():
-                if x == m.x and y == m.y and w == m.width and h == m.height:
-                    found = True
-                    break
             self.overrideredirect(True)
-            if found:
-                self.geometry(self.settings.get_player_fullscreen_geometry())
-            else:
-                m = screeninfo.get_monitors()[0]
-                self.geometry(f"{m.width}x{m.height}+{m.x}+{m.y}")
-
         else:
+            geom = self.settings.get_player_normal_geometry()
             self.overrideredirect(False)
-            self.geometry(self.settings.get_player_normal_geometry())
+        self.geometry(geom)
         self.width = self.winfo_width()
         self.height = self.winfo_height()
         self.config(cursor="none")
@@ -75,7 +85,17 @@ class Player(tk.Toplevel):
         self.focus_force()
         self.lift()
 
-    def play_music(self):
+    def recall_geometry(self) -> None:
+        normal_geom = self.settings.get_player_normal_geometry()
+        if len(normal_geom.split("+")) == 3:
+            nx, ny, nw, nh = get_window_geometry(normal_geom, True)
+            self.settings.set_player_normal_geometry(f"{nw}x{nh}+{nx}+{ny}")
+        fullscreen_geom = self.settings.get_player_fullscreen_geometry()
+        if fullscreen_geom is not None:
+            fx, fy, fw, fh = get_window_geometry(fullscreen_geom, False)
+            self.settings.set_player_fullscreen_geometry(f"{fw}x{fh}+{fx}+{fy}")
+
+    def play_music(self) -> None:
         musicpath = ""
         self.playingmusic = False
         if self.modo == "Solo letra":
@@ -90,7 +110,7 @@ class Player(tk.Toplevel):
         self.playingmusic = True
         self.synchronize()
 
-    def synchronize(self):
+    def synchronize(self) -> None:
         if self.slideindex < len(self.tiempos) - 1:
             nexttime = self.tiempos[self.slideindex + 1]
             if self.music.get_time() > nexttime:
@@ -99,7 +119,7 @@ class Player(tk.Toplevel):
             self.after(0, self._exit)
         self.after(10, self.synchronize)
 
-    def set_infohimno(self, infohimno: dict):
+    def set_infohimno(self, infohimno: dict) -> None:
         self.titulo = infohimno['titulo']
         self.numero = infohimno['numero']
         self.tema = infohimno['tema']
@@ -111,17 +131,17 @@ class Player(tk.Toplevel):
             self.tiempos.append(tiempoms)
         self.title(f"Himnario Adventista Player | {self.numero} - {self.titulo} | {self.modo.upper()}")
 
-    def setup_canvas(self):
+    def setup_canvas(self) -> None:
         self.canvas = ttk.Label(self)
         self.canvas.pack(fill="both", expand=True, anchor="center")
         self.canvas.bind('<Configure>', self._on_resize)
 
-    def update_canvas(self):
+    def update_canvas(self) -> None:
         if self.killed:
             return
         self.canvas.config(image=self.slide, anchor="center")
 
-    def keybindings(self):
+    def keybindings(self) -> None:
         self.bind("<F11>", self._toggle_fullscreen)
         self.bind("f", self._toggle_fullscreen)
         self.bind("<Right>", self._on_next)
@@ -131,7 +151,7 @@ class Player(tk.Toplevel):
         self.bind("<Escape>", self._exit)
         self.bind("<space>", self._toggle_pause)
 
-    def change_slide(self, direction: str, inposed=False):
+    def change_slide(self, direction: str, inposed=False) -> None:
         oldindex = self.slideindex
         if direction == "prev" and self.slideindex > 0:
             self.slideindex -= 1
@@ -154,7 +174,7 @@ class Player(tk.Toplevel):
                 self.image = self.images[self.slideindex]
                 self.set_slide()
 
-    def transition(self):
+    def transition(self) -> None:
         if self.killed:
             return
         if self.transalpha < 1.0:
@@ -167,7 +187,7 @@ class Player(tk.Toplevel):
             self.set_slide()
             self.transalpha = 0
 
-    def set_slide(self):
+    def set_slide(self) -> None:
         nwidth = self.width
         nheight = self.height
         if self.settings.get_player_aspectratio():
@@ -189,7 +209,7 @@ class Player(tk.Toplevel):
             self.slide = ImageTk.PhotoImage(image)
         self.update_canvas()
 
-    def get_images(self):
+    def get_images(self) -> None:
         imgfolder = f"{self.settings.get_lyrics_path()}/{self.ruta}"
         imgfiles = [fn for fn in glob.glob(f"{imgfolder}/*")]
         self.images = [Image.open(img) for img in imgfiles]
@@ -208,12 +228,12 @@ class Player(tk.Toplevel):
         self.bgimg2 = Image.open(f"{bgfolder}/{tema} - 2.jpg")
         self.bgimg = self.bgimg1
 
-    def _on_resize(self, event=None):
+    def _on_resize(self, event=None) -> None:
         self.width = event.width
         self.height = event.height
         self.set_slide()
 
-    def _on_next(self, _=None):
+    def _on_next(self, _=None) -> None:
         if self.transalpha != 0:
             self.after(1, self._on_next)
             return
@@ -222,7 +242,7 @@ class Player(tk.Toplevel):
         self.changed = True
         self.change_slide("next", True)
 
-    def _on_prev(self, _=None):
+    def _on_prev(self, _=None) -> None:
         if self.transalpha != 0:
             self.after(1, self._on_prev)
             return
@@ -231,7 +251,7 @@ class Player(tk.Toplevel):
         self.changed = True
         self.change_slide("prev", True)
 
-    def activate_fullscreen(self):
+    def activate_fullscreen(self) -> None:
         self.fullscreen = True
         self.settings.set_player_normal_geometry(self.geometry())
         x = self.winfo_x() + self.winfo_width() / 2
@@ -242,24 +262,24 @@ class Player(tk.Toplevel):
                 self.geometry(f"{m.width}x{m.height}+{m.x}+{m.y}")
                 break
 
-    def deactivate_fullscreen(self):
+    def deactivate_fullscreen(self) -> None:
         self.fullscreen = False
         self.geometry(self.settings.get_player_normal_geometry())
         self.overrideredirect(False)
 
-    def _allow_change(self, _=None):
+    def _allow_change(self, _=None) -> None:
         self.changed = False
 
-    def _toggle_fullscreen(self, _=None):
+    def _toggle_fullscreen(self, _=None) -> None:
         if self.fullscreen:
             self.deactivate_fullscreen()
         else:
             self.activate_fullscreen()
 
-    def _toggle_pause(self, _=None):
+    def _toggle_pause(self, _=None) -> None:
         self.music.toggle_pause()
 
-    def _exit(self, _=None):
+    def _exit(self, _=None) -> None:
         self.settings.set_player_fullscreen(self.fullscreen)
         if self.fullscreen:
             self.settings.set_player_fullscreen_geometry(self.geometry())

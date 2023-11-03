@@ -21,7 +21,7 @@ class App(tk.Tk):
         self.notebook.add(self.finder, text="Inicio")
         self.notebook.add(self.settingsui, text="Ajustes")
 
-    def _exit(self):
+    def _exit(self) -> None:
         self.settings.save()
         self.quit()
 

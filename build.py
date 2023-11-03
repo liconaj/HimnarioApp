@@ -5,8 +5,8 @@ arch = "x64"
 main_module = "src/main.py"
 
 output_dir = "dist"
-output = f"{output_dir}/main.dist"
-dist = f"{output_dir}/Himnario_{arch}"
+output = f"{output_dir}\\main.dist"
+dist = f"{output_dir}\\Himnario_{arch}"
 
 metadata = dict()
 fhandler = open("metadata.txt", "r", encoding="utf-8")

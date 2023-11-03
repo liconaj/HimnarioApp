@@ -40,7 +40,7 @@ except IOError:
         f.write(f'{DEFAULT_SETTINGS["version"]}\n')
 
 
-def reset():
+def reset() -> None:
     if os.path.exists(SETTINGS_FILE):
         os.remove(SETTINGS_FILE)
     sf = open(SETTINGS_FILE, 'w')
@@ -48,17 +48,10 @@ def reset():
     sf.close()
 
 
-def make_dpi_aware():
+def make_dpi_aware() -> None:
     if sys.platform.startswith("win"):
         # solo funciona desde Windows 8.1
         ctypes.windll.shcore.SetProcessDpiAwareness(2)
-
-
-def get_screenscale():
-    if sys.platform.startswith("win"):
-        return ctypes.windll.shcore.GetScaleFactorForDevice(0) / 100
-    else:
-        return 1
 
 
 class Settings:
@@ -82,27 +75,27 @@ class Settings:
         self.on_update = list()
         self.set_theme(self.theme)
 
-    def update(self):
+    def update(self) -> None:
         for func in self.on_update:
             func()
 
-    def save(self):
+    def save(self) -> None:
         if os.path.exists(SETTINGS_FILE):
             os.remove(SETTINGS_FILE)
         sf = open(SETTINGS_FILE, "w", encoding="utf-8")
         json.dump(self.settings, sf, indent=4)
         sf.close()
 
-    def get_theme(self):
+    def get_theme(self) -> str:
         return self.settings["theme"]
 
-    def get_player_normal_geometry(self):
+    def get_player_normal_geometry(self) -> str:
         return self.player.get("normal_geometry", DEFAULT_SETTINGS["player"]["normal_geometry"])
 
-    def get_player_fullscreen_geometry(self):
+    def get_player_fullscreen_geometry(self) -> str:
         return self.player.get("fullscreen_geometry", DEFAULT_SETTINGS["player"]["fullscreen_geometry"])
 
-    def get_player_size(self):
+    def get_player_size(self) -> tuple:
         if self.get_player_fullscreen():
             geom = self.get_player_fullscreen_geometry()
         else:
@@ -111,53 +104,53 @@ class Settings:
         size = size.split("x")
         return int(size[0]), int(size[1])
 
-    def get_player_remember_geometry(self):
+    def get_player_remember_geometry(self) -> bool:
         return self.player.get("remember_geometry", DEFAULT_SETTINGS["player"]["remember_geometry"])
 
-    def get_player_fullscreen(self):
+    def get_player_fullscreen(self) -> bool:
         return self.player.get("fullscreen", DEFAULT_SETTINGS["player"]["fullscreen"])
 
-    def get_player_transitions(self):
+    def get_player_transitions(self) -> bool:
         return self.player.get("transitions", DEFAULT_SETTINGS["player"]["transitions"])
 
-    def get_player_exit_on_finish(self):
+    def get_player_exit_on_finish(self) -> bool:
         return self.player.get("exit_on_finish", DEFAULT_SETTINGS["player"]["exit_on_finish"])
 
-    def get_player_aspectratio(self):
+    def get_player_aspectratio(self) -> bool:
         return self.player.get("aspect_ratio", DEFAULT_SETTINGS["player"]["aspect_ratio"])
 
-    def get_lyrics_path(self):
+    def get_lyrics_path(self) -> str:
         return self.path.get("lyrics", DEFAULT_SETTINGS["path"]["lyrics"])
 
-    def get_voice_path(self):
+    def get_voice_path(self) -> str:
         return self.path.get("path", DEFAULT_SETTINGS["path"]["voice"])
 
-    def get_instrumental_path(self):
+    def get_instrumental_path(self) -> str:
         return self.path.get("instrumental", DEFAULT_SETTINGS["path"]["instrumental"])
 
-    def get_backgrounds_path(self):
+    def get_backgrounds_path(self) -> str:
         return self.path.get("backgrounds", DEFAULT_SETTINGS["path"]["backgrounds"])
 
-    def get_indexes_path(self):
+    def get_indexes_path(self) -> str:
         return self.path.get("indexes", DEFAULT_SETTINGS["path"]["indexes"])
 
-    def set_theme(self, theme: str):
+    def set_theme(self, theme: str) -> None:
         sv_ttk.set_theme(theme)
         self.settings["theme"] = theme
         self.root.update()
         self._windows_set_titlebar_color(theme)
         self.update()
 
-    def set_player_fullscreen(self, fullscreen: bool):
+    def set_player_fullscreen(self, fullscreen: bool) -> None:
         self.settings["player"]["fullscreen"] = fullscreen
 
-    def set_player_normal_geometry(self, geometry: str):
+    def set_player_normal_geometry(self, geometry: str) -> None:
         self.settings["player"]["normal_geometry"] = geometry
 
-    def set_player_fullscreen_geometry(self, geometry: str | None):
+    def set_player_fullscreen_geometry(self, geometry: str | None) -> None:
         self.settings["player"]["fullscreen_geometry"] = geometry
 
-    def _windows_set_titlebar_color(self, color_mode: str):
+    def _windows_set_titlebar_color(self, color_mode: str) -> None:
         window = self.root
         if sys.platform.startswith("win"):
             if color_mode.lower() == "dark":
@@ -193,7 +186,7 @@ class SettingsUI(ttk.Frame):
         self.setup_playerconf()
         self.setup_reset_button()
 
-    def setup_themesel(self):
+    def setup_themesel(self) -> None:
         self.themesel = ttk.LabelFrame(self, text="Tema")
         self.themesel.rowconfigure(2, weight=0)
         self.themesel.grid(row=0, column=0, padx=20, pady=(20, 0), sticky="new")
@@ -211,16 +204,16 @@ class SettingsUI(ttk.Frame):
         self.buttonlight.grid(row=0, column=0, padx=20, pady=(20, 5), sticky="w")
         self.buttondark.grid(row=1, column=0, padx=20, pady=(5, 20), sticky="w")
 
-    def change_theme(self, _=None):
+    def change_theme(self, _=None) -> None:
         theme = self.theme.get()
         self.settings.set_theme(theme)
 
-    def change_playerconf(self, _=None):
+    def change_playerconf(self, _=None) -> None:
         for var in self.playervars:
             value = self.playervars[var].get()
             self.settings.settings["player"][var] = value
 
-    def setup_playerconf(self):
+    def setup_playerconf(self) -> None:
         self.playerconf = ttk.LabelFrame(self, text="Reproductor de letras")
         self.rowconfigure(4, weight=1)
         self.playerconf.grid(row=1, column=0, padx=(20, 20), pady=(10, 10), sticky="new")
@@ -255,7 +248,7 @@ class SettingsUI(ttk.Frame):
         self.exit_on_finish.grid(row=4, column=0, sticky="nsw", padx=20, pady=(10, 20))
         self.exit_on_finish.state(["!alternate"])
 
-    def reset_changes(self):
+    def reset_changes(self) -> None:
         if self.settings.settings != DEFAULT_SETTINGS:
             self.settings.settings = DEFAULT_SETTINGS
             self.theme.set(self.settings.get_theme())
@@ -263,6 +256,6 @@ class SettingsUI(ttk.Frame):
         for var in self.playervars:
             self.playervars[var].set(self.settings.settings["player"][var])
 
-    def setup_reset_button(self):
+    def setup_reset_button(self) -> None:
         self.reset_button = ttk.Button(self, text="Restablecer", command=self.reset_changes)
         self.reset_button.grid(row=4, sticky="sw", padx=20, pady=20)

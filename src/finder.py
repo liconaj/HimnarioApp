@@ -19,24 +19,24 @@ class Finder(ttk.Frame):
         self.grid_columnconfigure(0, weight=1)
         self.grid_rowconfigure(4, weight=1)
 
-        self.get_listahimnos()
+        self.set_listahimnos()
         self.setup_modeselector()
         self.setup_search()
 
         self.bind("<Button-1>", self._takeout_focus)
 
-    def setup_modeselector(self):
+    def setup_modeselector(self) -> None:
         self.modeselector = PlayModeSelector(self)
         self.modeselector.config(width=50)
         self.modeselector.grid(row=0, column=0, padx=20, pady=(20, 10))
 
-    def setup_search(self):
+    def setup_search(self) -> None:
         self.search = SearchEntries(self)
         self.search.grid(row=1, column=0, padx=0, pady=10)
         self.search.columnconfigure(2, weight=1)
         self.search.rowconfigure(2, weight=1)
 
-    def get_listahimnos(self):
+    def set_listahimnos(self) -> None:
         datafile = self.settings.get_indexes_path()
         fhandler = open(datafile, "r", encoding="utf-8")
         infohimnos = json.load(fhandler)
@@ -59,7 +59,7 @@ class Finder(ttk.Frame):
                 for numero in range(rango[0], rango[1] + 1):
                     self.numeros[numero]["tema"] = nombretema
 
-    def start_player(self, _=None):
+    def start_player(self, _=None) -> None:
         number = self.search.getnumber()
         if number is None:
             return
@@ -70,7 +70,7 @@ class Finder(ttk.Frame):
         else:
             self.player = Player(self.settings, modo, infohimno, self.mixer)
 
-    def _takeout_focus(self, event=None):
+    def _takeout_focus(self, event=None) -> None:
         if event.widget == self:
             self.focus()
 
@@ -85,12 +85,12 @@ class PlayModeSelector(ttk.Frame):
         self.addmode(1)
         self.addmode(2)
 
-    def addmode(self, value: int):
+    def addmode(self, value: int) -> None:
         text = self.modes[value]
         button = ttk.Radiobutton(self, text=text, variable=self.mode, value=value, style="Toggle.TButton", width=12)
         button.grid(row=0, column=value, padx=5, pady=5)
 
-    def getmode(self):
+    def getmode(self) -> str:
         return self.modes[self.mode.get()]
 
 
@@ -110,7 +110,7 @@ class SearchEntries(ttk.Frame):
         self.setup_resultslist()
         self.mybind("<Return>", self.start_player)
 
-    def setup_numberentry(self):
+    def setup_numberentry(self) -> None:
         self.numbertext = tk.StringVar()
         self.numberentry = PlaceholderEntry(self, self.numbertext, "#")
         self.numberentry.config(justify="center", width=5, font="Arial 16 bold", textvariable=self.numbertext)
@@ -118,7 +118,7 @@ class SearchEntries(ttk.Frame):
         self.numbertext.trace("w", lambda *args: self._validate_number())
         self.add_on_updatesettings(self.numberentry.update_placeholder)
 
-    def setup_titleentry(self):
+    def setup_titleentry(self) -> None:
         self.titletext = tk.StringVar()
         self.titleentry = PlaceholderEntry(self, self.titletext, "Título del himno")
 
@@ -129,7 +129,7 @@ class SearchEntries(ttk.Frame):
         self.titleentry.bind("<Down>", self._on_focus_result)
         self.add_on_updatesettings(self.titleentry.update_placeholder)
 
-    def setup_playbutton(self):
+    def setup_playbutton(self) -> None:
         self.playimg = {"dark": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_dark.png")),
                         "light": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_light.png")),
                         "dark_ready": ImageTk.PhotoImage(Image.open(f"{st.DATA_DIR}/Iconos/play_dark_ready.png")),
@@ -139,7 +139,7 @@ class SearchEntries(ttk.Frame):
         self.playbutton.grid(row=0, column=2, padx=(5, 0), sticky="nsw")
         self.add_on_updatesettings(self.update_playbutton)
 
-    def update_playbutton(self):
+    def update_playbutton(self) -> None:
         theme = self.settings.get_theme()
         ready = self.getnumber() is not None
         playimg = theme
@@ -147,7 +147,7 @@ class SearchEntries(ttk.Frame):
             playimg += "_ready"
         self.playbutton.config(image=self.playimg[playimg])
 
-    def setup_resultslist(self):
+    def setup_resultslist(self) -> None:
         self.results = ttk.Frame(self)
         self.results.grid(row=1, column=0, columnspan=3, pady=10)
         self.results.columnconfigure(2, weight=1)
@@ -168,29 +168,29 @@ class SearchEntries(ttk.Frame):
         self.resultslist.bind("<Double-Button-1>", self.start_player)
         self.show_alltitles()
 
-    def show_alltitles(self):
+    def show_alltitles(self) -> None:
         self.resultslist.delete(*self.resultslist.get_children())
         for n, info in self.numeros.items():
             self.resultslist.insert("", index="end", values=(n, info["titulo"]))
 
-    def search_titles(self, titlesearch: str):
+    def search_titles(self, titlesearch: str) -> None:
         self.resultslist.delete(*self.resultslist.get_children())
         for title in self.titulos:
             if normalizetxt(titlesearch) in normalizetxt(title):
                 n = self.titulos[title]["numero"]
                 self.resultslist.insert("", index="end", values=(n, title))
 
-    def mybind(self, sequence: str, func: callable):
+    def mybind(self, sequence: str, func: callable) -> None:
         self.numberentry.bind(sequence, func)
         self.titleentry.bind(sequence, func)
         self.resultslist.bind(sequence, func)
 
-    def getnumber(self):
+    def getnumber(self) -> int:
         number = self.numbertext.get()
         if number and number != self.numberentry.placeholder:
             return int(number)
 
-    def _validate_number(self):
+    def _validate_number(self) -> None:
         if self.focus_get() != self.numberentry:
             return
         number = self.numbertext.get()
@@ -226,7 +226,7 @@ class SearchEntries(ttk.Frame):
                 itemsee += 6
             self.resultslist.see(titles[itemsee - 1])
 
-    def _validate_title(self):
+    def _validate_title(self) -> None:
         if self.focus_get() != self.titleentry:
             return
         titulo = self.titletext.get()
@@ -254,7 +254,7 @@ class SearchEntries(ttk.Frame):
         self.titleentry.state([state])
         self.update_playbutton()
 
-    def change_title(self, direction="next"):
+    def change_title(self, direction="next") -> None:
         idir = 1
         if direction == "prev":
             idir = -1
@@ -274,25 +274,25 @@ class SearchEntries(ttk.Frame):
         self.resultslist.selection_set(titulos[nexti])
         self.update_playbutton()
 
-    def add_on_updatesettings(self, func: callable):
+    def add_on_updatesettings(self, func: callable) -> None:
         self.settings.on_update.append(func)
 
-    def _on_focus_result(self, _=None):
+    def _on_focus_result(self, _=None) -> str:
         items = self.resultslist.get_children()
         self.resultslist.focus_set()
         if len(items) > 0:
             self.resultslist.selection_set(items[0])
         return "break"
 
-    def _on_next_tab(self, _=None):
+    def _on_next_tab(self, _=None) -> str:
         self.change_title("next")
         return "break"  # evita que cambie el foco a otro widget
 
-    def _on_prev_tab(self, _=None):
+    def _on_prev_tab(self, _=None) -> str:
         self.change_title("prev")
         return "break"  # evita que cambie el foco a otro widget
 
-    def _on_select(self, _=None):
+    def _on_select(self, _=None) -> None:
         if len(self.resultslist.selection()) == 0:
             return
         item = self.resultslist.selection()[0]
@@ -308,7 +308,7 @@ class SearchEntries(ttk.Frame):
         self.update_playbutton()
 
 
-def normalizetxt(texto: str):
+def normalizetxt(texto: str) -> str:
     texto = re.sub(r'[^\w\s]', '', texto.lower())
     texto = ''.join(c for c in unicodedata.normalize('NFD', texto) if unicodedata.category(c) != 'Mn')
     return texto
@@ -327,24 +327,24 @@ class PlaceholderEntry(ttk.Entry):
         self.bind("<FocusIn>", self._on_focus_in)
         self.bind("<FocusOut>", self._on_focus_out)
 
-    def hide_placeholder(self):
+    def hide_placeholder(self) -> None:
         self.is_placeholder = 0
         self.update_placeholder()
         if self.textvariable.get() == self.placeholder:
             self.textvariable.set("")
 
-    def show_placeholder(self):
+    def show_placeholder(self) -> None:
         self.is_placeholder = 1
         self.update_placeholder()
         self.textvariable.set(self.placeholder)
 
-    def update_placeholder(self):
+    def update_placeholder(self) -> None:
         theme = self.settings.get_theme()
         self.config(foreground=self.colors[theme][self.is_placeholder])
 
-    def _on_focus_in(self, _=None):
+    def _on_focus_in(self, _=None) -> None:
         self.hide_placeholder()
 
-    def _on_focus_out(self, _=None):
+    def _on_focus_out(self, _=None) -> None:
         if self.textvariable.get() == "":
             self.show_placeholder()
