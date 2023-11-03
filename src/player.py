@@ -2,6 +2,7 @@ import glob
 import tkinter as tk
 from tkinter import ttk
 
+import gc
 import screeninfo
 from PIL import ImageTk, Image
 
@@ -33,8 +34,9 @@ def get_window_geometry(geom: str, fullscreen: bool) -> str:
 
 
 class Player(tk.Toplevel):
-    def __init__(self, settings: st.Settings, modo: str, infohimno: dict, music=None):
+    def __init__(self, root, settings: st.Settings, modo: str, infohimno: dict, music=None):
         super().__init__()
+        self.root = root
         self.music = music
         self.settings = settings
         self.modo = modo
@@ -125,9 +127,9 @@ class Player(tk.Toplevel):
         if new_nmonitors != self.nmonitors:
             self.nmonitors = new_nmonitors
             self.update_geometry()
-            self.after(1000, self.update_monitors)
+            self.after(3000, self.update_monitors)
         else:
-            self.after(10, self.update_monitors)
+            self.after(1000, self.update_monitors)
 
     def play_music(self) -> None:
         musicpath = ""
@@ -324,4 +326,6 @@ class Player(tk.Toplevel):
         self.killed = True
         self.music.quit()
         self.destroy()
-        self.update()
+        # Liberar memoria
+        self.root.player = None
+        self.root.after(1000, lambda *args: gc.collect())

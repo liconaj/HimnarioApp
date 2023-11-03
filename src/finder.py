@@ -68,7 +68,7 @@ class Finder(ttk.Frame):
         if self.player is not None and self.player.winfo_exists():
             self.player.new_song(modo, infohimno)
         else:
-            self.player = Player(self.settings, modo, infohimno, self.mixer)
+            self.player = Player(self, self.settings, modo, infohimno, self.mixer)
 
     def _takeout_focus(self, event=None) -> None:
         if event.widget == self:
