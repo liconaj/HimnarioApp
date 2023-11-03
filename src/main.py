@@ -18,7 +18,7 @@ class App(tk.Tk):
         self.finder = Finder(self.settings)
         self.finder.pack(fill="both", expand=True)
         self.settingsui = st.SettingsUI(self, self.settings)
-        self.notebook.add(self.finder, text="Inicio")
+        self.notebook.add(self.finder, text="Buscar")
         self.notebook.add(self.settingsui, text="Ajustes")
 
     def _exit(self) -> None:
