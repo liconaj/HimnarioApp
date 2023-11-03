@@ -9,26 +9,27 @@ import music as msc
 import settings as st
 
 
-def get_window_geometry(geom: str, fullscreen: bool) -> tuple:
+def get_window_geometry(geom: str, fullscreen: bool) -> str:
     size = geom.split("+")[0]
     w, h = tuple([int(v) for v in size.split("x")])
     x, y = tuple([int(v) for v in geom.split("+")[1:]])
     xc, yc = x + w / 2, y + h / 2
-    found = False
+    index = -1
     for m in screeninfo.get_monitors():
+        index += 1
         if (fullscreen and x == m.x and y == m.y and w == m.width and h == m.height) or (
                 m.x <= xc <= m.x + m.width and m.y <= yc <= m.y + m.width):
-            found = True
             break
-    if not found:
-        m = screeninfo.get_monitors()[0]
-        if fullscreen:
-            x, y = m.x, m.y
-            w, h = m.width, m.height
-        else:
-            x = x % m.width
-            y = y % m.height
-    return x, y, w, h
+
+    m = screeninfo.get_monitors()[index]
+    if fullscreen:
+        x, y = m.x, m.y
+        w, h = m.width, m.height
+    else:
+        x = x % m.width
+        y = y % m.height
+
+    return f"{w}x{h}+{x}+{y}"
 
 
 class Player(tk.Toplevel):
@@ -67,9 +68,11 @@ class Player(tk.Toplevel):
         self.set_slide()
 
     def setup_window(self) -> None:
+        self.nmonitors = len(screeninfo.get_monitors())
+        self.after(100, self.update_monitors)
         self.minsize(800, 600)
         self.configure(background="black")
-        self.recall_geometry()
+        self.recalc_geometry()
         self.fullscreen = self.settings.get_player_fullscreen()
         if self.fullscreen:
             geom = self.settings.get_player_fullscreen_geometry()
@@ -85,15 +88,46 @@ class Player(tk.Toplevel):
         self.focus_force()
         self.lift()
 
-    def recall_geometry(self) -> None:
+    def recalc_geometry(self) -> bool:
         normal_geom = self.settings.get_player_normal_geometry()
-        if len(normal_geom.split("+")) == 3:
-            nx, ny, nw, nh = get_window_geometry(normal_geom, True)
-            self.settings.set_player_normal_geometry(f"{nw}x{nh}+{nx}+{ny}")
         fullscreen_geom = self.settings.get_player_fullscreen_geometry()
+
+        new_normal_geom = normal_geom
+        if len(normal_geom.split("+")) == 3:
+            new_normal_geom = get_window_geometry(normal_geom, False)
+
+        new_fullscreen_geom = fullscreen_geom
         if fullscreen_geom is not None:
-            fx, fy, fw, fh = get_window_geometry(fullscreen_geom, False)
-            self.settings.set_player_fullscreen_geometry(f"{fw}x{fh}+{fx}+{fy}")
+            new_fullscreen_geom = get_window_geometry(fullscreen_geom, True)
+
+        self.settings.set_player_normal_geometry(new_normal_geom)
+        self.settings.set_player_fullscreen_geometry(new_fullscreen_geom)
+        changed = new_normal_geom != normal_geom or new_fullscreen_geom != fullscreen_geom
+        return changed
+
+    def update_geometry(self):
+        if self.fullscreen:
+            self.settings.set_player_fullscreen_geometry(self.geometry())
+        else:
+            self.settings.set_player_normal_geometry(self.geometry())
+
+        if not self.recalc_geometry():
+            return
+
+        if self.fullscreen:
+            geom = self.settings.get_player_fullscreen_geometry()
+        else:
+            geom = self.settings.get_player_normal_geometry()
+        self.geometry(geom)
+
+    def update_monitors(self):
+        new_nmonitors = len(screeninfo.get_monitors())
+        if new_nmonitors != self.nmonitors:
+            self.nmonitors = new_nmonitors
+            self.update_geometry()
+            self.after(1000, self.update_monitors)
+        else:
+            self.after(10, self.update_monitors)
 
     def play_music(self) -> None:
         musicpath = ""
@@ -258,8 +292,10 @@ class Player(tk.Toplevel):
         y = self.winfo_y() + self.winfo_height() / 2
         for m in screeninfo.get_monitors():
             if m.x <= x <= m.x + m.width and m.y <= y <= m.y + m.height:
+                geom = f"{m.width}x{m.height}+{m.x}+{m.y}"
                 self.overrideredirect(True)
-                self.geometry(f"{m.width}x{m.height}+{m.x}+{m.y}")
+                self.geometry(geom)
+                self.settings.set_player_fullscreen_geometry(geom)
                 break
 
     def deactivate_fullscreen(self) -> None:

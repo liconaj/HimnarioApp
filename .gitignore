@@ -1,4 +1,5 @@
 dist/*
+!dist/*.bat
 utils/models
 utils/raw
 assets/Data/Musica/Cantado/*
