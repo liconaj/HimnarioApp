@@ -38,6 +38,7 @@ parameters = f"""
     --file-description="{metadata["file-description"]}"
     --copyright="{metadata["copyright"]}"
     --include-data-files=VERSION=VERSION
+    --include-data-files=scripts/*=./
     --jobs=6
 """
 
@@ -46,8 +47,3 @@ cmd = f"cmd /c nuitka {main_module} {parameters}"
 os.system(cmd)
 os.system(f"if exist {dist} rmdir /s /q {dist}")
 os.system(f"if exist {output} move {output} {dist}")
-
-# os.system(cmd)
-# os.system(f"rm")
-# os.system(f"xcopy /y /s /i {output} {dist}")
-# os.system(f"rmdir /s /q {output}")
