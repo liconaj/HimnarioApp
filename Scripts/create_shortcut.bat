@@ -1,4 +1,6 @@
 @echo off
+for /f "tokens=2 delims=:." %%x in ('chcp') do set cp=%%x
+chcp 1252>nul
 
 set APP_NAME=Himnario Adventista
 set APP_EXECUTABLE=Program\Himnario.exe
@@ -16,3 +18,5 @@ echo shortcut.Description = "%APP_NAME%" >> CreateShortcut.vbs
 echo shortcut.Save >> CreateShortcut.vbs
 cscript CreateShortcut.vbs
 del CreateShortcut.vbs
+
+chcp %cp%>nul
