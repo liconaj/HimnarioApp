@@ -1,27 +1,28 @@
 import _tkinter
+
 import sys
 
 import tkinter as tk
 from tkinter import ttk
 
-import Settings
-import Finder
+import Source.Settings as Settings
+import Source.Finder as Finder
 
 
 class App(tk.Tk):
-    def __init__(self, data_dir: str):
+    def __init__(self, data_path: str):
         super().__init__()
         Settings.make_dpi_aware()
         width, height = 800, 700
-        self.title("Himnario Adventista")
+        self.title("Program Adventista")
         self.geometry(f"{width}x{height}")
         self.minsize(width, height)
         try:
-            self.iconbitmap(default=f"{data_dir}/icon.ico")
+            self.iconbitmap(default=f"{data_path}/icon.ico")
         except _tkinter.TclError:
             print("Archivo icon.ico faltante", file=sys.stderr)
         self.protocol("WM_DELETE_WINDOW", self._exit)
-        self.settings = Settings.Settings(self, data_dir)
+        self.settings = Settings.Settings(self, data_path)
         self.notebook = ttk.Notebook(self)
         self.notebook.pack(fill="both", expand=True)
 
@@ -34,12 +35,3 @@ class App(tk.Tk):
     def _exit(self) -> None:
         self.settings.save()
         self.quit()
-
-
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        DATA_DIR = sys.argv[1]
-    else:
-        DATA_DIR = "Data"
-    app = App(DATA_DIR)
-    app.mainloop()

@@ -7,9 +7,9 @@ from PIL import ImageTk, Image
 
 import unicodedata
 
-import Music
-import Player
-import Settings
+import Source.Music as Music
+import Source.Player as Player
+import Source.Settings as Settings
 
 
 class Finder(ttk.Frame):

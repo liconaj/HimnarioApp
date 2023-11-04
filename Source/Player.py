@@ -6,8 +6,8 @@ import gc
 import screeninfo
 from PIL import ImageTk, Image
 
-import Music
-import Settings
+import Source.Music as Music
+import Source.Settings as Settings
 
 
 def get_window_geometry(geom: str, fullscreen: bool) -> str:

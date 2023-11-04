@@ -1,12 +1,14 @@
 import os
+import sys
+import subprocess
 
-arch = "x64"
+ARCHITECTURE = "x64"
+if len(sys.argv) > 1:
+    ARCHITECTURE = sys.argv[1]
 
-main_module = "src/main.py"
-
-output_dir = "dist"
-output = f"{output_dir}\\main.dist"
-dist = f"{output_dir}\\Himnario_{arch}"
+CWD = os.getcwd().replace("\\", "/")
+PYTHON_EXE_PATH = "C:/Program Files/Python311/python.exe"
+MSVC = "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvarsall.bat"
 
 metadata = dict()
 fhandler = open("metadata.txt", "r", encoding="utf-8")
@@ -17,33 +19,30 @@ for line in fhandler:
     metadata[key] = value
 fhandler.close()
 
-with open("VERSION", "r", encoding="utf-8") as fversion:
-    version = fversion.readline()
-    metadata["product-version"] = version.strip()
-    fversion.close()
+if os.path.exists("Dist/Program"):
+    os.system("rmdir /s /q Dist\\Program")
 
-# --include-data-dir=assets/Data=Data
-parameters = f"""
-    --standalone
-    --disable-console
-    --remove-output
-    --output-dir={output_dir}
-    --force-stderr-spec=logs.err.txt
-    --enable-plugin=tk-inter
-    --output-filename="{metadata["output-filename"]}"
-    --product-version="{metadata["product-version"]}"
-    --company-name="{metadata["company-name"]}"
-    --product-name="{metadata["product-name"]}"
-    --windows-icon-from-ico={metadata["icon-windows"]}
-    --file-description="{metadata["file-description"]}"
-    --copyright="{metadata["copyright"]}"
-    --include-data-files=VERSION=VERSION
-    --include-data-files=scripts/*=./
-    --jobs=6
-"""
+command = '"{}" {}&'.format(MSVC, ARCHITECTURE)
+command += '"{}" -m nuitka '.format(PYTHON_EXE_PATH)
+command += '--standalone --disable-console '
+command += '--output-dir="{}/Dist" '.format(CWD)
+command += '--remove-output '
+command += '--output-filename="{}" '.format(metadata["filename"])
+command += '--enable-plugin=tk-inter '
+command += '--force-stderr-spec=logs.log '
+command += '--force-stdout-spec=logs.log '
+command += '--product-version={} '.format(metadata["version"])
+command += '--company-name="{}" '.format(metadata["company"])
+command += '--product-name="{}" '.format(metadata["name"])
+command += '--windows-icon-from-ico="{}" '.format(metadata["icon-windows"])
+command += '--file-description="{}" '.format(metadata["description"])
+command += '--copyright="{}" '.format(metadata["copyright"])
+# command += '--include-data-files=DATAPATH=DATAPATH '
+command += '--main="{}" &'.format("main.py")
+command += 'move "Dist/main.dist" "Dist/Program"'
 
-parameters = " ".join([p.strip() for p in parameters.split("\n")])
-cmd = f"cmd /c nuitka {main_module} {parameters}"
-os.system(cmd)
-os.system(f"if exist {dist} rmdir /s /q {dist}")
-os.system(f"if exist {output} move {output} {dist}")
+os.system(f"cmd /c {command}")
+
+if os.path.exists("Dist/Program"):
+    with open("Dist/Program/DATAPATH", "w", encoding="utf-8") as f:
+        f.write("../Data\n")
