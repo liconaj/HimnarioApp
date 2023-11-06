@@ -1,30 +1,30 @@
-import json
-import re
 import tkinter as tk
 from tkinter import ttk
 
 from PIL import ImageTk, Image
 
-import unicodedata
-
 import Source.Music as Music
 import Source.Player as Player
 import Source.Settings as Settings
+import Source.Utils as Utils
 
 
 class Finder(ttk.Frame):
-    def __init__(self, settings: Settings.Settings) -> None:
+    def __init__(self, settings: Settings.Settings, indices: dict) -> None:
         super().__init__()
         self.settings = settings
+        self.titulos = indices["titulos"]
+        self.numeros = indices["numeros"]
+        self.palabras = indices["palabras"]
 
         self.mixer = Music.Music()
         self.playing = False
         self.player = None
 
         self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(0, weight=0)
         self.grid_rowconfigure(4, weight=1)
 
-        self.set_listahimnos()
         self.setup_modeselector()
         self.setup_search()
 
@@ -32,37 +32,13 @@ class Finder(ttk.Frame):
 
     def setup_modeselector(self) -> None:
         self.modeselector = PlayModeSelector(self)
-        self.modeselector.config(width=50)
         self.modeselector.grid(row=0, column=0, padx=20, pady=(20, 10))
 
     def setup_search(self) -> None:
         self.search = SearchEntries(self)
-        self.search.grid(row=1, column=0, padx=0, pady=10)
-        self.search.columnconfigure(2, weight=1)
+        self.search.grid(row=1, column=0, padx=20, pady=10, sticky="ew")
+        self.search.columnconfigure(0, weight=1)
         self.search.rowconfigure(2, weight=1)
-
-    def set_listahimnos(self) -> None:
-        datafile = self.settings.get_indexes_path()
-        fhandler = open(datafile, "r", encoding="utf-8")
-        infohimnos = json.load(fhandler)
-        self.titulos = {}
-        self.numeros = {}
-        for info in infohimnos["lista"]:
-            self.numeros[int(info["numero"])] = info
-            self.titulos[info["titulo"]] = info
-        self.temas = infohimnos["temas"]
-        for tema in self.temas:
-            nombretema = tema["nombre"]
-            if tema["hassubs"]:
-                for sub in tema["subtemas"]:
-                    nombresub = f'{nombretema} - {sub["nombre"]}'
-                    rango = sub["rango"]
-                    for numero in range(rango[0], rango[1] + 1):
-                        self.numeros[numero]["tema"] = nombresub
-            else:
-                rango = tema["rango"]
-                for numero in range(rango[0], rango[1] + 1):
-                    self.numeros[numero]["tema"] = nombretema
 
     def start_player(self, _=None) -> None:
         number = self.search.getnumber()
@@ -83,7 +59,9 @@ class Finder(ttk.Frame):
 class PlayModeSelector(ttk.Frame):
     def __init__(self, root: Finder, *args, **kwargs):
         super().__init__(root, *args, **kwargs)
-        self.columnconfigure(3, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_columnconfigure(1, weight=1)
+        self.grid_columnconfigure(2, weight=1)
         self.mode = tk.IntVar(value=1)
         self.modes = ["Solo letra", "Cantado", "Instrumental"]
         self.addmode(0)
@@ -92,8 +70,8 @@ class PlayModeSelector(ttk.Frame):
 
     def addmode(self, value: int) -> None:
         text = self.modes[value]
-        button = ttk.Radiobutton(self, text=text, variable=self.mode, value=value, style="Toggle.TButton", width=12)
-        button.grid(row=0, column=value, padx=5, pady=5)
+        button = ttk.Radiobutton(self, text=text, variable=self.mode, value=value, style="Toggle.TButton", width=20)
+        button.grid(row=0, column=value, padx=5, pady=5, sticky="ew")
 
     def getmode(self) -> str:
         return self.modes[self.mode.get()]
@@ -106,29 +84,38 @@ class SearchEntries(ttk.Frame):
         self.settings = root.settings
         self.titulos = root.titulos
         self.numeros = root.numeros
+        self.palabras = root.palabras
         self.start_player = root.start_player
-        self.columnconfigure(3, weight=1)
-        self.rowconfigure(2, weight=1)
+        self.grid_columnconfigure(0, weight=1)
+        self.grid_rowconfigure(0, weight=1)
+        self.grid_rowconfigure(1, weight=1)
+        self.setup_playentries()
+        self.setup_resultslist()
+        self._bind("<Return>", self.start_player)
+
+    def setup_playentries(self):
+        self.playentries = ttk.Frame(self)
+        self.playentries.grid(row=0, column=0, sticky="ew")
+        self.playentries.grid_columnconfigure(1, weight=1)
+        self.playentries.grid_columnconfigure(2, weight=1)
         self.setup_numberentry()
         self.setup_titleentry()
         self.setup_playbutton()
-        self.setup_resultslist()
-        self.mybind("<Return>", self.start_player)
 
     def setup_numberentry(self) -> None:
         self.numbertext = tk.StringVar()
-        self.numberentry = PlaceholderEntry(self, self.numbertext, "#")
-        self.numberentry.config(justify="center", width=5, font="Arial 16 bold", textvariable=self.numbertext)
-        self.numberentry.grid(row=0, column=0, padx=(0, 5), sticky="ew")
+        self.numberentry = PlaceholderEntry(self.playentries, self.settings, self.numbertext, "#")
+        self.numberentry.config(justify="center", font="Arial 16 bold", width=7, textvariable=self.numbertext)
+        self.numberentry.grid(row=0, column=0, padx=(6, 5), sticky="ew")
         self.numbertext.trace("w", lambda *args: self._validate_number())
         self.add_on_updatesettings(self.numberentry.update_placeholder)
 
     def setup_titleentry(self) -> None:
         self.titletext = tk.StringVar()
-        self.titleentry = PlaceholderEntry(self, self.titletext, "Título del himno")
+        self.titleentry = PlaceholderEntry(self.playentries, self.settings, self.titletext, "Título del himno")
 
-        self.titleentry.config(justify="center", width=39, font="Arial 16 bold", textvariable=self.titletext)
-        self.titleentry.grid(row=0, column=1, padx=(5, 5), sticky="ew")
+        self.titleentry.config(justify="center", font="Arial 16 bold", textvariable=self.titletext)
+        self.titleentry.grid(row=0, column=1, padx=(5, 5), sticky="ew", columnspan=2)
         self.titletext.trace("w", lambda *args: self._validate_title())
         self.titleentry.bind("<Tab>", self._on_focus_result)
         self.titleentry.bind("<Down>", self._on_focus_result)
@@ -142,9 +129,9 @@ class SearchEntries(ttk.Frame):
             "dark_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_dark_ready.png")),
             "light_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_light_ready.png"))
         }
-        self.playbutton = ttk.Button(self, command=self.start_player)
+        self.playbutton = ttk.Button(self.playentries, command=self.start_player)
         self.update_playbutton()
-        self.playbutton.grid(row=0, column=2, padx=(5, 0), sticky="nsw")
+        self.playbutton.grid(row=0, column=3, padx=(5, 6), sticky="nsew")
         self.add_on_updatesettings(self.update_playbutton)
 
     def update_playbutton(self) -> None:
@@ -157,17 +144,25 @@ class SearchEntries(ttk.Frame):
 
     def setup_resultslist(self) -> None:
         self.results = ttk.Frame(self)
-        self.results.grid(row=1, column=0, columnspan=3, pady=10)
-        self.results.columnconfigure(2, weight=1)
+        self.results.grid(row=1, column=0, pady=10, sticky="ew")
+        self.results.grid_columnconfigure(0, weight=1)
+        self.results.grid_columnconfigure(1, weight=0)
         self.scrollbar = ttk.Scrollbar(self.results)
-        self.scrollbar.grid(row=0, column=1, sticky="nsw")
-        self.resultslist = ttk.Treeview(self.results, height=11, columns=("1", "2"), selectmode="browse",
-                                        show=("tree",), yscrollcommand=self.scrollbar.set)
-        self.resultslist.column("#0", width=0, stretch=True)
-        self.resultslist.column(1, anchor="center", width=40)
-        self.resultslist.column(2, anchor="center", width=560)
+        self.scrollbar.grid(row=0, column=1, sticky="nse")
+        self.resultslist = ttk.Treeview(self.results, height=15,
+                                        columns=("numero", "titulo", "palabras", "tema"),
+                                        selectmode="browse", show="tree headings", yscrollcommand=self.scrollbar.set)
+        self.resultslist.heading("numero", text="Número")
+        self.resultslist.heading("titulo", text="Título")
+        self.resultslist.heading("palabras", text="Primeras palabras")
+        self.resultslist.heading("tema", text="Tema")
+        self.resultslist.column("#0", width=0, stretch=False)
+        self.resultslist.column("numero", anchor="center", width=100, stretch=False)
+        self.resultslist.column("titulo", anchor="w", stretch=True)
+        self.resultslist.column("palabras", anchor="w", stretch=True)
+        self.resultslist.column("tema", anchor="w", stretch=True)
         self.scrollbar.config(command=self.resultslist.yview)
-        self.resultslist.grid(row=0, column=0, sticky="ew")
+        self.resultslist.grid(row=0, column=0, padx=(6, 0), sticky="nsew")
         self.resultslist.bind("<<TreeviewSelect>>", self._on_select)
         self.resultslist.bind("<Tab>", self._on_next_tab)
         self.resultslist.bind("<Down>", self._on_next_tab)
@@ -176,19 +171,66 @@ class SearchEntries(ttk.Frame):
         self.resultslist.bind("<Double-Button-1>", self.start_player)
         self.show_alltitles()
 
+    def _set_titles(self, info):
+        n = info["numero"]
+        title = info["titulo"]
+        tema = info["tema"]
+        palabras = info.get("palabras", "")
+        self.resultslist.insert("", index="end", values=(n, title, palabras, tema))
+
     def show_alltitles(self) -> None:
         self.resultslist.delete(*self.resultslist.get_children())
-        for n, info in self.numeros.items():
-            self.resultslist.insert("", index="end", values=(n, info["titulo"]))
+        for info in self.numeros.values():
+            self._set_titles(info)
+
+    def _set_titles_list(self, lista, dictinfo):
+        for k in lista:
+            info = dictinfo[k]
+            self._set_titles(info)
 
     def search_titles(self, titlesearch: str) -> None:
         self.resultslist.delete(*self.resultslist.get_children())
+        normtitles = [[], []]
+        normwords = [[], []]
+        himnosresult = {}
+        if titlesearch == "":
+            self.show_alltitles()
+            return
+        normsearch = Utils.normalizetxt(titlesearch)
         for title in self.titulos:
-            if normalizetxt(titlesearch) in normalizetxt(title):
-                n = self.titulos[title]["numero"]
-                self.resultslist.insert("", index="end", values=(n, title))
+            nt = Utils.normalizetxt(title)
+            if nt.startswith(normsearch):
+                notbestmatch = 0
+            elif normsearch in nt:
+                notbestmatch = 1
+            else:
+                continue
+            normtitles[notbestmatch].append(nt)
+            info = self.titulos[title]
+            himnosresult[nt] = info
+        for palabras in self.palabras:
+            np = Utils.normalizetxt(palabras)
+            title = self.palabras[palabras]["titulo"]
+            nt = Utils.normalizetxt(title)
+            if nt in normtitles[0] or nt in normtitles[1]:
+                continue
+            if np.startswith(normsearch):
+                notbestmatch = 0
+            elif normsearch in np:
+                notbestmatch = 1
+            else:
+                continue
+            normwords[notbestmatch].append(nt)
+            info = self.titulos[title]
+            himnosresult[nt] = info
+        for i in range(2):
+            normtitles[i].sort()
+            normwords[i].sort()
+        for i in range(2):
+            self._set_titles_list(normtitles[i], himnosresult)
+            self._set_titles_list(normwords[i], himnosresult)
 
-    def mybind(self, sequence: str, func: callable) -> None:
+    def _bind(self, sequence: str, func: callable) -> None:
         self.numberentry.bind(sequence, func)
         self.titleentry.bind(sequence, func)
         self.resultslist.bind(sequence, func)
@@ -204,10 +246,9 @@ class SearchEntries(ttk.Frame):
         number = self.numbertext.get()
         if number == self.numberentry.placeholder:
             return
-        self.update_playbutton()
 
         maxdigits = 3
-        maxnumber = 614
+        maxnumber = 613
 
         if not number.isdigit():
             self.numbertext.set(number[:-1])
@@ -215,6 +256,8 @@ class SearchEntries(ttk.Frame):
             self.numbertext.set(number[:maxdigits])
         elif len(number) > 0 and int(number) > maxnumber:
             self.after(100, lambda *args: self.numbertext.set(str(maxnumber)))
+
+        self.update_playbutton()
 
         if not number:
             self.titleentry.show_placeholder()
@@ -228,10 +271,10 @@ class SearchEntries(ttk.Frame):
             titles = self.resultslist.get_children()
             self.resultslist.selection_set(titles[number - 1])
             itemsee = number
-            if number > 607:
-                itemsee = 614
-            elif number > 5:
-                itemsee += 6
+            if number > 605:
+                itemsee = 613
+            elif number > 7:
+                itemsee += 8
             self.resultslist.see(titles[itemsee - 1])
 
     def _validate_title(self) -> None:
@@ -259,6 +302,9 @@ class SearchEntries(ttk.Frame):
         state = "!invalid"
         if len(self.resultslist.get_children()) == 0:
             state = "invalid"
+        titles = self.resultslist.get_children()
+        if len(titles) > 0:
+            self.resultslist.see(titles[0])
         self.titleentry.state([state])
         self.update_playbutton()
 
@@ -304,7 +350,7 @@ class SearchEntries(ttk.Frame):
         if len(self.resultslist.selection()) == 0:
             return
         item = self.resultslist.selection()[0]
-        n, title = self.resultslist.item(item, "values")
+        n, title, palabras, tema = self.resultslist.item(item, "values")
         currnumber = self.numbertext.get()
         currtitle = self.titletext.get()
         if currnumber != n:
@@ -316,16 +362,11 @@ class SearchEntries(ttk.Frame):
         self.update_playbutton()
 
 
-def normalizetxt(texto: str) -> str:
-    texto = re.sub(r'[^\w\s]', '', texto.lower())
-    texto = ''.join(c for c in unicodedata.normalize('NFD', texto) if unicodedata.category(c) != 'Mn')
-    return texto
-
-
 class PlaceholderEntry(ttk.Entry):
-    def __init__(self, root: SearchEntries, textvariable: tk.StringVar, placeholder: str, *args, **kwargs):
+    def __init__(self, root: ttk.Frame, settings: Settings.Settings, textvariable: tk.StringVar, placeholder: str,
+                 *args, **kwargs):
         super().__init__(root, *args, **kwargs)
-        self.settings = root.settings
+        self.settings = settings
         self.colors = {"light": ["#1c1c1c", "#d7d7d7"], "dark": ["#e7e7e7", "#4c4c4c"]}
         self.is_placeholder = 1
         self.placeholder = f"ㅤ{placeholder}ㅤ"

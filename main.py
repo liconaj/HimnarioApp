@@ -13,5 +13,5 @@ if __name__ == "__main__":
         datapath = "Data"
     if len(sys.argv) > 1:
         datapath = sys.argv[1]
-    app = Himnario.App(datapath)
+    app = Himnario.Himnario(datapath)
     app.mainloop()
