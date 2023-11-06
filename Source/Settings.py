@@ -175,12 +175,11 @@ class Settings:
 
 
 class SettingsUI(ttk.Frame):
-    def __init__(self, root: tk.Tk, settings: Settings) -> None:
-        super().__init__(root)
-        self.root = root
+    def __init__(self, settings: Settings) -> None:
+        super().__init__()
+        self.settings = settings
         self.columnconfigure(0, weight=1)
         self.rowconfigure(4, weight=1)
-        self.settings = settings
         self.setup_themesel()
         self.setup_playerconf()
         self.setup_reset_button()
