@@ -18,7 +18,7 @@ class Himnario(tk.Tk):
         width, height = 1080, 700
         self.title("Program Adventista")
         self.geometry(f"{width}x{height}")
-        self.minsize(width, height)
+        self.minsize(int(width*0.6), int(height*0.95))
         try:
             self.iconbitmap(default=f"{data_path}/icon.ico")
         except _tkinter.TclError:
