@@ -95,11 +95,6 @@
                 {"nombre": "Niños",                 "rango": [598,607]},
                 {"nombre": "Jóvenes",               "rango": [608,613]}
             ]
-        },
-        {
-            "nombre": "Amenes",
-            "hassubs": false,
-            "rango": [614,614]
         }
     ],
     "lista": [
@@ -339,12 +334,14 @@
         },
         {
             "titulo": "Shalom",
+            "palabras": "Que Dios te dé su bendición",
             "numero": "40",
             "ruta": "040 - Shalom",
             "tiempos": "00:00:00|00:10:00|00:34:00|00:58:00"
         },
         {
             "titulo": "Gracia, amor y comunión",
+            "palabras": "Que la gracia de Jesús",
             "numero": "41",
             "ruta": "041 - Gracia, amor y comunion",
             "tiempos": "00:00:00|00:20:00|00:41:00|01:01:00"
@@ -519,6 +516,7 @@
         },
         {
             "titulo": "¡Nuestro Dios reina!",
+            "palabras": "Cuán bellos son",
             "numero": "70",
             "ruta": "070 - Nuestro Dios reina",
             "tiempos": "00:00:00|00:15:00|00:42:00"
@@ -531,18 +529,21 @@
         },
         {
             "titulo": "Fue un milagro",
+            "palabras": "Mi Padre omnipotente es",
             "numero": "72",
             "ruta": "072 - Fue un milagro",
             "tiempos": "00:00:00|00:08:00|00:27:00|00:45:00|01:05:00|01:24:00|01:42:00|02:01:00|02:21:00|02:39:00"
         },
         {
             "titulo": "La creación",
+            "palabras": "¡Cuán bella es, Señor, tu obra!",
             "numero": "73",
             "ruta": "073 - La creacion",
             "tiempos": "00:00:00|00:08:00|00:34:00|00:59:00|01:18:00|01:43:00|02:08:00|02:27:00|02:52:00|03:17:00"
         },
         {
             "titulo": "Himno al Creador",
+            "palabras": "Que cada ser vivo",
             "numero": "74",
             "ruta": "074 - Himno al Creador",
             "tiempos": "00:00:00|00:13:00|00:34:00|00:48:00|01:09:00|01:30:00|01:44:00"
@@ -711,6 +712,7 @@
         },
         {
             "titulo": "Cordero de Dios",
+            "palabras": "Hijo de Dios",
             "numero": "102",
             "ruta": "102 - Cordero de Dios",
             "tiempos": "00:00:00|00:13:00|00:38:00|01:03:00|01:28:00|01:53:00|02:18:00"
@@ -771,6 +773,7 @@
         },
         {
             "titulo": "Ningún otro me amo cual Cristo",
+            "palabras": "Cristo hallome en la miseria y el pecado",
             "numero": "112",
             "ruta": "112 - Ningun otro me amo cual Cristo",
             "tiempos": "00:00:00|00:12:00|00:39:00|01:08:00|01:33:00|02:00:00|02:26:00"
@@ -795,6 +798,7 @@
         },
         {
             "titulo": "Cristo está a mi lado",
+            "palabras": "Muchas veces me pregunto",
             "numero": "116",
             "ruta": "116 - Cristo esta a mi lado",
             "tiempos": "00:00:00|00:10:00|00:39:00|01:08:00|01:36:00|02:05:00|02:35:00"
@@ -837,6 +841,7 @@
         },
         {
             "titulo": "¡Cuánto nos ama Jesús!",
+            "palabras": "¡Cuánto Jesús te ama a ti!",
             "numero": "123",
             "ruta": "123 - Cuanto nos ama Jesus",
             "tiempos": "00:00:00|00:15:00|00:57:00"
@@ -875,6 +880,7 @@
         },
         {
             "titulo": "Cual Jesús no hay otro nombre",
+            "palabras": "No hay nombre en esta tierra",
             "numero": "129",
             "ruta": "129 - Cual Jesus no hay otro nombre",
             "tiempos": "00:00:00|00:10:00|00:31:00|00:42:00|00:53:00|01:14:00|01:25:00|01:36:00|01:56:00|02:07:00|02:18:00|02:39:00|02:50:00",
@@ -896,6 +902,7 @@
         },
         {
             "titulo": "Dulce, hermoso nombre es Jesús",
+            "palabras": "Hay nombres que me encanta escuchar",
             "numero": "132",
             "ruta": "132 - Dulce, hermoso nombre es Jesus",
             "tiempos": "00:00:00|00:13:00|00:43:00|01:12:00|01:42:00|02:10:00|02:40:00",
@@ -924,6 +931,7 @@
         },
         {
             "titulo": "¡Oh, cuánto amo a Cristo!",
+            "palabras": "Su nombre hermoso yo anhelo oír",
             "numero": "136",
             "ruta": "136 - Oh, cuanto amo a Cristo",
             "tiempos": "00:00:00|00:07:00|00:24:00|00:42:00|00:59:00|01:16:00|01:33:00",
@@ -973,6 +981,7 @@
         },
         {
             "titulo": "Digno eres tú",
+            "palabras": "Eres la Perla de valor",
             "numero": "143",
             "ruta": "143 - Digno eres tu",
             "tiempos": "00:00:00|00:14:00|00:29:00|00:44:00|01:15:00|01:31:00|01:44:00",
@@ -1029,6 +1038,7 @@
         },
         {
             "titulo": "Por eso lo amo",
+            "palabras": "El que me amó vino una vez",
             "numero": "151",
             "ruta": "151 - Por eso lo amo",
             "tiempos": "00:00:00|00:06:00|00:22:00|00:37:00|00:53:00",
@@ -1192,6 +1202,7 @@
         },
         {
             "titulo": "Los tres mensajes angélicos",
+            "palabras": "Ved al ángel que proclama",
             "numero": "177",
             "ruta": "177 - Los tres mensajes angelicos",
             "tiempos": "00:00:00|00:06:00|00:25:00|00:39:00|00:58:00|01:12:00|01:31:00|01:45:00|02:04:00"
@@ -1222,18 +1233,21 @@
         },
         {
             "titulo": "Veremos a Cristo",
+            "palabras": "El cielo se abrirá",
             "numero": "182",
             "ruta": "182 - Veremos a Cristo",
             "tiempos": "00:00:00|00:09:00|00:57:00|01:46:00|02:10:00|02:34:00"
         },
         {
             "titulo": "No me olvidé de ti",
+            "palabras": "Si las pruebas de esta vida",
             "numero": "183",
             "ruta": "183 - No me olvide de ti",
             "tiempos": "00:00:00|00:13:00|00:36:00|00:59:00|01:22:00|01:47:00|02:11:00|02:34:00|02:56:00"
         },
         {
             "titulo": "Nunca te rindas",
+            "palabras": "Días hay, lo sé",
             "numero": "184",
             "ruta": "184 - Nunca te rindas",
             "tiempos": "00:00:00|00:06:00|00:35:00|01:07:00|01:22:00|01:37:00"
@@ -1282,6 +1296,7 @@
         },
         {
             "titulo": "Llena mi ser",
+            "palabras": "Santo Espíritu de Dios, llena tú mi ser",
             "numero": "192",
             "ruta": "192 - Llena mi ser",
             "tiempos": "00:00:00|00:11:00|00:35:00"
@@ -1294,6 +1309,7 @@
         },
         {
             "titulo": "Vive en mí",
+            "palabras": "Vive, Santo Espíritu, en este pobre ser",
             "numero": "194",
             "ruta": "194 - Vive en mi",
             "tiempos": "00:00:00|00:10:00|00:33:00|00:57:00|01:19:00|01:44:00|02:06:00"
@@ -1312,6 +1328,7 @@
         },
         {
             "titulo": "Dulce Espíritu",
+            "palabras": "Hay un dulce Espíritu aquí",
             "numero": "197",
             "ruta": "197 - Dulce Espiritu",
             "tiempos": "00:00:00|00:10:00|01:02:00|01:28:00"
@@ -1336,6 +1353,7 @@
         },
         {
             "titulo": "Canción del Espíritu",
+            "palabras": "Oh, deja que le Señor te envuelva",
             "numero": "201",
             "ruta": "201 - Cancion del Espiritu",
             "tiempos": "00:00:00|00:07:00|00:29:00|00:51:00|01:32:00|01:54:00|02:17:00"
@@ -1398,6 +1416,7 @@
         },
         {
             "titulo": "Fija tus ojos en Cristo",
+            "palabras": "Te sientes cansado y turbado",
             "numero": "211",
             "ruta": "211 - Fija tus ojos en Cristo",
             "tiempos": "00:00:00|00:23:00|00:56:00|01:29:00|02:02:00|02:35:00|03:08:00",
@@ -1524,6 +1543,7 @@
         },
         {
             "titulo": "¿Has pensado lo que puede costar?",
+            "palabras": "Cuando llegue el momento de tu decisión",
             "numero": "229",
             "ruta": "229 - Has pensado lo que puede costar",
             "tiempos": "00:00:00|00:07:00|00:23:00|00:40:00|00:57:00|01:14:00|01:30:00|01:47:00|02:03:00|02:21:00|02:37:00|02:54:00|03:11:00",
@@ -1538,6 +1558,7 @@
         },
         {
             "titulo": "Todo en el altar",
+            "palabras": "¿Anhelaste la paz?",
             "numero": "231",
             "ruta": "231 - Todo en el altar",
             "tiempos": "00:00:00|00:21:00|00:36:00|00:51:00|01:21:00|01:35:00|01:50:00|02:19:00|02:34:00|02:49:00",
@@ -1545,6 +1566,7 @@
         },
         {
             "titulo": "Entrégate en oración",
+            "palabras": "Puedes hoy con Cristo a solas conversar",
             "numero": "232",
             "ruta": "232 - Entregate en oracion",
             "tiempos": "00:00:00|00:12:00|00:26:00",
@@ -1566,6 +1588,7 @@
         },
         {
             "titulo": "La razón de vivir",
+            "palabras": "Si no puedes luchar",
             "numero": "235",
             "ruta": "235 - La razon de vivir",
             "tiempos": "00:00:00|00:13:00|00:27:00|00:40:00|00:55:00|01:21:00|01:35:00|01:56:00|02:10:00",
@@ -1573,6 +1596,7 @@
         },
         {
             "titulo": "A Jesús entrega todo",
+            "palabras": "Has corrido tras un arcoirís",
             "numero": "236",
             "ruta": "236 - A Jesus entrega todo",
             "tiempos": "00:00:00|00:14:00|00:46:00|01:19:00|01:50:00",
@@ -1605,6 +1629,7 @@
         },
         {
             "titulo": "Perdón te ruego, mi Señor y Dios",
+            "palabras": "Si fui motivo de dolor",
             "numero": "241",
             "ruta": "241 - Perdon te ruego, mi Senor y Dios",
             "tiempos": "00:00:00|00:16:00|00:52:00|01:28:00|02:04:00"
@@ -1617,6 +1642,7 @@
         },
         {
             "titulo": "Entrego todo a Cristo",
+            "palabras": "Todo mi vil pecado",
             "numero": "243",
             "ruta": "243 - Entrego todo a Cristo",
             "tiempos": "00:00:00|00:20:00|00:56:00|01:33:00|02:10:00"
@@ -1701,6 +1727,7 @@
         },
         {
             "titulo": "Oh ven, te invito, Cristo",
+            "palabras": "Al venir al mundo dejaste atrás",
             "numero": "257",
             "ruta": "257 - Oh ven, te invito, Cristo",
             "tiempos": "00:00:00|00:14:00|00:39:00|00:52:00|01:16:00|01:29:00|01:53:00|02:08:00|02:33:00"
@@ -1809,6 +1836,7 @@
         },
         {
             "titulo": "Humilde oración",
+            "palabras": "En humilde oración",
             "numero": "275",
             "ruta": "275 - Humilde oracion",
             "tiempos": "00:00:00|00:10:00|00:35:00"
@@ -1827,12 +1855,14 @@
         },
         {
             "titulo": "¿Puede el mundo ver a Jesús en mi?",
+            "palabras": "¿Vivo hoy tan cerca de mi Jesús?",
             "numero": "278",
             "ruta": "278 - Puede el mundo ver a Jesus en mi",
             "tiempos": "00:00:00|00:09:00|00:20:00|00:30:00|00:41:00|00:52:00|01:13:00|01:23:00|01:35:00|01:56:00|02:06:00"
         },
         {
             "titulo": "Transfórmame a tu imagen",
+            "palabras": "Hoy pido en oración",
             "numero": "279",
             "ruta": "279 - Transformame a tu imagen",
             "tiempos": "00:00:00|00:11:00|00:35:00|00:58:00|01:22:00"
@@ -1851,6 +1881,7 @@
         },
         {
             "titulo": "¡Brilla, Jesús!",
+            "palabras": "Cristo, tu gran amor me inspira",
             "numero": "282",
             "ruta": "282 - Brilla, Jesus",
             "tiempos": "00:00:00|00:09:00|00:25:00|00:39:00|01:00:00|01:21:00|01:38:00|01:52:00|02:12:00"
@@ -1995,6 +2026,7 @@
         },
         {
             "titulo": "Llegó Jesús",
+            "palabras": "Muy solitario, junto al sendero",
             "numero": "306",
             "ruta": "306 - Llego Jesus",
             "tiempos": "00:00:00|00:11:00|00:24:00|00:37:00|00:49:00|01:02:00|01:15:00|01:27:00|01:40:00|01:52:00|02:05:00|02:17:00|02:30:00|02:43:00|02:56:00|03:08:00|03:20:00"
@@ -2007,12 +2039,14 @@
         },
         {
             "titulo": "Dios descendió",
+            "palabras": "Día tan grande no puedo olvidar",
             "numero": "308",
             "ruta": "308 - Dios descendio",
             "tiempos": "00:00:00|00:08:00|00:24:00|00:38:00|00:48:00|01:08:00|01:29:00|01:49:00|02:10:00|02:29:00|02:50:00|03:00:00|03:16:00|03:30:00|03:48:00"
         },
         {
             "titulo": "La voz de Jesús",
+            "palabras": "Escuché muy dulce y llena de amor",
             "numero": "309",
             "ruta": "309 - La voz de Jesus",
             "tiempos": "00:00:00|00:12:00|00:27:00|00:41:00|00:56:00|01:11:00|01:26:00|01:40:00|01:55:00|02:10:00|02:25:00|02:40:00|02:54:00"
@@ -2037,6 +2071,7 @@
         },
         {
             "titulo": "La hora del Juicio",
+            "palabras": "Solemne anuncio Dios nos da",
             "numero": "313",
             "ruta": "313 - La hora del Juicio",
             "tiempos": "00:00:00|00:11:00|00:35:00|01:00:00|01:24:00|01:49:00|02:13:00|02:38:00|03:02:00"
@@ -2079,6 +2114,7 @@
         },
         {
             "titulo": "Jamás se dice adiós allá",
+            "palabras": "Cuán grato es con amigos vernos",
             "numero": "320",
             "ruta": "320 - Jamas se dice adios alla",
             "tiempos": "00:00:00|00:07:00|00:27:00|00:47:00|01:07:00|01:27:00|01:46:00"
@@ -2097,6 +2133,7 @@
         },
         {
             "titulo": "He de conocerle entonces",
+            "palabras": "Cuando aquí los afanes de mi vida",
             "numero": "323",
             "ruta": "323 - He de conocerle entonces",
             "tiempos": "00:00:00|00:12:00|00:25:00|00:38:00|01:05:00|01:18:00|01:32:00|01:58:00|02:11:00|02:24:00|02:51:00|03:04:00|03:17:00"
@@ -2145,6 +2182,7 @@
         },
         {
             "titulo": "La mañana gloriosa",
+            "palabras": "Cuán gloriosa será la mañana",
             "numero": "331",
             "ruta": "331 - La manana gloriosa",
             "tiempos": "00:00:00|00:12:00|00:32:00|00:43:00|00:58:00|01:19:00|01:29:00"
@@ -2169,6 +2207,7 @@
         },
         {
             "titulo": "Mi hogar celestial",
+            "palabras": "Hay en el cielo un dulce hogar",
             "numero": "335",
             "ruta": "335 - Mi hogar celestial",
             "tiempos": "00:00:00|00:25:00|00:51:00|01:18:00|01:44:00|02:11:00|02:37:00"
@@ -2181,6 +2220,7 @@
         },
         {
             "titulo": "Nunca más adiós",
+            "palabras": "Hay una tierra sin maldad",
             "numero": "337",
             "ruta": "337 - Nunca mas adios",
             "tiempos": "00:00:00|00:13:00|00:42:00|01:09:00|01:24:00|01:39:00|02:08:00|02:35:00|02:50:00|03:04:00|03:34:00|04:01:00|04:15:00"
@@ -2205,12 +2245,14 @@
         },
         {
             "titulo": "Más cerca del hogar",
+            "palabras": "La Biblia asegura que Jesús",
             "numero": "341",
             "ruta": "341 - Mas cerca del hogar",
             "tiempos": "00:00:00|00:14:00|00:38:00|01:05:00|01:28:00"
         },
         {
             "titulo": "Después del río",
+            "palabras": "He oído de una tierra hermosa",
             "numero": "342",
             "ruta": "342 - Despues del rio",
             "tiempos": "00:00:00|00:17:00|00:34:00|00:50:00|01:06:00|01:22:00|01:38:00|01:57:00|02:15:00|02:31:00|02:47:00|03:03:00|03:19:00"
@@ -2285,6 +2327,7 @@
         },
         {
             "titulo": "Suenan melodías en mi ser",
+            "palabras": "Jesús me dio un dulce canto",
             "numero": "353",
             "ruta": "353 - Suenan melodias en mi ser",
             "tiempos": "00:00:00|00:07:00|00:27:00|00:46:00|00:56:00|01:06:00|01:25:00|01:44:00",
@@ -2299,6 +2342,7 @@
         },
         {
             "titulo": "Yo voy feliz",
+            "palabras": "Aquel en cuyo corazón",
             "numero": "355",
             "ruta": "355 - Yo voy feliz",
             "tiempos": "00:00:00|00:16:00|00:35:00|00:53:00|01:11:00|01:29:00|01:48:00",
@@ -2393,6 +2437,7 @@
         },
         {
             "titulo": "Gratitud y alabanza",
+            "palabras": "Gracias por tus bendiciones",
             "numero": "369",
             "ruta": "369 - Gratitud y alabanza",
             "tiempos": "00:00:00|00:08:00"
@@ -2405,6 +2450,7 @@
         },
         {
             "titulo": "Jesús te ama",
+            "palabras": "Gracias te doy por darme esperanza",
             "numero": "371",
             "ruta": "371 - Jesus te ama",
             "tiempos": "00:00:00|00:11:00|00:25:00|00:38:00|01:05:00|01:19:00|01:32:00"
@@ -2495,6 +2541,7 @@
         },
         {
             "titulo": "El jardín de oración",
+            "palabras": "Hay jardín memorable y hermoso",
             "numero": "384",
             "ruta": "384 - El jardin de oracion",
             "tiempos": "00:00:00|00:21:00|00:35:00|00:49:00|01:03:00|01:17:00|01:31:00|01:44:00|01:58:00|02:12:00|02:26:00|02:40:00|02:53:00|03:07:00|03:21:00|03:35:00|03:49:00",
@@ -2628,6 +2675,7 @@
         },
         {
             "titulo": "Sé quién es Jesús",
+            "palabras": "No tengo duda, sé quién es Jesús",
             "numero": "405",
             "ruta": "405 - Se quien es Jesus",
             "tiempos": "00:00:00|00:11:00|00:25:00|00:52:00|01:05:00"
@@ -2640,6 +2688,7 @@
         },
         {
             "titulo": "Muy cerca de mi Redentor",
+            "palabras": "Hay un lugar do quiero estar muy cerca",
             "numero": "407",
             "ruta": "407 - Muy cerca de mi Redentor",
             "tiempos": "00:00:00|00:21:00|00:44:00|01:08:00|01:31:00|01:54:00|02:17:00"
@@ -2754,6 +2803,7 @@
         },
         {
             "titulo": "Tengo paz",
+            "palabras": "Si paz como un río",
             "numero": "426",
             "ruta": "426 - Tengo paz",
             "tiempos": "00:00:00|00:21:00|00:40:00|01:00:00|01:22:00|01:41:00|02:01:00|02:23:00|02:53:00|03:02:00"
@@ -2766,6 +2816,7 @@
         },
         {
             "titulo": "Su oveja soy",
+            "palabras": "Junto a aguas tranquilas",
             "numero": "428",
             "ruta": "428 - Su oveja soy",
             "tiempos": "00:00:00|00:11:00|00:24:00|00:36:00"
@@ -2796,24 +2847,28 @@
         },
         {
             "titulo": "Conmigo marcha un ángel",
+            "palabras": "La ruta es larga y cruenta",
             "numero": "433",
             "ruta": "433 - Conmigo marcha un angel",
             "tiempos": "00:00:00|00:13:00|00:40:00|01:05:00|01:30:00|01:57:00|02:23:00|02:49:00|03:13:00"
         },
         {
             "titulo": "Jesús es mi vida",
+            "palabras": "Cuando el cielo y sus estrellas",
             "numero": "434",
             "ruta": "434 - Jesus es mi vida",
             "tiempos": "00:00:00|00:19:00|00:41:00|01:01:00|01:27:00|01:41:00|02:01:00|02:22:00|02:48:00"
         },
         {
             "titulo": "Dios sabe, Dios oye, Dios ve",
+            "palabras": "Si hoy tú te sietes pequeño",
             "numero": "435",
             "ruta": "435 - Dios sabe, Dios oye, Dios ve",
             "tiempos": "00:00:00|00:14:00|00:46:00|01:16:00|01:47:00|02:17:00|02:46:00"
         },
         {
             "titulo": "Él vive hoy",
+            "palabras": "Dios nos envió",
             "numero": "436",
             "ruta": "436 - El vive hoy",
             "tiempos": "00:00:00|00:08:00|00:31:00|00:53:00|01:15:00|01:37:00|02:10:00|02:21:00|02:43:00"
@@ -2826,6 +2881,7 @@
         },
         {
             "titulo": "Mira hacia Dios",
+            "palabras": "Alegre y dulce es el vivir",
             "numero": "438",
             "ruta": "438 - Mira hacia Dios",
             "tiempos": "00:00:00|00:12:00|00:38:00|00:51:00|01:03:00|01:29:00|01:42:00|01:55:00|02:20:00|02:33:00"
@@ -2930,6 +2986,7 @@
         },
         {
             "titulo": "Cómo ser cual Cristo",
+            "palabras": "Dime cómo debo amar",
             "numero": "453",
             "ruta": "453 - Como ser cual Cristo",
             "tiempos": "00:00:00|00:13:00|00:37:00|01:02:00|01:27:00|01:52:00|02:17:00",
@@ -2972,6 +3029,7 @@
         },
         {
             "titulo": "Háblame más de Cristo",
+            "palabras": "Quiero escuchar de aquel grande amor",
             "numero": "459",
             "ruta": "459 - Hablame mas de Cristo",
             "tiempos": "00:00:00|00:11:00|00:23:00|00:35:00|01:00:00|01:24:00|01:49:00|02:01:00|02:13:00",
@@ -2986,6 +3044,7 @@
         },
         {
             "titulo": "A tu lado anhelo estar",
+            "palabras": "Oh, Señor, muy débil soy",
             "numero": "461",
             "ruta": "461 - A tu lado anhelo estar",
             "tiempos": "00:00:00|00:24:00|00:43:00|00:50:00|01:08:00|01:14:00|01:39:00|01:57:00|02:04:00|02:28:00|02:46:00",
@@ -2993,6 +3052,7 @@
         },
         {
             "titulo": "Dame a Cristo",
+            "palabras": "De mañana al despertar",
             "numero": "462",
             "ruta": "462 - Dame a Cristo",
             "tiempos": "00:00:00|00:28:00|00:59:00|01:29:00|01:58:00",
@@ -3000,6 +3060,7 @@
         },
         {
             "titulo": "Mi oración",
+            "palabras": "Que mi vida, cada día",
             "numero": "463",
             "ruta": "463 - Mi oracion",
             "tiempos": "00:00:00|00:15:00|00:33:00|00:51:00",
@@ -3014,6 +3075,7 @@
         },
         {
             "titulo": "Ven junto a mí",
+            "palabras": "Oh, Jesús, ven muy junto a mí",
             "numero": "465",
             "ruta": "465 - Ven junto a mi",
             "tiempos": "00:00:00|00:22:00|00:46:00|01:10:00|01:33:00|01:58:00|02:21:00",
@@ -3063,6 +3125,7 @@
         },
         {
             "titulo": "Háblame, y hablaré",
+            "palabras": "Oh, háblame, y hablaré",
             "numero": "473",
             "ruta": "473 - Hablame, y hablare",
             "tiempos": "00:00:00|00:09:00|00:33:00|00:55:00"
@@ -3117,24 +3180,28 @@
         },
         {
             "titulo": "Quiero cantar",
+            "palabras":"Al transitar por este mundo oscuro",
             "numero": "482",
             "ruta": "482 - Quiero cantar",
             "tiempos": "00:00:00|00:14:00|00:29:00|00:46:00|01:02:00|01:19:00|01:52:00|02:08:00"
         },
         {
             "titulo": "Cuando al cielo lleguemos",
+            "palabras": "Todos juntos de Jesús cantemos",
             "numero": "483",
             "ruta": "483 - Cuando al cielo lleguemos",
             "tiempos": "00:00:00|00:08:00|00:27:00|00:47:00|01:05:00|01:25:00|01:44:00"
         },
         {
             "titulo": "Busca al Señor",
+            "palabras": "Mi hermano, eleva tu alma",
             "numero": "484",
             "ruta": "484 - Busca al Senor",
             "tiempos": "00:00:00|00:19:00|00:40:00|01:02:00|01:23:00|01:45:00|02:06:00"
         },
         {
             "titulo": "Unidos en verdad",
+            "palabras": "Por nuestro Señor",
             "numero": "485",
             "ruta": "485 - Unidos en verdad",
             "tiempos": "00:00:00|00:11:00|00:25:00|00:38:00|00:51:00|01:05:00|01:31:00|01:45:00"
@@ -3199,6 +3266,7 @@
         },
         {
             "titulo": "Mi deber",
+            "palabras": "Amar a alguien con más intenso amor",
             "numero": "495",
             "ruta": "495 - Mi deber",
             "tiempos": "00:00:00|00:28:00|00:44:00|00:55:00|01:07:00|01:29:00|01:46:00|02:08:00",
@@ -3206,6 +3274,7 @@
         },
         {
             "titulo": "Sus manos somos",
+            "palabras": "Sigo por el camino angosto",
             "numero": "496",
             "ruta": "496 - Sus manos somos",
             "tiempos": "00:00:00|00:22:00|00:45:00|01:08:00|01:30:00",
@@ -3213,6 +3282,7 @@
         },
         {
             "titulo": "Manos",
+            "palabras": "Estas manos Dios me dio",
             "numero": "497",
             "ruta": "497 - Manos",
             "tiempos": "00:00:00|00:21:00|00:37:00|00:50:00|01:04:00|01:20:00|01:36:00|01:49:00|02:04:00",
@@ -3248,6 +3318,7 @@
         },
         {
             "titulo": "Brilla en el sitio donde estés",
+            "palabras": "Nunca esperes el momento",
             "numero": "502",
             "ruta": "502 - Brilla en el sitio donde estes",
             "tiempos": "00:00:00|00:08:00|00:19:00|00:30:00|00:40:00|00:51:00|01:01:00|01:12:00|01:22:00|01:33:00|01:42:00|01:54:00|02:04:00",
@@ -3293,6 +3364,7 @@
         },
         {
             "titulo": "¡Firmes! ¡Fuertes!",
+            "palabras": "Siervos de Jesús, hombres de verdad",
             "numero": "509",
             "ruta": "509 - Firmes Fuertes",
             "tiempos": "00:00:00|00:11:00|00:33:00|00:56:00|01:19:00|01:41:00|02:04:00"
@@ -3359,6 +3431,7 @@
         },
         {
             "titulo": "¡Adelante! manda el Señor",
+            "palabras": "Cristo, nuestre jefe, nos lleva a la lid",
             "numero": "520",
             "ruta": "520 - Adelante manda el Senor",
             "tiempos": "00:00:00|00:16:00|00:33:00|00:52:00|01:09:00|01:27:00|01:44:00"
@@ -3425,6 +3498,7 @@
         },
         {
             "titulo": "La familia de Dios",
+            "palabras": "¡Qué feliz! ¡Qué feliz! La familia de Dios",
             "numero": "531",
             "ruta": "531 - La familia de Dios",
             "tiempos": "00:00:00|00:08:00|00:27:00|00:45:00|01:05:00"
@@ -3546,6 +3620,7 @@
         },
         {
             "titulo": "Embajador soy de mi Rey",
+            "palabras": "Soy peregrino aquí",
             "numero": "551",
             "ruta": "551 - Embajador soy de mi Rey",
             "tiempos": "00:00:00|00:11:00|00:24:00|00:36:00|01:01:00|01:15:00|01:26:00|01:51:00|02:05:00|02:16:00"
@@ -3654,6 +3729,7 @@
         },
         {
             "titulo": "Id y predicad el evangelio",
+            "palabras": "Oíd, oíd lo que nos manda el Salvador",
             "numero": "569",
             "ruta": "569 - Id y predicad el evangelio",
             "tiempos": "00:00:00|00:08:00|00:19:00|00:29:00|00:43:00|00:58:00|01:08:00|01:18:00|01:28:00|01:42:00|01:57:00|02:07:00|02:17:00|02:27:00|02:41:00|02:56:00"
@@ -3684,6 +3760,7 @@
         },
         {
             "titulo": "Testimonio",
+            "palabras": "En mi vivir voy a decir que Cristo",
             "numero": "574",
             "ruta": "574 - Testimonio",
             "tiempos": "00:00:00|00:17:00|00:38:00|00:57:00|01:17:00|01:36:00|01:56:00"
@@ -3708,6 +3785,7 @@
         },
         {
             "titulo": "El pueblo que conoce a su Dios",
+            "palabras": "Atardece en el mundo",
             "numero": "578",
             "ruta": "578 - El pueblo que conoce a su Dios",
             "tiempos": "00:00:00|00:20:00|00:42:00|00:58:00|01:15:00|01:37:00|01:53:00"
@@ -3721,6 +3799,7 @@
         },
         {
             "titulo": "Las aguas del bautismo",
+            "palabras": "En las aguas de la muerte",
             "numero": "580",
             "ruta": "580 - Las aguas del bautismo",
             "tiempos": "00:00:00|00:10:00|00:33:00|00:56:00|01:19:00|01:41:00|02:04:00",
@@ -3740,6 +3819,7 @@
         },
         {
             "titulo": "La Cena de la Comunión",
+            "palabras": "Con gran amor Cristo preparó",
             "numero": "583",
             "ruta": "583 - La Cena de la Comunion",
             "tiempos": "00:00:00|00:22:00|00:48:00|01:13:00|01:38:00"
@@ -3811,6 +3891,7 @@
         },
         {
             "titulo": "Señor, gracias por mi hogar",
+            "palabras": "Horas alegres hay en la niñez",
             "numero": "594",
             "ruta": "594 - Senor, gracias por mi hogar",
             "tiempos": "00:00:00|00:14:00|00:36:00|00:58:00",
@@ -3825,6 +3906,7 @@
         },
         {
             "titulo": "Edificamos familias",
+            "palabras": "El hogar es lugar donde encontramos",
             "numero": "596",
             "ruta": "596 - Edificamos familias",
             "tiempos": "00:00:00|00:08:00|00:21:00|00:32:00|00:56:00|01:09:00|01:21:00|01:44:00|02:09:00",
@@ -3832,6 +3914,7 @@
         },
         {
             "titulo": "Oración por un niño",
+            "palabras": "Presentamos este niño",
             "numero": "597",
             "ruta": "597 - Oracion por un nino",
             "tiempos": "00:00:00|00:20:00|00:43:00|01:05:00|01:28:00",
@@ -3881,6 +3964,7 @@
         },
         {
             "titulo": "Jesús tiene tiempo",
+            "palabras": "Mientras Jesús enseñaba a la gente",
             "numero": "605",
             "ruta": "605 - Jesus tiene tiempo",
             "tiempos": "00:00:00|00:05:00|00:18:00|00:30:00|00:44:00"
@@ -3932,12 +4016,6 @@
             "numero": "613",
             "ruta": "613 - Hoy nos toca trabajar",
             "tiempos": "00:00:00|00:17:00|00:37:00|00:56:00|01:11:00|01:25:00|01:45:00|02:04:00|02:19:00|02:33:00|02:53:00|03:11:00|03:27:00"
-        },
-        {
-            "titulo": "Amenes",
-            "numero": "614",
-            "ruta": "614 - Amenes",
-            "tiempos": "00:00:00"
         }
     ]
 }
