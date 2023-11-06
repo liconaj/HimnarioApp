@@ -175,7 +175,7 @@ class SearchEntries(ttk.Frame):
         n = info["numero"]
         title = info["titulo"]
         tema = info["tema"]
-        palabras = info.get("palabras", "")
+        palabras = info.get("palabras", "-")
         self.resultslist.insert("", index="end", values=(n, title, palabras, tema))
 
     def show_alltitles(self) -> None:
