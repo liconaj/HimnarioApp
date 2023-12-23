@@ -9,6 +9,7 @@ from tkinter import ttk
 import Source.Settings as Settings
 import Source.Finder as Finder
 import Source.Indexes as Indexes
+import Source.Favorites as Favorites
 
 
 class Himnario(tk.Tk):
@@ -16,7 +17,7 @@ class Himnario(tk.Tk):
         super().__init__()
         Settings.make_dpi_aware()
         width, height = 1080, 700
-        self.title("Program Adventista")
+        self.title("Himnario Adventista")
         self.geometry(f"{width}x{height}")
         self.minsize(int(width*0.6), int(height*0.95))
         try:
@@ -25,6 +26,7 @@ class Himnario(tk.Tk):
             print("Archivo icon.ico faltante", file=sys.stderr)
         self.protocol("WM_DELETE_WINDOW", self._exit)
         self.settings = Settings.Settings(self, data_path)
+        self.favorites = Favorites.get(self.settings)
         self.indices = self.get_infohimnos()
         self.notebook = ttk.Notebook(self)
         self.notebook.pack(fill="both", expand=True)
@@ -33,7 +35,7 @@ class Himnario(tk.Tk):
         self.setup_settingsui()
 
     def setup_finder(self):
-        self.finder = Finder.Finder(self.settings, self.indices)
+        self.finder = Finder.Finder(self.settings, self.indices, self.favorites)
         self.notebook.add(self.finder, text="Buscar")
 
     def setup_settingsui(self):
@@ -46,6 +48,7 @@ class Himnario(tk.Tk):
 
     def _exit(self) -> None:
         self.settings.save()
+        Favorites.save(self.settings, self.favorites)
         self.quit()
 
     def get_infohimnos(self) -> dict:

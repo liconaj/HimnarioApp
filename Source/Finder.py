@@ -10,9 +10,10 @@ import Source.Utils as Utils
 
 
 class Finder(ttk.Frame):
-    def __init__(self, settings: Settings.Settings, indices: dict) -> None:
+    def __init__(self, settings: Settings.Settings, indices: dict, favorites: list) -> None:
         super().__init__()
         self.settings = settings
+        self.favorites = favorites
         self.titulos = indices["titulos"]
         self.numeros = indices["numeros"]
         self.palabras = indices["palabras"]
@@ -64,14 +65,14 @@ class PlayModeSelector(ttk.Frame):
         self.grid_columnconfigure(2, weight=1)
         self.mode = tk.IntVar(value=1)
         self.modes = ["Solo letra", "Cantado", "Instrumental"]
-        self.addmode(0)
-        self.addmode(1)
-        self.addmode(2)
+        self.addmode(0, (0, 0))
+        self.addmode(1, (5, 0))
+        self.addmode(2, (5, 0))
 
-    def addmode(self, value: int) -> None:
+    def addmode(self, value: int, padx=(0, 0)) -> None:
         text = self.modes[value]
         button = ttk.Radiobutton(self, text=text, variable=self.mode, value=value, style="Toggle.TButton", width=20)
-        button.grid(row=0, column=value, padx=5, pady=5, sticky="ew")
+        button.grid(row=0, column=value, padx=padx, pady=5, sticky="ew")
 
     def getmode(self) -> str:
         return self.modes[self.mode.get()]
@@ -81,7 +82,9 @@ class SearchEntries(ttk.Frame):
     def __init__(self, root: Finder):
         super().__init__(root)
         self.root = root
+        self.padx = 5
         self.settings = root.settings
+        self.favorites = root.favorites
         self.titulos = root.titulos
         self.numeros = root.numeros
         self.palabras = root.palabras
@@ -100,13 +103,13 @@ class SearchEntries(ttk.Frame):
         self.playentries.grid_columnconfigure(2, weight=1)
         self.setup_numberentry()
         self.setup_titleentry()
-        self.setup_playbutton()
+        self.setup_buttons()
 
     def setup_numberentry(self) -> None:
         self.numbertext = tk.StringVar()
         self.numberentry = PlaceholderEntry(self.playentries, self.settings, self.numbertext, "#")
-        self.numberentry.config(justify="center", font="Arial 16 bold", width=7, textvariable=self.numbertext)
-        self.numberentry.grid(row=0, column=0, padx=(6, 5), sticky="ew")
+        self.numberentry.config(justify="center", font="Arial 16 bold", width=13, textvariable=self.numbertext)
+        self.numberentry.grid(row=0, column=0, padx=(6, 0), sticky="ew")
         self.numbertext.trace("w", lambda *args: self._validate_number())
         self.add_on_updatesettings(self.numberentry.update_placeholder)
 
@@ -115,11 +118,59 @@ class SearchEntries(ttk.Frame):
         self.titleentry = PlaceholderEntry(self.playentries, self.settings, self.titletext, "Título del himno")
 
         self.titleentry.config(justify="center", font="Arial 16 bold", textvariable=self.titletext)
-        self.titleentry.grid(row=0, column=1, padx=(5, 5), sticky="ew", columnspan=2)
+        self.titleentry.grid(row=0, column=1, padx=(self.padx, 0), sticky="ew", columnspan=2)
         self.titletext.trace("w", lambda *args: self._validate_title())
         self.titleentry.bind("<Tab>", self._on_focus_result)
         self.titleentry.bind("<Down>", self._on_focus_result)
         self.add_on_updatesettings(self.titleentry.update_placeholder)
+
+    def setup_buttons(self) -> None:
+        self.setup_playbutton()
+        self.setup_delbutton()
+        self.setup_addbutton()
+        self.setup_favbutton()
+        self.update_buttons()
+        self.add_on_updatesettings(self.update_buttons)
+
+    def update_buttons(self) -> None:
+        theme = self.settings.get_theme()
+        allimg = theme
+        delimg = theme
+        favimg = theme
+        number = self.getnumber()
+        if number in self.favorites:
+            favimg += "_filled"
+        if number is not None:
+            allimg += "_ready"
+            favimg += "_ready"
+        if self.gettitle() is not None:
+            delimg += "_ready"
+        self.playbutton.config(image=self.playimg[allimg])
+        self.addbutton.config(image=self.addimg[allimg])
+        self.delbutton.config(image=self.delimg[delimg])
+        self.favbutton.config(image=self.favimg[favimg])
+
+    def setup_delbutton(self):
+        icons_path = self.settings.get_icons_path()
+        self.delimg = {
+            "dark": ImageTk.PhotoImage(Image.open(f"{icons_path}/delete_dark.png")),
+            "light": ImageTk.PhotoImage(Image.open(f"{icons_path}/delete_light.png")),
+            "dark_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/delete_dark_ready.png")),
+            "light_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/delete_light_ready.png")),
+        }
+        self.delbutton = ttk.Button(self.playentries, width=40, command=self._clear_entries)
+        self.delbutton.grid(row=0, column=3, padx=(self.padx, 0), sticky="nsew")
+
+    def _clear_entries(self):
+        self.titletext.set("")
+        self.numbertext.set("")
+        # self._validate_number()
+        # self._validate_title()
+        self.numberentry.show_placeholder()
+        self.titleentry.show_placeholder()
+        self.update_buttons()
+        self.show_alltitles()
+        self.titleentry.state(["!invalid"])
 
     def setup_playbutton(self) -> None:
         icons_path = self.settings.get_icons_path()
@@ -129,18 +180,42 @@ class SearchEntries(ttk.Frame):
             "dark_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_dark_ready.png")),
             "light_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/play_light_ready.png"))
         }
-        self.playbutton = ttk.Button(self.playentries, command=self.start_player)
-        self.update_playbutton()
-        self.playbutton.grid(row=0, column=3, padx=(5, 6), sticky="nsew")
-        self.add_on_updatesettings(self.update_playbutton)
+        self.playbutton = ttk.Button(self.playentries, width=40, command=self.start_player)
+        self.playbutton.grid(row=0, column=4, padx=(self.padx, 0), sticky="nsew")
 
-    def update_playbutton(self) -> None:
-        theme = self.settings.get_theme()
-        ready = self.getnumber() is not None
-        playimg = theme
-        if ready:
-            playimg += "_ready"
-        self.playbutton.config(image=self.playimg[playimg])
+    def setup_addbutton(self):
+        icons_path = self.settings.get_icons_path()
+        self.addimg = {
+            "dark": ImageTk.PhotoImage(Image.open(f"{icons_path}/add_dark.png")),
+            "light": ImageTk.PhotoImage(Image.open(f"{icons_path}/add_light.png")),
+            "dark_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/add_dark_ready.png")),
+            "light_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/add_light_ready.png")),
+        }
+        self.addbutton = ttk.Button(self.playentries, width=40)
+        self.addbutton.grid(row=0, column=5, padx=(self.padx, 0), sticky="nsew")
+
+    def setup_favbutton(self):
+        icons_path = self.settings.get_icons_path()
+        self.favimg = {
+            "dark": ImageTk.PhotoImage(Image.open(f"{icons_path}/heart_dark.png")),
+            "light": ImageTk.PhotoImage(Image.open(f"{icons_path}/heart_light.png")),
+            "dark_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/heart_dark_ready.png")),
+            "light_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/heart_light_ready.png")),
+            "dark_filled_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/heart_dark_filled_ready.png")),
+            "light_filled_ready": ImageTk.PhotoImage(Image.open(f"{icons_path}/heart_light_filled_ready.png")),
+        }
+        self.favbutton = ttk.Button(self.playentries, width=40, command=self._toggle_favorite)
+        self.favbutton.grid(row=0, column=6, padx=(self.padx, 6), sticky="nsew")
+
+    def _toggle_favorite(self):
+        number = self.getnumber()
+        if number is None:
+            return
+        if number not in self.favorites:
+            self.favorites.append(number)
+        else:
+            self.favorites.remove(number)
+        self.update_buttons()
 
     def setup_resultslist(self) -> None:
         self.results = ttk.Frame(self)
@@ -175,7 +250,8 @@ class SearchEntries(ttk.Frame):
         n = info["numero"]
         title = info["titulo"]
         tema = info["tema"]
-        palabras = info.get("palabras", "-")
+        htitle = "  ".join([". "*len(p) for p in title.split(" ")])
+        palabras = info.get("palabras", htitle)
         self.resultslist.insert("", index="end", values=(n, title, palabras, tema))
 
     def show_alltitles(self) -> None:
@@ -240,6 +316,11 @@ class SearchEntries(ttk.Frame):
         if number and number != self.numberentry.placeholder:
             return int(number)
 
+    def gettitle(self) -> str:
+        title = self.titletext.get()
+        if title and title != self.titleentry.placeholder:
+            return title
+
     def _validate_number(self) -> None:
         if self.focus_get() != self.numberentry:
             return
@@ -256,8 +337,6 @@ class SearchEntries(ttk.Frame):
             self.numbertext.set(number[:maxdigits])
         elif len(number) > 0 and int(number) > maxnumber:
             self.after(100, lambda *args: self.numbertext.set(str(maxnumber)))
-
-        self.update_playbutton()
 
         if not number:
             self.titleentry.show_placeholder()
@@ -276,6 +355,8 @@ class SearchEntries(ttk.Frame):
             elif number > 7:
                 itemsee += 8
             self.resultslist.see(titles[itemsee - 1])
+
+        self.update_buttons()
 
     def _validate_title(self) -> None:
         if self.focus_get() != self.titleentry:
@@ -306,7 +387,7 @@ class SearchEntries(ttk.Frame):
         if len(titles) > 0:
             self.resultslist.see(titles[0])
         self.titleentry.state([state])
-        self.update_playbutton()
+        self.update_buttons()
 
     def change_title(self, direction="next") -> None:
         idir = 1
@@ -326,7 +407,7 @@ class SearchEntries(ttk.Frame):
             nexti = len(titulos) - 1
         self.resultslist.see(titulos[nexti])
         self.resultslist.selection_set(titulos[nexti])
-        self.update_playbutton()
+        self.update_buttons()
 
     def add_on_updatesettings(self, func: callable) -> None:
         self.settings.on_update.append(func)
@@ -359,7 +440,7 @@ class SearchEntries(ttk.Frame):
         if currtitle != title:
             self.titleentry.hide_placeholder()
             self.titletext.set(title)
-        self.update_playbutton()
+        self.update_buttons()
 
 
 class PlaceholderEntry(ttk.Entry):

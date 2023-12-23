@@ -26,6 +26,7 @@ DEFAULT_SETTINGS = {
         "backgrounds": "Fondos",
         "icons": "Iconos",
         "indexes": "indices.json",
+        "favorites": "favoritos.json"
     }
 }
 
@@ -61,7 +62,7 @@ class Settings:
     def reset(self) -> None:
         if os.path.exists(self.settings_file):
             os.remove(self.settings_file)
-        sf = open(self.settings_file, 'w')
+        sf = open(self.settings_file, 'w', encoding="utf-8")
         json.dump(DEFAULT_SETTINGS, sf, indent=4)
         sf.close()
 
@@ -132,6 +133,10 @@ class Settings:
     def get_indexes_path(self) -> str:
         indexes = self.path.get("indexes", DEFAULT_SETTINGS["path"]["indexes"])
         return f"{self.data_dir}/{indexes}"
+
+    def get_favorites_path(self) -> str:
+        favorites = self.path.get("favorites", DEFAULT_SETTINGS["path"]["favorites"])
+        return f"{self.data_dir}/{favorites}"
 
     def set_theme(self, theme: str) -> None:
         sv_ttk.set_theme(theme)
